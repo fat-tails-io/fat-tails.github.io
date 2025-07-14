@@ -2,7 +2,7 @@
 fat-tails - forensic understanding of root causes in project failure lead to improved overall success rates.
 
 ## What?
-This is a collection of practical examples about business value, with the Atlassian API.
+This is a collection of practical examples about business value, with the Atlassian APIs.
 
 You will not see lengthy blogs posts, you will see practical tips with working code to implement value measurement and monitoring.
 
