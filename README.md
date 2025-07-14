@@ -1,5 +1,5 @@
 # fat-tails.github.io
-fat-tails - Forensic understanding of root causes in project failure lead to improved overall success rates.
+fat-tails - forensic understanding of root causes in project failure lead to improved overall success rates.
 
 ## What?
 This is a collection of practical examples about business value, with the Atlassian API.
