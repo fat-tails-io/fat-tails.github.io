@@ -2,10 +2,18 @@ title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
 remote_theme: just-the-docs
 
+# baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://tips.fat-tails.io" # fat-tails.io base hostname
+repository: fat-tails-io/fat-tails.github.io # for github-metadata
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: /fat-tails-favicon-32x32.png
-
-url: https://tips.fat-tails.io
-
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
