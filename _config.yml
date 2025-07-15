@@ -1,6 +1,6 @@
 title: fat-tails.io Tips
 description: Forensic understanding of root causes in project failure lead to improved overall success rates.
-remote_theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
 # baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tips.fat-tails.io" # fat-tails.io base hostname
