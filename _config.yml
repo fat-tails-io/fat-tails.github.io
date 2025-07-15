@@ -16,4 +16,4 @@ defaults:
       layout: "default"
 
 # Set a path/url to a favicon that will be displayed by the browser
-favicon_ico: /fat-tails-favicon-32x32.png
+favicon_ico: "/fat-tails-favicon-32x32.png"
