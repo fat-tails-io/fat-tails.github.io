@@ -3,7 +3,7 @@ description: A starter template for a Jeykll site using the Just the Docs theme!
 remote_theme: just-the-docs
 
 # Set a path/url to a favicon that will be displayed by the browser
-favicon_ico: "/favicon.ico"
+favicon_ico: "/fat-tails-favicon-32x32.png"
 
 url: https://tips.fat-tails.io
 
