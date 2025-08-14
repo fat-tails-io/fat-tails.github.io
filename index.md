@@ -4,7 +4,7 @@ layout: default
 navorder: 1
 description: >
   Explore the concept of fat tails in probability distributions, crucial for understanding rare but impactful events in project management and delivery.
-permalinbk: /
+permalink: /
 ---
 # Why we're here?
 
