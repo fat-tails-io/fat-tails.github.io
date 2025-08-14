@@ -1,2 +1,0 @@
-# Assets
-Assets go here.
