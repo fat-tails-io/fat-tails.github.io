@@ -11,3 +11,11 @@ permalink: /
 We are here to explore the concept of fat tails in probability distributions, as it relates to project management and risk. Fat tails are characterized by a higher likelihood of extreme events compared to normal distributions (outcomes).
 
 This concept is crucial in risk management and securing project timelines consistently.
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
