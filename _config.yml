@@ -80,3 +80,5 @@ ga_tracking: G-BXM00SB729
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 nav_enabled: true
+
+markdown: kramdown

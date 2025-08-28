@@ -65,11 +65,13 @@ in
 ## Configuration
 To make an Excel file more shareable with others, store configuration values in a dedicated worksheet, like this table:
 
-| parameter   | value                             |
-|:------------|:----------------------------------|
-| JiraBaseUrl | https://your-domain.atlassian.net |
-| UserEmail   | your-email@domain.com             |
-| ApiToken    | your-api-token-here               |
-| ApiVersion  | 3                                 |
+| parameter      | value                             |
+|:---------------|:----------------------------------|
+| JiraBaseUrl    | https://your-domain.atlassian.net |
+| UserEmail      | your-email@domain.com             |
+| ApiToken       | your-api-token-here               |
+| ApiVersion[^1] | '3                                |
 
 Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name).
+
+[^1]: PowerQuery `m` does not concatenate config parameters of different types. Notice the treatment of ApiVersion as text.
