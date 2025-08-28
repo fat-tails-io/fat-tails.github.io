@@ -79,4 +79,4 @@ favicon_ico: "/assets/images/fat-tails-favicon-32x32.png"
 ga_tracking: G-BXM00SB729
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
-nav_enabled: false
+nav_enabled: true
