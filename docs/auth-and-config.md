@@ -4,8 +4,8 @@ description: Set up authentication, authorisation and configuration for workshee
 nav_order: 1
 ---
 
-# Approach
-Security is an important and extensive topic, deserving of dedicated posts. This page focuses on getting going quickly, but gives explanations for why the steps are taken.
+# Auth and Config
+Security is an important topic, deserving of much coverage. Here the focus is on getting going quickly, but giving explanations for why the steps are taken.
 
 ## Authentication
 Basic authentication to Atlassian APIs is achieved with [API tokens](https://developer.atlassian.com/server/jira/platform/basic-authentication/){:target="_blank"}. The token, and other credentials, are base64 encoded then sent along in the authorization header. **NOT** achieveable with the standard web content connector for PowerQuery currently, so a PowerQuery query needs to include configuration and authentication:
