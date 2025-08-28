@@ -1,5 +1,5 @@
 ---
-title: MAthJax, PowrerQuery and CAPM
+title: MathJax, PowerQuery and CAPM
 description: Confirming if MathJax is working now for the site.
 math: mathjax3
 nav_order: 2
