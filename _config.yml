@@ -83,14 +83,14 @@ nav_enabled: true
 
 markdown: kramdown
 
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    line_numbers: true
-    css_class: 'highlight'
+# kramdown:
+#   input: GFM
+#   hard_wrap: false
+#   auto_ids: true
+#   syntax_highlighter: rouge
+#   syntax_highlighter_opts:
+#     line_numbers: true
+#     css_class: 'highlight'
 
 # Enable or disable the site search
 # Supports true (default) or false
