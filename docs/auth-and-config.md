@@ -5,20 +5,22 @@ nav_order: 1
 ---
 
 # Approach
-Security is an important and extensive topic, deserving of dedicated posts. This page focuses on getting the user up and running quickly, but gives explanations for why the steps are taken.
+Security is an important and extensive topic, deserving of dedicated posts. This page focuses on getting going quickly, but gives explanations for why the steps are taken.
 
-### Authentication
+## Authentication
 - Basic authentication to Atlassian APIs is achieved with [API tokens](https://developer.atlassian.com/server/jira/platform/basic-authentication/). The token, and other credentials, are base64 encoded then sent along in the authorization header. 
-- Not currently achieveable with the standard web content connector for PowerQuery, so a PowerQuery query needs authentication credentials included, for example:
+  - This is NOT achieveable with the standard web content connector for PowerQuery currently, so a PowerQuery query needs to include configuration and authentication:
 
 ```m
 // -----------------------------------------------------------------------------
 // Self-Contained Direct API Call Function
-// Create this as a query named: JiraApiCall
+// Description: Authenticates and calls Jira API endpoint.
+// Create this with query name: JiraApiCall
 // -----------------------------------------------------------------------------
 (endpoint as text, optional queryParams as record) =>
 let
-    // CONFIGURATION - Update these values once
+    // CONFIGURATION setup. 
+    // Update these values once.
     JiraBaseUrl = "https://your-domain.atlassian.net",
     UserEmail = "your-email@domain.com",
     ApiToken = "your-api-token-here",
@@ -51,5 +53,14 @@ let
 in
     JsonResponse
 ```
+## Configuration
+To make an Excel file more shareable with others, store configuration values in a dedicated worksheet, like this table:
 
-- You can create an API token for your Atlassian account by following the instructions [here](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+| parameter   | value                             |
+|:------------|:----------------------------------|
+| JiraBaseUrl | https://your-domain.atlassian.net |
+| UserEmail   | your-email@domain.com             |
+| ApiToken    | your-api-token-here               |
+| ApiVersion  | 3                                 |
+
+Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name). You could also use a named range here.
