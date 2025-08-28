@@ -20,13 +20,22 @@ Security is an important and extensive topic, deserving of dedicated posts. This
 (endpoint as text, optional queryParams as record) =>
 let
     // CONFIGURATION setup. 
-    // Update these values once.
-    JiraBaseUrl = "https://your-domain.atlassian.net",
-    UserEmail = "your-email@domain.com",
-    ApiToken = "your-api-token-here",
-    ApiVersion = "3",
+    // Reference the table in current workbook
+    ConfigTable = Excel.CurrentWorkbook(){[Name="Parameters"]}[Content],
     
-    // Authentication setup
+    // Convert to a lookup record
+    ConfigRecord = Record.FromList(
+        ConfigTable[Value], 
+        ConfigTable[Parameter]
+    ),
+    
+    // Extract specific config values
+    JiraBaseUrl = ConfigRecord[JiraBaseUrl],
+    UserEmail = ConfigRecord[UserEmail],
+    ApiToken = ConfigRecord[ApiToken],
+    ApiVersion = ConfigRecord[ApiVersion],
+    
+    // AUTHENTICATION setup
     Credentials = Text.ToBinary(UserEmail & ":" & ApiToken),
     EncodedCredentials = Binary.ToText(Credentials, BinaryEncoding.Base64),
     Headers = [
@@ -63,4 +72,4 @@ To make an Excel file more shareable with others, store configuration values in 
 | ApiToken    | your-api-token-here               |
 | ApiVersion  | 3                                 |
 
-Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name). You could also use a named range here.
+Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name).
