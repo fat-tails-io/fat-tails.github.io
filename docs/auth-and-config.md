@@ -8,7 +8,19 @@ nav_order: 1
 Security is an important topic, deserving of much coverage. Here the focus is on getting going quickly, but giving explanations for why the steps are taken.
 
 ## Authentication
-Basic authentication to Atlassian APIs is achieved with [API tokens](https://developer.atlassian.com/server/jira/platform/basic-authentication/){:target="_blank"}. The token, and other credentials, are base64 encoded then sent along in the authorization header. **NOT** achieveable with the standard web content connector for PowerQuery currently, so a PowerQuery query needs to include configuration and authentication:
+Basic authentication to Atlassian APIs is achieved with [API tokens](https://developer.atlassian.com/server/jira/platform/basic-authentication/){:target="_blank"}. The token, and other credentials, are base64 encoded then sent along in the authorization header. **NOT** achieveable with the standard web content connector for PowerQuery currently, so a PowerQuery query needs to include configuration and authentication.
+
+## Configuration
+To make an Excel file more shareable with others, store configuration values in a dedicated worksheet, like this table:
+
+| parameter      | value                             |
+|:---------------|:----------------------------------|
+| JiraBaseUrl    | https://your-domain.atlassian.net |
+| UserEmail      | your-email@domain.com             |
+| ApiToken       | your-api-token-here               |
+| ApiVersion[^1] | '3                                |
+
+Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name).
 
 ```m
 // -----------------------------------------------------------------------------
@@ -61,16 +73,4 @@ let
 in
     JsonResponse
 ```
-## Configuration
-To make an Excel file more shareable with others, store configuration values in a dedicated worksheet, like this table:
-
-| parameter      | value                             |
-|:---------------|:----------------------------------|
-| JiraBaseUrl    | https://your-domain.atlassian.net |
-| UserEmail      | your-email@domain.com             |
-| ApiToken       | your-api-token-here               |
-| ApiVersion[^1] | '3                                |
-
-Turn the table into an Excel Table (Insert > Table), and name the table `Parameters` (Table Design > Table Name).
-
 [^1]: PowerQuery `m` does not concatenate config parameters of different types. Notice the treatment of ApiVersion as text.

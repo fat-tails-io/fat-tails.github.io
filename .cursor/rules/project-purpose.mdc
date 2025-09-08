@@ -1,0 +1,31 @@
+---
+description: fat-tails.io Website Boilerplate
+globs:
+alwaysApply: true
+---
+This project is a professional technical help and blog website. It helps businesses get full value from their Atlassian subscription, by helping them leverage the extensive information in the APIs.
+
+This help is created by publishing articles (docs), code and blog posts (_posts) that are practical examples to implement reporting and analysis from the API in Excel using Power Query `m` code.
+
+- Each article, published in ../docs, is a brief explanation of useful endpoints in the API. It includes an `m` code example for extracting the data into Excel. It also includes an explanation of where / how this endpoint supports project analysis.
+  - Example: ../docs/auth-and-config.md
+- Each blog post, published in ../_posts, is a longer explanation or analysis which references articles in ../docs.
+  - Example: TBC
+
+What is the reason for this website?
+Atlassian produces exceptional project management tools. Microsoft produces exceptional office software, especially Excel (spreadsheets). Project managers are familiar with both of these products. Their finance and investment partners are rooted in their Excel (spreadsheets). This website builds a bridge in this community.
+
+It aids forensic project analysis by illuminating key aspects of the API and how they can support deeper investigation (if necessary).
+
+How is it built?
+The website uses a Jekyll template called "just-the-docs". Jekyll and Ruby are installed locally, so the site changes can be rendered locally before publication.
+
+The website gets re-published automatically using the GitHub pages workflow, each time a commit is pushed to the remote repository.
+
+The following rules apply:
+
+1. Articles are published to ../docs always.
+2. `m` code examples are written to ../assets always.
+3. `m` code examples are written with the front matter draft = true always.
+4. `m` code examples include configuration and authentication setup always. The template can be seen in [lines 33-56, auth-and-config.md](../docs/auth-and-config.md)
+5. Blog posts are written to ../_posts always.
