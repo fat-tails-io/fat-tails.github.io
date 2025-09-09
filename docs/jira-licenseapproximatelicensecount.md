@@ -2,7 +2,7 @@
 title: Approximate License Count
 description: Returns the approximate number of user accounts across all Jira licenses. Note that this information is cached with a 7-day lifecycle and could be sta...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Approximate License Count

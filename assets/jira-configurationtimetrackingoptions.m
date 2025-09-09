@@ -5,7 +5,7 @@ description: Returns the time tracking settings. This includes settings such as 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/configuration/timetracking/options
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

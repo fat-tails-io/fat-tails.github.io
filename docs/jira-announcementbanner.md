@@ -4,7 +4,7 @@ description: Returns the current announcement banner configuration.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://conflu...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Announcement Banner Configuration

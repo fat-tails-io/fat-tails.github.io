@@ -2,7 +2,7 @@
 title: Valid Project Name
 description: Checks that a project name isn't in use. If the name isn't in use, the passed string is returned. If the name is in use, this operation attempts to ge...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Valid Project Name

@@ -3,7 +3,7 @@ title: Get Workflow Schemes Which Are Using A Given Workflow
 description: Returns a page of workflow schemes using a given workflow.
 endpoint: /rest/api/3/workflow/{workflowId}/workflowSchemes
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

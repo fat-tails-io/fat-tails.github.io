@@ -8,7 +8,7 @@ description: Returns a [paginated](https://developer.atlassian.com/cloud/jira/pl
  *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 endpoint: /rest/api/3/statuses/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of the webhooks registered 
 **[Permissions](#permissions) required:** Only [Connect](https://developer.atlassian.com/cloud/jira/platform/#connect-apps) and [OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps) apps can use this operation.
 endpoint: /rest/api/3/webhook
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

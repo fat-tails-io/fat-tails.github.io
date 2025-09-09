@@ -6,7 +6,7 @@ Returns all users in a group.
 
 **[Permissions](#permissions) re...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Group

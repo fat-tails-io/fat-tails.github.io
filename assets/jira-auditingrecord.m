@@ -21,7 +21,7 @@ description: Returns a list of audit records. The list can be filtered to includ
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/auditing/record
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

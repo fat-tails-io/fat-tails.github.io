@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of the webhooks registered 
 
 **[Permissions](#permissions) required:** Only [Connect](https...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Dynamic Webhooks For App

@@ -5,7 +5,7 @@ description: Returns a workflow scheme.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflowscheme/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

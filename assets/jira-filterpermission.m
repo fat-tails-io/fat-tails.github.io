@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
  *  filters shared with the public.
 endpoint: /rest/api/3/filter/{id}/permission/{permissionId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

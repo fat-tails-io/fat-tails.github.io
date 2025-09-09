@@ -2,7 +2,7 @@
 title: Field Reference Data (Get)
 description: Returns reference data for JQL searches. This is a downloadable version of the documentation provided in [Advanced searching - fields reference](https...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Field Reference Data (Get)

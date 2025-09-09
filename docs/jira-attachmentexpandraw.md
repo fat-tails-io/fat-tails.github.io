@@ -2,7 +2,7 @@
 title: Contents Metadata For An Expanded Attachment
 description: Returns the metadata for the contents of an attachment, if it is an archive. For example, if the attachment is a ZIP archive, then information about t...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Contents Metadata For An Expanded Attachment

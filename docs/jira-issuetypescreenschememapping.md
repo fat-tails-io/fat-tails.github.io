@@ -6,7 +6,7 @@ Only issue type screen schemes used in classic projects are returned.
 
 **[...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Type Screen Scheme Items

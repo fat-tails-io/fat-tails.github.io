@@ -2,7 +2,7 @@
 title: Contexts For A Field
 description: Returns a [paginated](#pagination) list of the contexts a field is used in. Deprecated, use [ Get custom field contexts](#api-rest-api-3-field-fieldId...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Contexts For A Field

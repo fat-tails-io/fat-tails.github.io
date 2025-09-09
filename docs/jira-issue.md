@@ -4,7 +4,7 @@ description: Returns the details for an issue.
 
 The issue is identified by its ID or key, however, if the identifier doesn't match an issue, a case-insensitive sea...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue

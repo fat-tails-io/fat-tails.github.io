@@ -2,7 +2,7 @@
 title: All Workflows
 description: This will be removed on [February 1, 2026](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-2567); use [Search workflows](#api-re...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Workflows

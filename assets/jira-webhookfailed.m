@@ -11,7 +11,7 @@ This method uses a cursor-based pagination. To request the next page use the fai
 **[Permissions](#permissions) required:** Only [Connect apps](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps) can use this operation.
 endpoint: /rest/api/3/webhook/failed
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

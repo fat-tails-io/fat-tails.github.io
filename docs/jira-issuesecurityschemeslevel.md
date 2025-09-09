@@ -6,7 +6,7 @@ Only issue security levels in the context of classic projects are returned.
 
 Filter...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Security Levels

@@ -5,7 +5,7 @@ description: Returns an issue resolution value.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/resolution/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

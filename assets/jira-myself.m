@@ -5,7 +5,7 @@ description: Returns details for the current user.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/myself
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -31,7 +31,7 @@ This operation can be accessed anonymously.
 Note: For any fields to be editable the user must have the *Edit issues* [project permission](https://confluence.atlassian.com/x/yodKLg) for the issue.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/editmeta
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

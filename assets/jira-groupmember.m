@@ -10,7 +10,7 @@ Note that users are ordered by username, however the username is not returned in
  *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group/member
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

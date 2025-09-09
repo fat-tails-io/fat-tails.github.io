@@ -2,7 +2,7 @@
 title: Available Transitions
 description: Use this API to retrieve a list of transitions available for the specified issues that can be used or bulk transition operations. You can submit eithe...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Available Transitions

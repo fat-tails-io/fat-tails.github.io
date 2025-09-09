@@ -8,7 +8,7 @@ description: Returns all issues breaching and approaching per-issue limits.
  *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issue/limit/report
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

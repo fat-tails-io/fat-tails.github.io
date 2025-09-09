@@ -7,7 +7,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 endpoint: /rest/api/3/version/{id}/relatedwork
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

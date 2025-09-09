@@ -9,7 +9,7 @@ The jobStatus will be one of the following:
  *  PENDING - The redaction job has not started yet
 endpoint: /rest/api/3/redact/status/{jobId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

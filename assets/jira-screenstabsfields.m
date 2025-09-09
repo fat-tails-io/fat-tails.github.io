@@ -8,7 +8,7 @@ description: Returns all fields for a screen tab.
  *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
 endpoint: /rest/api/3/screens/{screenId}/tabs/{tabId}/fields
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

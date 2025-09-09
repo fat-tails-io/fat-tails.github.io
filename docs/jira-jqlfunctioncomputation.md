@@ -2,7 +2,7 @@
 title: Precomputations (Apps)
 description: Returns the list of a function's precomputations along with information about when they were created, updated, and last used. Each precomputation has ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Precomputations (Apps)

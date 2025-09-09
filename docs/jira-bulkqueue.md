@@ -6,7 +6,7 @@ description: Use this to get the progress state for the specified bulk operation
 
  *  Global bulk change [perm...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Bulk Issue Operation Progress

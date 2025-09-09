@@ -8,7 +8,7 @@ description: Returns a [paginated](#pagination) list of resolutions. The list ca
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/resolution/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

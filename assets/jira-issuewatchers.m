@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
  *  To see details of users on the watchlist other than themselves, *View voters and watchers* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/watchers
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

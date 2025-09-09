@@ -10,7 +10,7 @@ This operation can be accessed anonymously.
  *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) to get the details of any issue types associated with the projects the user has permission to browse.
 endpoint: /rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

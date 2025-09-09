@@ -4,7 +4,7 @@ description: Returns the workflow-issue type mappings for a workflow scheme's dr
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permissio...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Types For Workflows In Draft Workflow Scheme

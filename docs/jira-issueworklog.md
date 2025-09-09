@@ -4,7 +4,7 @@ description: Returns a worklog.
 
 Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time trac...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Worklog

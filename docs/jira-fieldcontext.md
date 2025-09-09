@@ -2,7 +2,7 @@
 title: Custom Field Contexts
 description: Returns a [paginated](#pagination) list of [ contexts](https://confluence.atlassian.com/adminjiracloud/what-are-custom-field-contexts-991923859.html) ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Custom Field Contexts

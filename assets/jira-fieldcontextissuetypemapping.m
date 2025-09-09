@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of context to issue type ma
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/field/{fieldId}/context/issuetypemapping
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -11,7 +11,7 @@ This operation can be accessed anonymously.
  *  If the comment has visibility restrictions, the user belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/comment/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

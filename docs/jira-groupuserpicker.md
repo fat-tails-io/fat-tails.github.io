@@ -4,7 +4,7 @@ description: Returns a list of users and groups matching a string. The string is
 
  *  for users, to find a case-insensitive match with display name and e-mai...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users And Groups

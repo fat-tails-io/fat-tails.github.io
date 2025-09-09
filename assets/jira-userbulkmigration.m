@@ -5,7 +5,7 @@ description: Returns the account IDs for the users specified in the `key` or `us
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/user/bulk/migration
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

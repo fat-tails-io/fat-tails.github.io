@@ -4,7 +4,7 @@ description: Returns planning settings for a plan-only team.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.at...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Plan-Only Team

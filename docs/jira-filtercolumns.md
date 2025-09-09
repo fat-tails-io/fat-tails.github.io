@@ -2,7 +2,7 @@
 title: Columns
 description: Returns the columns configured for a filter. The column configuration is used when the filter's results are viewed in *List View* with the *Columns* s...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Columns

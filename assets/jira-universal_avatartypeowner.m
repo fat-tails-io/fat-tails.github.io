@@ -12,7 +12,7 @@ This operation can be accessed anonymously.
  *  for priority avatars, none.
 endpoint: /rest/api/3/universal_avatar/type/{type}/owner/{entityId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

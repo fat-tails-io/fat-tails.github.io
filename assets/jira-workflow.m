@@ -9,7 +9,7 @@ If the `workflowName` parameter is specified, the workflow is returned as an obj
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflow
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

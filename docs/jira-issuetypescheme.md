@@ -6,7 +6,7 @@ Only issue type schemes used in classic projects are returned.
 
 **[Permissions](#permi...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Issue Type Schemes

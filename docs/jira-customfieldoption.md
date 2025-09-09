@@ -4,7 +4,7 @@ description: Returns a custom field option. For example, an option in a select l
 
 Note that this operation **only works for issue field select list options cre...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Custom Field Option

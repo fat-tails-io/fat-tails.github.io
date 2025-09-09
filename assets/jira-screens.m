@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of all screens or those spe
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/screens
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

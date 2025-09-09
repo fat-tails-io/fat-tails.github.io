@@ -3,7 +3,7 @@ title: Get Projects Which Are Using A Given Workflow Scheme
 description: Returns a page of projects using a given workflow scheme.
 endpoint: /rest/api/3/workflowscheme/{workflowSchemeId}/projectUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

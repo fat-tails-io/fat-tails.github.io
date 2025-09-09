@@ -2,7 +2,7 @@
 title: Workflow Transition Properties
 description: This will be removed on [June 1, 2026](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-2570); fetch transition properties from [...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Workflow Transition Properties

@@ -19,7 +19,7 @@ This operation can be accessed anonymously.
  *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project, to get users for that project.
 endpoint: /rest/api/3/user/permission/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

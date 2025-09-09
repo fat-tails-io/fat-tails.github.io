@@ -4,7 +4,7 @@ description: Returns a list of users who can be assigned issues in one or more p
 
 This...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users Assignable To Projects

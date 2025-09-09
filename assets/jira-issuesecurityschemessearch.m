@@ -8,7 +8,7 @@ Only issue security schemes in the context of classic projects are returned.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

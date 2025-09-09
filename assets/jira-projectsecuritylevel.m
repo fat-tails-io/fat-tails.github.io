@@ -7,7 +7,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
 endpoint: /rest/api/3/project/{projectKeyOrId}/securitylevel
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

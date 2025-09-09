@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) mapping of project that have not
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/notificationscheme/project
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

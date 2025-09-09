@@ -4,7 +4,7 @@ description: Returns the value of a user's property. If no property key is provi
 
 Note:...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User Property

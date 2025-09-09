@@ -4,7 +4,7 @@ description: Gets the [permission scheme](https://confluence.atlassian.com/x/yod
 
 **[Permissions](#permissions) required:** *Admin...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Assigned Permission Scheme

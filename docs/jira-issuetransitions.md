@@ -4,7 +4,7 @@ description: Returns either all transitions or a transition that can be performe
 
 Note, if a request is made...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Transitions

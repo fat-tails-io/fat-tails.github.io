@@ -3,7 +3,7 @@ title: Get Project Features
 description: Returns the list of features for a project.
 endpoint: /rest/api/3/project/{projectIdOrKey}/features
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

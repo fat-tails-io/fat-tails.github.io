@@ -2,7 +2,7 @@
 title: Custom Field Configurations
 description: Returns a [paginated](#pagination) list of configurations for a custom field of a [type](https://developer.atlassian.com/platform/forge/manifest-refer...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Custom Field Configurations

@@ -14,7 +14,7 @@ When a task has finished, this operation returns the JSON blob applicable to the
  *  Creator of the task.
 endpoint: /rest/api/3/task/{taskId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

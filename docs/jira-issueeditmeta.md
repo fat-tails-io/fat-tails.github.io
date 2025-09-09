@@ -2,7 +2,7 @@
 title: Edit Issue Metadata
 description: Returns the edit screen fields for an issue that are visible to and editable by the user. Use the information to populate the requests in [Edit issue]...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Edit Issue Metadata

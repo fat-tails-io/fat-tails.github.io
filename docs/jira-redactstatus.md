@@ -6,7 +6,7 @@ The jobStatus will be one of the following:
 
  *  IN\_PROGRESS - The redaction job is currently in...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Redaction Status

@@ -6,7 +6,7 @@ Only issue type scheme items used in classic projects are returned.
 
 **[Permissio...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Type Scheme Items

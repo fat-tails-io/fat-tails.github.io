@@ -4,7 +4,7 @@ description: Returns the attachment settings, that is, whether attachments are e
 
 Note that there are also [project ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Jira Attachment Settings

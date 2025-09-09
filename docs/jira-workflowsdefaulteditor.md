@@ -2,7 +2,7 @@
 title: The User'S Default Workflow Editor
 description: Get the user's default workflow editor. This can be either the new editor or the legacy editor.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # The User'S Default Workflow Editor

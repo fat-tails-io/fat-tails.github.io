@@ -14,7 +14,7 @@ This operation can be accessed anonymously.
 However, if the user does not have the *Transition issues* [ project permission](https://confluence.atlassian.com/x/yodKLg) the response will not list any transitions.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/transitions
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -5,7 +5,7 @@ description: Returns the default workflow for a workflow scheme. The default wor
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflowscheme/{id}/default
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

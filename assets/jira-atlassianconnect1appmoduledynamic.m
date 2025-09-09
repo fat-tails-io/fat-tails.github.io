@@ -5,7 +5,7 @@ description: Returns all modules registered dynamically by the calling app.
 **[Permissions](#permissions) required:** Only Connect apps can make this request.
 endpoint: /rest/atlassian-connect/1/app/module/dynamic
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

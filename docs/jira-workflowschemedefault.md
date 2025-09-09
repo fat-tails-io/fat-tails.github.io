@@ -2,7 +2,7 @@
 title: Default Workflow
 description: Returns the default workflow for a workflow scheme. The default workflow is the workflow that is assigned any issue types that have not been mapped to...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Default Workflow

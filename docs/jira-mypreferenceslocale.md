@@ -4,7 +4,7 @@ description: Returns the locale for the user.
 
 If the user has no language preference set (which is the default setting) or this resource is accessed anonymous, th...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Locale

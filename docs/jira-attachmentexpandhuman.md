@@ -2,7 +2,7 @@
 title: All Metadata For An Expanded Attachment
 description: Returns the metadata for the contents of an attachment, if it is an archive, and metadata for the attachment itself. For example, if the attachment is...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Metadata For An Expanded Attachment

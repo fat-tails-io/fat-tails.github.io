@@ -5,7 +5,7 @@ description: Gets a [notification scheme](https://confluence.atlassian.com/x/8Yd
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/notificationscheme
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

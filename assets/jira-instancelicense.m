@@ -5,7 +5,7 @@ description: Returns licensing information about the Jira instance.
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/instance/license
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -6,7 +6,7 @@ description: Returns an issue security scheme along with its security levels.
 
  *  *Administer Jira* [global permission]...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Security Scheme

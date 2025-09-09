@@ -6,7 +6,7 @@ To use this operation, the site must have [issue linking](https://confluence.atl
 
 This operat...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Link Type

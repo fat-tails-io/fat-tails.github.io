@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** The user must have read permission of the dashboard or have the dashboard shared with them.
 endpoint: /rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of projects by scheme.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priorityscheme/{schemeId}/projects
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -8,7 +8,7 @@ description: Returns all permissions, including:
 
 This operation can be ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Permissions

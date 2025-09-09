@@ -2,7 +2,7 @@
 title: Draft Workflow Scheme
 description: Returns the draft workflow scheme for an active workflow scheme. Draft workflow schemes allow changes to be made to the active workflow schemes: When ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Draft Workflow Scheme

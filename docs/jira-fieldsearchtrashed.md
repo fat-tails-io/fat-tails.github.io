@@ -2,7 +2,7 @@
 title: Fields In Trash Paginated
 description: Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Fields In Trash Paginated

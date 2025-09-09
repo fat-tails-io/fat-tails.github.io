@@ -5,7 +5,7 @@ description: Returns an issue priority.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priority/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

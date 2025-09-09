@@ -5,7 +5,7 @@ description: Returns planning settings for a plan-only team.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}/team/planonly/{planOnlyTeamId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

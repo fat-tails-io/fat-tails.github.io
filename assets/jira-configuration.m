@@ -5,7 +5,7 @@ description: Returns the [global settings](https://confluence.atlassian.com/x/qY
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/configuration
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

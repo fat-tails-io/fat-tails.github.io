@@ -5,7 +5,7 @@ description: Returns the [default actors](#api-rest-api-3-resolution-get) for th
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/role/{id}/actors
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

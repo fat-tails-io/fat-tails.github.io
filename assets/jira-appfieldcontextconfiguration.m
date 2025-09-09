@@ -14,7 +14,7 @@ Otherwise, all configurations are returned.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the Forge app that provided the custom field type.
 endpoint: /rest/api/3/app/field/{fieldIdOrKey}/context/configuration
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

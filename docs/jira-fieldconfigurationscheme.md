@@ -6,7 +6,7 @@ Only field configuration schemes used in classic projects are returned.
 
 **[P...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Field Configuration Schemes

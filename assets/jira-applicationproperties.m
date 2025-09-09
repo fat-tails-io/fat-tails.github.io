@@ -7,7 +7,7 @@ If you specify a value for the `key` parameter, then an application property is 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/application-properties
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

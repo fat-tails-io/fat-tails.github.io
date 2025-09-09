@@ -4,7 +4,7 @@ description: Returns a workflow scheme.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg)...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Workflow Scheme

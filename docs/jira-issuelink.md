@@ -8,7 +8,7 @@ This operation can be accessed anonymously.
 
  *  *Browse project* [project permissi...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Link

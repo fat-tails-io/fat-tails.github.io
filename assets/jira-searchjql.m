@@ -10,7 +10,7 @@ If the JQL query expression is too large to be encoded as a query parameter, use
  *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 endpoint: /rest/api/3/search/jql
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -5,7 +5,7 @@ description: Returns system and custom issue fields according to the following r
  *  Fields that cannot be added to the issue navigator are always returned.
 ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Fields

@@ -11,7 +11,7 @@ This operation can be accessed anonymously.
  *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/comment/{commentId}/properties/{propertyKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

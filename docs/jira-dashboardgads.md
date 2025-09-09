@@ -4,7 +4,7 @@ description: Gets a list of all available gadgets that can be added to all dashb
 
 **[Permissions](#permissions) required:** None.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Available Gadgets

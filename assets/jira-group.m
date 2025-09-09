@@ -10,7 +10,7 @@ Returns all users in a group.
  *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

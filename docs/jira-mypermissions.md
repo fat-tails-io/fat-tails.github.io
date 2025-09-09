@@ -2,7 +2,7 @@
 title: My Permissions
 description: Returns a list of permissions indicating which permissions the user has. Details of the user's permissions can be obtained in a global, project, issue...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # My Permissions

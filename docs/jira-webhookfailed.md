@@ -4,7 +4,7 @@ description: Returns webhooks that have recently failed to be delivered to the r
 
 After 72 hours the failure may ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Failed Webhooks

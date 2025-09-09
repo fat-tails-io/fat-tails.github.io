@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of the contexts a field is 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/field/{fieldId}/contexts
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

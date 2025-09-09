@@ -9,7 +9,7 @@ Filtering using IDs is inclusive: if you specify both security scheme IDs and le
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/level
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

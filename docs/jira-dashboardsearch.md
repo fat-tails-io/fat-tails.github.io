@@ -2,7 +2,7 @@
 title: Search For Dashboards
 description: Returns a [paginated](#pagination) list of dashboards. This operation is similar to [Get dashboards](#api-rest-api-3-dashboard-get) except that the re...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search For Dashboards

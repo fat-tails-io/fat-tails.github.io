@@ -2,7 +2,7 @@
 title: Workflow Transition Rule Configurations
 description: Returns a [paginated](#pagination) list of workflows with transition rules. The workflows can be filtered to return only those containing workflow tra...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Workflow Transition Rule Configurations

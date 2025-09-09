@@ -2,7 +2,7 @@
 title: Create Field Metadata For A Project And Issue Type Id
 description: Returns a page of field metadata for a specified project and issuetype id. Use the information to populate the requests in [ Create issue](#api-rest-a...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Create Field Metadata For A Project And Issue Type Id

@@ -5,7 +5,7 @@ description: Gets the [permission scheme](https://confluence.atlassian.com/x/yod
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/permissionscheme
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

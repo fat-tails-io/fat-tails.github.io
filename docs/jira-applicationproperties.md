@@ -4,7 +4,7 @@ description: Returns all application properties or an application property.
 
 If you specify a value for the `key` parameter, then an application property is return...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Application Property

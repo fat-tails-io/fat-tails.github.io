@@ -7,7 +7,7 @@ Only company-managed projects associated with an issue type screen scheme are re
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/project
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

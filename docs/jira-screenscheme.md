@@ -6,7 +6,7 @@ Only screen schemes used in classic projects are returned.
 
 **[Permissions](#permissions) ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Screen Schemes

@@ -19,7 +19,7 @@ Use [ Update a user profile](https://developer.atlassian.com/cloud/admin/user-ma
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/mypreferences
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

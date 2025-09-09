@@ -6,7 +6,7 @@ Note that these keys are deprecated:
 
  *  *jira.user.locale* The locale of the user. By defaul...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Preference

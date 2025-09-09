@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of the users specified by o
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/user/bulk
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

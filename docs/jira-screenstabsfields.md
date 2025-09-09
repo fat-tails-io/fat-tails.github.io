@@ -6,7 +6,7 @@ description: Returns all fields for a screen tab.
 
  *  *Administer Jira* [global permission](https://confluence.atlassia...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Screen Tab Fields

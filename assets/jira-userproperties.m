@@ -10,7 +10,7 @@ Note: This operation does not access the [user properties](https://confluence.at
  *  Access to Jira, to get a property from the calling user's record.
 endpoint: /rest/api/3/user/properties/{propertyKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

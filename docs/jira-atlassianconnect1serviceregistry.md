@@ -4,7 +4,7 @@ description: Retrieve the attributes of given service registries.
 
 **[Permissions](#permissions) required:** Only Connect apps can make this request and the servic...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Retrieve The Attributes Of Service Registries

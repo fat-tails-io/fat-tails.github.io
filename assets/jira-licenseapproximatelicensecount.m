@@ -5,7 +5,7 @@ description: Returns the approximate number of user accounts across all Jira lic
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/license/approximateLicenseCount
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

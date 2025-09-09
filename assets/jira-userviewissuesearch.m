@@ -19,7 +19,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). Anonymous calls and calls by users without the required permission return empty search results.
 endpoint: /rest/api/3/user/viewissue/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

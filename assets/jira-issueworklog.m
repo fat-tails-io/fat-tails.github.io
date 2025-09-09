@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
  *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/worklog/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

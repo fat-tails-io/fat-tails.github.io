@@ -533,7 +533,7 @@ Parameters:
  *  `id` the ID of the Forge rule
 endpoint: /rest/api/3/workflows/capabilities
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

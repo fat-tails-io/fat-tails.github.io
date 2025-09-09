@@ -2,7 +2,7 @@
 title: Search Resolutions
 description: Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criter...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search Resolutions

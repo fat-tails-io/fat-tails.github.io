@@ -9,7 +9,7 @@ description: Returns a [paginated](#pagination) list of priorities. The list can
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priority/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

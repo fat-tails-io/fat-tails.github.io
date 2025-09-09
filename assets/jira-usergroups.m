@@ -5,7 +5,7 @@ description: Returns the groups to which a user belongs.
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/user/groups
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

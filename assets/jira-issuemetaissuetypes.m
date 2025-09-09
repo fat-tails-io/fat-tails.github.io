@@ -7,7 +7,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Create issues* [project permission](https://confluence.atlassian.com/x/yodKLg) in the requested projects.
 endpoint: /rest/api/3/issue/createmeta/{projectIdOrKey}/issuetypes/{issueTypeId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

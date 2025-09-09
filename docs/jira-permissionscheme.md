@@ -4,7 +4,7 @@ description: Returns a permission scheme.
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Permission Scheme

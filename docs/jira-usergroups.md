@@ -4,7 +4,7 @@ description: Returns the groups to which a user belongs.
 
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluenc...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User Groups

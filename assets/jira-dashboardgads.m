@@ -5,7 +5,7 @@ description: Gets a list of all available gadgets that can be added to all dashb
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/dashboard/gadgets
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

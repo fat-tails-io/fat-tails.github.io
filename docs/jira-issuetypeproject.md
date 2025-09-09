@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permissions) required:** *Browse projects* [project ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Types For Project

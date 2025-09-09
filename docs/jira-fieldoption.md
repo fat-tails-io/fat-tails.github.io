@@ -4,7 +4,7 @@ description: Returns an option from a select list issue field.
 
 Note that this operation **only works for issue field select list options added by Connect apps**, ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Field Option

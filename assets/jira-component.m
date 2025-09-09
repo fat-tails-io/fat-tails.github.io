@@ -7,7 +7,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for project containing the component.
 endpoint: /rest/api/3/component/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

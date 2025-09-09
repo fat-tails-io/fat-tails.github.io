@@ -4,7 +4,7 @@ description: Validates a project key by confirming the key is a valid string and
 
 **[Permissions](#permissions) required:** None.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Validate Project Key

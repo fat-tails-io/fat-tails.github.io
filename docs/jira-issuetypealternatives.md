@@ -2,7 +2,7 @@
 title: Alternative Issue Types
 description: Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Alternative Issue Types

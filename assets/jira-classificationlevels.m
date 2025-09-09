@@ -5,7 +5,7 @@ description: Returns all classification levels.
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/classification-levels
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

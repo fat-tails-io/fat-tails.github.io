@@ -7,7 +7,7 @@ Note that this operation **only works for issue field select list options added 
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/field/{fieldKey}/option/suggestions/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

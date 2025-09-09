@@ -5,7 +5,7 @@ description: Validates a project key and, if the key is invalid or in use, gener
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/validProjectKey
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

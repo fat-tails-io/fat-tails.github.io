@@ -4,7 +4,7 @@ description: Returns the [default actors](#api-rest-api-3-resolution-get) for th
 
 **[Permissions](#permissions) required:** *Administer Jira* [globa...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Default Actors For Project Role

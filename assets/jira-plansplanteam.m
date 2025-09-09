@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of plan-only and Atlassian 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}/team
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

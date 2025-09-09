@@ -4,7 +4,7 @@ description: Returns a list of audit records. The list can be filtered to includ
 
  *  where each item in `filter` has at least one match in any of these fi...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Audit Records

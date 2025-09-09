@@ -4,7 +4,7 @@ description: Returns the filters owned by the user. If `includeFavourites` is `t
 
 **[Permissions](#perm...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # My Filters

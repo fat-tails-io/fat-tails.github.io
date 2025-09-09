@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permissions) required:** A favorite f...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Favorite Filters

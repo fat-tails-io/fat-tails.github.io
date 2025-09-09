@@ -2,7 +2,7 @@
 title: Project Components Paginated
 description: Returns a [paginated](#pagination) list of all components in a project. See the [Get project components](#api-rest-api-3-project-projectIdOrKey-compon...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Project Components Paginated

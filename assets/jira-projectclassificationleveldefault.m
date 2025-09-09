@@ -9,7 +9,7 @@ description: Returns the default data classification for a project.
  *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/project/{projectIdOrKey}/classification-level/default
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

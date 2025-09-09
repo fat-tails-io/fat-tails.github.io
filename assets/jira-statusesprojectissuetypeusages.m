@@ -3,7 +3,7 @@ title: Get Issue Type Usages By Status And Project
 description: Returns a page of issue types in a project using a given status.
 endpoint: /rest/api/3/statuses/{statusId}/project/{projectId}/issueTypeUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

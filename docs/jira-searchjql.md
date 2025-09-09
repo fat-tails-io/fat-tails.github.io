@@ -2,7 +2,7 @@
 title: Search For Issues Using Jql Enhanced Search (Get)
 description: Searches for issues using [JQL](https://confluence.atlassian.com/x/egORLQ). Recent updates might not be immediately visible in the returned search res...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search For Issues Using Jql Enhanced Search (Get)

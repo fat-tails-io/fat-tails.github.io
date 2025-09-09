@@ -10,7 +10,7 @@ This operation can be accessed anonymously.
  *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, permission to view both of the issues.
 endpoint: /rest/api/3/issueLink/{linkId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

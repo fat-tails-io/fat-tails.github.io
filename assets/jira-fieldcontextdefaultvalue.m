@@ -37,7 +37,7 @@ Forge custom fields [types](https://developer.atlassian.com/platform/forge/manif
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/field/{fieldId}/context/defaultValue
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

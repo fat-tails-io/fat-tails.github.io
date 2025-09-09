@@ -4,7 +4,7 @@ description: Returns details about the votes on an issue.
 
 This operation requires the **Allow users to vote on issues** option to be *ON*. This option is set in G...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Votes

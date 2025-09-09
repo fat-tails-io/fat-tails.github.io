@@ -14,7 +14,7 @@ This operation can be accessed anonymously.
 Note that users with the necessary permissions for this operation but without the *View voters and watchers* project permissions are not returned details in the `voters` field.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/votes
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

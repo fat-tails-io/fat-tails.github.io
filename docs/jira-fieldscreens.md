@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of the screens a field is u
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permis...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Screens For A Field

@@ -4,7 +4,7 @@ description: Returns licensing information about the Jira instance.
 
 **[Permissions](#permissions) required:** None.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # License
