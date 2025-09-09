@@ -2,6 +2,7 @@
 title: Projects Using Notification Schemes Paginated
 description: Returns a [paginated](#pagination) mapping of project that have notification scheme assigned. You can provide either one or multiple notification sche...
 nav_order: 999
+draft: true
 ---
 
 # Projects Using Notification Schemes Paginated

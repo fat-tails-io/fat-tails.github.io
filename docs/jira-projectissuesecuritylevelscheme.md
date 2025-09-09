@@ -4,6 +4,7 @@ description: Returns the [issue security scheme](https://confluence.atlassian.co
 
 **[Permissions](#permissions) required:**...
 nav_order: 999
+draft: true
 ---
 
 # Project Issue Security Scheme

@@ -2,6 +2,7 @@
 title: Issue Types In A Project That Are Using A Given Workflow
 description: Returns a page of issue types using a given workflow within a project.
 nav_order: 999
+draft: true
 ---
 
 # Issue Types In A Project That Are Using A Given Workflow

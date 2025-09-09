@@ -4,6 +4,7 @@ description: Returns the [project's sender email address](https://confluence.atl
 
 **[Permissions](#permissions) required:** *Browse projects* ...
 nav_order: 999
+draft: true
 ---
 
 # Project'S Sender Email

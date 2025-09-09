@@ -2,6 +2,7 @@
 title: Project Components
 description: Returns all components in a project. See the [Get project components paginated](#api-rest-api-3-project-projectIdOrKey-component-get) resource if you ...
 nav_order: 999
+draft: true
 ---
 
 # Project Components

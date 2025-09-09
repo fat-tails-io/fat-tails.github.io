@@ -6,6 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permissions) require...
 nav_order: 999
+draft: true
 ---
 
 # All Project Avatars
