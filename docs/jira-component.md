@@ -14,7 +14,7 @@ published: false
 ## Purpose
 Analyze project components and their associated issues for better project organization understanding
 
-## When to Use
+## When to Use..
 When you need this specific data point for project analysis or reporting requirements
 
 ## Key Data Points
