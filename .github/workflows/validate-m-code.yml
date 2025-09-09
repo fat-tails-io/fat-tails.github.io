@@ -1,0 +1,198 @@
+name: Validate M Code Quality
+
+on:
+  # Run on pull requests that modify M code files
+  pull_request:
+    paths:
+      - 'assets/*.m'
+      - 'collections/generator.py'
+      - 'collections/templates/*.template'
+      - '.cursor/rules/api-generation-rules.mdc'
+  
+  # Run on pushes to main that include M code
+  push:
+    branches: [ main ]
+    paths:
+      - 'assets/*.m'
+
+  # Allow manual validation
+  workflow_dispatch:
+
+jobs:
+  validate-m-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Validate M Code Files
+      run: |
+        echo "🔍 Starting M code validation..."
+        
+        # Count M code files
+        M_FILES_COUNT=$(find assets -name "*.m" | wc -l)
+        echo "📊 Found $M_FILES_COUNT M code files"
+        
+        # Validation counters
+        VALID_FILES=0
+        INVALID_FILES=0
+        WARNINGS=0
+        
+        # Create validation report
+        echo "## 🔍 M Code Validation Report" > validation-report.md
+        echo "" >> validation-report.md
+        echo "**Total Files**: $M_FILES_COUNT" >> validation-report.md
+        echo "" >> validation-report.md
+        
+        # Validate each M code file
+        for file in assets/*.m; do
+          if [ -f "$file" ]; then
+            echo "Validating: $file"
+            
+            # Check for required front matter
+            if ! head -10 "$file" | grep -q "draft: true"; then
+              echo "❌ Missing 'draft: true' in front matter: $file"
+              echo "- ❌ **$(basename $file)**: Missing 'draft: true' in front matter" >> validation-report.md
+              ((INVALID_FILES++))
+              continue
+            fi
+            
+            # Check for required authentication setup
+            if ! grep -q "ConfigTable = Excel.CurrentWorkbook" "$file"; then
+              echo "❌ Missing authentication setup: $file"
+              echo "- ❌ **$(basename $file)**: Missing authentication setup" >> validation-report.md
+              ((INVALID_FILES++))
+              continue
+            fi
+            
+            # Check for function naming convention
+            if ! grep -q "// Create this with query name: Jira" "$file"; then
+              echo "⚠️ Function naming may not follow convention: $file"
+              echo "- ⚠️ **$(basename $file)**: Function naming may not follow convention" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            # Check for deep JSON expansion
+            if ! grep -q "ExpandAllRecords" "$file"; then
+              echo "⚠️ Missing deep JSON expansion: $file"
+              echo "- ⚠️ **$(basename $file)**: Missing deep JSON expansion" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            # Check for proper endpoint documentation
+            if ! grep -q "API Endpoint:" "$file"; then
+              echo "⚠️ Missing API endpoint documentation: $file"
+              echo "- ⚠️ **$(basename $file)**: Missing API endpoint documentation" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            echo "✅ Validated: $file"
+            ((VALID_FILES++))
+          fi
+        done
+        
+        # Add summary to report
+        echo "" >> validation-report.md
+        echo "### 📊 Validation Summary" >> validation-report.md
+        echo "- ✅ **Valid files**: $VALID_FILES" >> validation-report.md
+        echo "- ❌ **Invalid files**: $INVALID_FILES" >> validation-report.md
+        echo "- ⚠️ **Warnings**: $WARNINGS" >> validation-report.md
+        
+        # Set outputs for other steps
+        echo "valid_files=$VALID_FILES" >> $GITHUB_OUTPUT
+        echo "invalid_files=$INVALID_FILES" >> $GITHUB_OUTPUT
+        echo "warnings=$WARNINGS" >> $GITHUB_OUTPUT
+        
+        # Display results
+        echo "🎯 Validation completed:"
+        echo "  ✅ Valid files: $VALID_FILES"
+        echo "  ❌ Invalid files: $INVALID_FILES"
+        echo "  ⚠️ Warnings: $WARNINGS"
+        
+        # Fail if there are invalid files
+        if [ $INVALID_FILES -gt 0 ]; then
+          echo "💥 Validation failed due to invalid files"
+          exit 1
+        fi
+      id: validate
+
+    - name: Check Rules Compliance
+      run: |
+        echo "📋 Checking compliance with api-generation-rules.mdc..."
+        
+        # Check if all M files follow GET-only rule
+        NON_GET_FILES=$(grep -l "POST\|PUT\|DELETE\|PATCH" assets/*.m | wc -l || echo "0")
+        
+        if [ "$NON_GET_FILES" -gt 0 ]; then
+          echo "❌ Found $NON_GET_FILES files with non-GET methods (violates rule #20)"
+          echo "" >> validation-report.md
+          echo "### ❌ Rules Compliance Issues" >> validation-report.md
+          echo "- Found $NON_GET_FILES files with non-GET methods (violates rule #20)" >> validation-report.md
+          exit 1
+        fi
+        
+        # Check for proper file naming convention
+        INVALID_NAMES=$(find assets -name "*.m" ! -name "jira-*.m" | wc -l)
+        
+        if [ "$INVALID_NAMES" -gt 0 ]; then
+          echo "⚠️ Found $INVALID_NAMES files not following naming convention"
+          echo "- ⚠️ Found $INVALID_NAMES files not following jira-*.m naming convention" >> validation-report.md
+        fi
+        
+        echo "✅ Rules compliance check completed"
+
+    - name: Generate Quality Metrics
+      run: |
+        echo "📈 Generating quality metrics..."
+        
+        # Calculate metrics
+        TOTAL_LINES=$(find assets -name "*.m" -exec wc -l {} + | tail -1 | awk '{print $1}')
+        AVG_FILE_SIZE=$(echo "scale=0; $TOTAL_LINES / ${{ steps.validate.outputs.valid_files }}" | bc -l 2>/dev/null || echo "0")
+        
+        # Files with authentication
+        AUTH_FILES=$(grep -l "ConfigTable = Excel.CurrentWorkbook" assets/*.m | wc -l)
+        AUTH_PERCENTAGE=$(echo "scale=1; $AUTH_FILES * 100 / ${{ steps.validate.outputs.valid_files }}" | bc -l 2>/dev/null || echo "0")
+        
+        # Files with deep expansion
+        EXPANSION_FILES=$(grep -l "ExpandAllRecords" assets/*.m | wc -l)
+        EXPANSION_PERCENTAGE=$(echo "scale=1; $EXPANSION_FILES * 100 / ${{ steps.validate.outputs.valid_files }}" | bc -l 2>/dev/null || echo "0")
+        
+        echo "" >> validation-report.md
+        echo "### 📈 Quality Metrics" >> validation-report.md
+        echo "- **Total lines of code**: $TOTAL_LINES" >> validation-report.md
+        echo "- **Average file size**: $AVG_FILE_SIZE lines" >> validation-report.md
+        echo "- **Files with authentication**: $AUTH_FILES ($AUTH_PERCENTAGE%)" >> validation-report.md
+        echo "- **Files with deep expansion**: $EXPANSION_FILES ($EXPANSION_PERCENTAGE%)" >> validation-report.md
+        
+        echo "📊 Quality metrics generated"
+
+    - name: Upload validation report
+      uses: actions/upload-artifact@v3
+      with:
+        name: m-code-validation-report
+        path: validation-report.md
+
+    - name: Add validation summary to step
+      run: |
+        cat validation-report.md >> $GITHUB_STEP_SUMMARY
+
+    - name: Comment on PR (if applicable)
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const report = fs.readFileSync('validation-report.md', 'utf8');
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `## 🤖 M Code Validation Results\n\n${report}`
+          });

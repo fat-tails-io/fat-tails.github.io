@@ -1,0 +1,58 @@
+---
+title: {{TITLE}}
+description: {{DESCRIPTION}}
+endpoint: {{ENDPOINT}}
+method: {{METHOD}}
+draft: true
+---
+
+// -----------------------------------------------------------------------------
+// {{FUNCTION_NAME}}
+// Description: {{DESCRIPTION}}
+// API Endpoint: {{METHOD}} {{ENDPOINT}}
+// Create this with query name: {{FUNCTION_NAME}}
+// -----------------------------------------------------------------------------
+({{PARAMETERS}}) =>
+let
+    // CONFIGURATION setup. 
+    // Reference the table in current workbook
+    ConfigTable = Excel.CurrentWorkbook(){[Name="Parameters"]}[Content],
+    
+    // Convert to a lookup record
+    ConfigRecord = Record.FromList(
+        ConfigTable[Value], 
+        ConfigTable[Parameter]
+    ),
+    
+    // Extract specific config values
+    JiraBaseUrl = ConfigRecord[JiraBaseUrl],
+    UserEmail = ConfigRecord[UserEmail],
+    ApiToken = ConfigRecord[ApiToken],
+    ApiVersion = ConfigRecord[ApiVersion],
+    
+    // AUTHENTICATION setup
+    Credentials = Text.ToBinary(UserEmail & ":" & ApiToken),
+    EncodedCredentials = Binary.ToText(Credentials, BinaryEncoding.Base64),
+    Headers = [
+        #"Authorization" = "Basic " & EncodedCredentials,
+        #"Accept" = "application/json", 
+        #"Content-Type" = "application/json"
+    ],
+    
+    {{QUERY_PARAMS_SECTION}}
+    
+    // Build URL
+    BaseUrl = JiraBaseUrl & "{{ENDPOINT_PATH}}",
+    {{URL_BUILDING_SECTION}}
+    
+    // Make API call
+    Response = Web.Contents(FullUrl, [Headers = Headers]),
+    JsonResponse = Json.Document(Response),
+    
+    {{DATA_PROCESSING_SECTION}}
+    
+in
+    {{RETURN_VALUE}}
+
+
+

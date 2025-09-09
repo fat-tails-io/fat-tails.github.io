@@ -1,0 +1,80 @@
+---
+title: {{TITLE}}
+description: {{DESCRIPTION}}
+endpoint: {{ENDPOINT}}
+method: {{METHOD}}
+draft: true
+---
+
+// -----------------------------------------------------------------------------
+// {{FUNCTION_NAME}}
+// Description: {{DESCRIPTION}} with automatic pagination handling
+// API Endpoint: {{METHOD}} {{ENDPOINT}}
+// Create this with query name: {{FUNCTION_NAME}}
+// -----------------------------------------------------------------------------
+({{PARAMETERS}}) =>
+let
+    // CONFIGURATION setup. 
+    // Reference the table in current workbook
+    ConfigTable = Excel.CurrentWorkbook(){[Name="Parameters"]}[Content],
+    
+    // Convert to a lookup record
+    ConfigRecord = Record.FromList(
+        ConfigTable[Value], 
+        ConfigTable[Parameter]
+    ),
+    
+    // Extract specific config values
+    JiraBaseUrl = ConfigRecord[JiraBaseUrl],
+    UserEmail = ConfigRecord[UserEmail],
+    ApiToken = ConfigRecord[ApiToken],
+    ApiVersion = ConfigRecord[ApiVersion],
+    
+    // AUTHENTICATION setup
+    Credentials = Text.ToBinary(UserEmail & ":" & ApiToken),
+    EncodedCredentials = Binary.ToText(Credentials, BinaryEncoding.Base64),
+    Headers = [
+        #"Authorization" = "Basic " & EncodedCredentials,
+        #"Accept" = "application/json", 
+        #"Content-Type" = "application/json"
+    ],
+    
+    // Pagination function
+    GetAllPages = (startAt as number) =>
+        let
+            {{QUERY_PARAMS_SECTION}}
+            
+            // Build URL with pagination
+            BaseUrl = JiraBaseUrl & "{{ENDPOINT_PATH}}",
+            {{URL_BUILDING_SECTION}}
+            
+            // Make API call
+            Response = Web.Contents(FullUrl, [Headers = Headers]),
+            JsonResponse = Json.Document(Response),
+            
+            // Extract data and pagination info
+            CurrentData = JsonResponse[{{DATA_FIELD}}],
+            Total = JsonResponse[total],
+            MaxResults = JsonResponse[maxResults],
+            StartAt = JsonResponse[startAt],
+            
+            // Recursively get next page if needed
+            NextPage = if StartAt + MaxResults < Total then
+                @GetAllPages(StartAt + MaxResults)
+            else {},
+            
+            // Combine current page with next pages
+            AllData = CurrentData & NextPage
+        in
+            AllData,
+    
+    // Get all data starting from page 0
+    AllResults = GetAllPages(0),
+    
+    {{DATA_PROCESSING_SECTION}}
+    
+in
+    {{RETURN_VALUE}}
+
+
+

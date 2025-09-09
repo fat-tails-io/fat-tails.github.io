@@ -1,0 +1,151 @@
+name: Generate M Code from API Collection
+
+on:
+  # Trigger when API collection file changes
+  push:
+    paths:
+      - 'collections/atlassian-api.json'
+      - 'collections/generator.py'
+      - 'collections/templates/*.template'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      categories:
+        description: 'Endpoint categories to generate (space-separated, e.g., "Projects Issues")'
+        required: false
+        default: ''
+        type: string
+      force_regenerate:
+        description: 'Force regeneration of all M code files'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  generate-m-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Add any additional dependencies if needed
+        # pip install -r requirements.txt
+
+    - name: Generate M Code files
+      run: |
+        cd collections
+        echo "🚀 Starting M code generation..."
+        
+        # Check if categories were specified
+        if [ -n "${{ github.event.inputs.categories }}" ]; then
+          echo "📂 Generating for categories: ${{ github.event.inputs.categories }}"
+          python3 generator.py --categories ${{ github.event.inputs.categories }}
+        else
+          echo "📂 Generating for all categories"
+          python3 generator.py
+        fi
+        
+        echo "✅ M code generation completed"
+
+    - name: Check for changes
+      id: git-check
+      run: |
+        cd assets
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "📝 Changes detected in generated M code files"
+          git status --short
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "ℹ️ No changes in generated M code files"
+        fi
+
+    - name: Commit and push changes
+      if: steps.git-check.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - M Code Generator"
+        
+        # Add all new and modified M code files
+        git add assets/*.m
+        
+        # Count files
+        NEW_FILES=$(git diff --cached --name-only --diff-filter=A | wc -l)
+        MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=M | wc -l)
+        
+        # Create commit message
+        CATEGORIES_MSG=""
+        if [ -n "${{ github.event.inputs.categories }}" ]; then
+          CATEGORIES_MSG="- Categories: ${{ github.event.inputs.categories }}"
+        else
+          CATEGORIES_MSG="- Categories: All categories"
+        fi
+        
+        COMMIT_MSG="🤖 Auto-generate M code files
+
+        📊 Summary:
+        - New M code files: $NEW_FILES
+        - Modified M code files: $MODIFIED_FILES
+        - Generated from: collections/atlassian-api.json
+        $CATEGORIES_MSG
+        - Generator version: $(date +'%Y-%m-%d %H:%M:%S')
+        
+        🔍 Files updated:
+        $(git diff --cached --name-only | sed 's/^/- /')"
+        
+        git commit -m "$COMMIT_MSG"
+        git push
+
+    - name: Create summary
+      run: |
+        echo "## 🤖 M Code Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.git-check.outputs.changes }}" == "true" ]; then
+          echo "✅ **Status**: Changes detected and committed" >> $GITHUB_STEP_SUMMARY
+          echo "📁 **Location**: \`assets/\` directory" >> $GITHUB_STEP_SUMMARY
+          echo "🔄 **Trigger**: API collection or generator updates" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **Status**: No changes detected" >> $GITHUB_STEP_SUMMARY
+          echo "🎯 **Reason**: Generated M code matches existing files" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 Generation Details" >> $GITHUB_STEP_SUMMARY
+        echo "- **Source**: \`collections/atlassian-api.json\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Generator**: \`collections/generator.py\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Templates**: \`collections/templates/\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Rules**: Following \`.cursor/rules/api-generation-rules.mdc\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Scope**: GET endpoints only (264 total)" >> $GITHUB_STEP_SUMMARY
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🎯 Next Steps" >> $GITHUB_STEP_SUMMARY
+        echo "- Generated M code files are ready for use in Power Query" >> $GITHUB_STEP_SUMMARY
+        echo "- Each file includes authentication setup and deep JSON expansion" >> $GITHUB_STEP_SUMMARY
+        echo "- Files are marked with \`draft: true\` in front matter" >> $GITHUB_STEP_SUMMARY
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "## ❌ M Code Generation Failed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The automated M code generation process encountered an error." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔍 Troubleshooting" >> $GITHUB_STEP_SUMMARY
+        echo "1. Check the API collection file format (\`collections/atlassian-api.json\`)" >> $GITHUB_STEP_SUMMARY
+        echo "2. Verify generator script syntax (\`collections/generator.py\`)" >> $GITHUB_STEP_SUMMARY
+        echo "3. Ensure all templates are present (\`collections/templates/\`)" >> $GITHUB_STEP_SUMMARY
+        echo "4. Review the action logs for specific error details" >> $GITHUB_STEP_SUMMARY
