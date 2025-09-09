@@ -70,6 +70,7 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
     - assets/README.md
+    - collections/README.md
 
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "/assets/images/fat-tails-favicon-32x32.png"
