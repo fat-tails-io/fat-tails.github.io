@@ -393,15 +393,136 @@ class MCodeGenerator:
     // Apply intelligent deep expansion to all nested structures
     FinalTable = ExpandAllRecords(ExpandedTable, 3)'''
     
-    def generate_file(self, endpoint: EndpointInfo) -> tuple[str, str]:
-        """Generate M code file for an endpoint"""
+    def generate_business_context(self, endpoint: EndpointInfo, category: str) -> dict:
+        """Generate business context for documentation based on endpoint and category"""
+        
+        # Business context templates by category
+        context_templates = {
+            'Projects': {
+                'purpose': 'Retrieve essential project information for management oversight and analysis',
+                'when_to_use': 'When you need to analyze project performance, track project metrics, or generate executive reports on project portfolio health',
+                'analysis_value': 'Enables forensic analysis of project setup, configuration, and performance metrics. Critical for understanding project success factors and identifying patterns in high-performing vs struggling projects',
+                'usage_examples': '• Executive dashboard showing project health across portfolio\n• Project audit reports for compliance\n• Resource allocation analysis by project\n• Project timeline and milestone tracking'
+            },
+            'Issues': {
+                'purpose': 'Access detailed issue data for project analysis and performance tracking',
+                'when_to_use': 'When conducting deep-dive analysis of project delivery, identifying bottlenecks, or measuring team productivity and issue resolution patterns',
+                'analysis_value': 'Provides granular insights into project execution, enabling identification of process inefficiencies, resource constraints, and quality patterns that impact project success',
+                'usage_examples': '• Burndown analysis and sprint performance\n• Issue aging and resolution time analysis\n• Quality metrics and defect tracking\n• Team productivity and workload analysis'
+            },
+            'Users': {
+                'purpose': 'Understand team composition, roles, and user activity patterns',
+                'when_to_use': 'When analyzing team performance, resource allocation, or conducting organizational analysis of project contributions',
+                'analysis_value': 'Enables analysis of human resource utilization, identifies key contributors, and supports capacity planning and team optimization decisions',
+                'usage_examples': '• Team performance and contribution analysis\n• Resource capacity planning\n• User activity and engagement metrics\n• Role-based access and permission auditing'
+            },
+            'Search': {
+                'purpose': 'Execute complex queries to extract specific data sets for targeted analysis',
+                'when_to_use': 'When you need to perform advanced filtering and data extraction for specialized reports or custom analysis scenarios',
+                'analysis_value': 'Provides flexible data extraction capabilities for custom analysis scenarios, enabling sophisticated filtering and reporting beyond standard metrics',
+                'usage_examples': '• Custom filtered reports for stakeholders\n• Advanced trend analysis with specific criteria\n• Compliance reporting with complex filters\n• Ad-hoc analysis for specific business questions'
+            }
+        }
+        
+        # Get template for category, fallback to generic
+        template = context_templates.get(category, {
+            'purpose': 'Extract specific data from Jira for project analysis and reporting',
+            'when_to_use': 'When you need this specific data point for project analysis or reporting requirements',
+            'analysis_value': 'Provides valuable data insights that support project management decision-making and performance analysis',
+            'usage_examples': '• Custom reports and dashboards\n• Data analysis and trend identification\n• Performance monitoring and tracking'
+        })
+        
+        # Customize based on endpoint specifics
+        path_parts = endpoint.path.lower().split('/')
+        
+        # Add specific context based on endpoint path
+        if 'component' in endpoint.path.lower():
+            template['purpose'] = 'Analyze project components and their associated issues for better project organization understanding'
+            template['key_data'] = 'Component names, descriptions, lead assignments, issue counts, and component hierarchy'
+        elif 'version' in endpoint.path.lower():
+            template['purpose'] = 'Track project versions, releases, and associated delivery metrics'
+            template['key_data'] = 'Version names, release dates, issue counts, and version status information'
+        elif 'role' in endpoint.path.lower():
+            template['purpose'] = 'Understand project roles, permissions, and team structure for governance analysis'
+            template['key_data'] = 'Role definitions, user assignments, permission levels, and access patterns'
+        
+        return template
+    
+    def generate_documentation(self, endpoint: EndpointInfo, m_filename: str, function_name: str) -> str:
+        """Generate business documentation for an endpoint"""
+        
+        category = self.categorize_endpoint(endpoint)
+        context = self.generate_business_context(endpoint, category)
+        
+        # Load documentation template
+        doc_template = self.load_template('basic-doc.md.template')
+        
+        # Generate title and description
+        title = endpoint.name.replace('_', ' ').title()
+        if title.startswith('Get '):
+            title = title[4:]  # Remove "Get " prefix for cleaner titles
+        
+        # Extract key data points from endpoint
+        key_data_points = []
+        if endpoint.parameters:
+            for param in endpoint.parameters[:3]:  # Show first 3 parameters
+                if param.get('description'):
+                    key_data_points.append(f"• **{param['name']}**: {param['description']}")
+        
+        if not key_data_points:
+            key_data_points = ['• Structured data from Jira API endpoint', '• Automatically expanded nested information', '• Ready for Excel analysis and reporting']
+        
+        # Generate function parameters documentation
+        param_docs = []
+        if endpoint.parameters:
+            for param in endpoint.parameters:
+                required = "Required" if param.get('required', False) else "Optional"
+                param_docs.append(f"• **{param['name']}** ({required}): {param.get('description', 'No description available')}")
+        
+        if not param_docs:
+            param_docs = ['• No additional parameters required']
+        
+        # Template replacements
+        replacements = {
+            '{{TITLE}}': title,
+            '{{DESCRIPTION}}': endpoint.description[:150] + '...' if len(endpoint.description) > 150 else endpoint.description,
+            '{{NAV_ORDER}}': '999',  # Will be updated later for proper ordering
+            '{{PURPOSE}}': context.get('purpose', 'Extract data for project analysis'),
+            '{{WHEN_TO_USE}}': context.get('when_to_use', 'When you need this data for analysis'),
+            '{{KEY_DATA_POINTS}}': '\n'.join(key_data_points),
+            '{{ANALYSIS_VALUE}}': context.get('analysis_value', 'Provides insights for project management'),
+            '{{USAGE_EXAMPLES}}': context.get('usage_examples', '• Custom analysis and reporting'),
+            '{{FUNCTION_NAME}}': function_name,
+            '{{M_CODE_FILE}}': m_filename,
+            '{{FUNCTION_PARAMETERS}}': '\n'.join(param_docs),
+            '{{EXPECTED_OUTPUT}}': 'Structured table with expanded JSON data ready for Excel analysis',
+            '{{RELATED_ENDPOINTS}}': 'See other endpoints in the same category for related functionality',
+            '{{API_ENDPOINT}}': endpoint.path
+        }
+        
+        # Apply replacements
+        documentation = doc_template
+        for placeholder, replacement in replacements.items():
+            documentation = documentation.replace(placeholder, replacement)
+        
+        return documentation
+    
+    def generate_file(self, endpoint: EndpointInfo) -> tuple[str, str, str, str]:
+        """Generate M code file and documentation for an endpoint"""
         m_code = self.generate_m_code(endpoint)
         function_name = self.generate_function_name(endpoint)
-        filename = f"jira-{function_name.lower().replace('jira', '').replace('get', '').replace('create', '').replace('update', '').replace('delete', '')}.m"
-        filename = re.sub(r'-+', '-', filename)  # Clean up multiple dashes
-        filename = filename.strip('-')  # Remove leading/trailing dashes
         
-        return filename, m_code
+        # Generate filenames
+        m_filename = f"jira-{function_name.lower().replace('jira', '').replace('get', '').replace('create', '').replace('update', '').replace('delete', '')}.m"
+        m_filename = re.sub(r'-+', '-', m_filename)  # Clean up multiple dashes
+        m_filename = m_filename.strip('-')  # Remove leading/trailing dashes
+        
+        doc_filename = m_filename.replace('.m', '.md')
+        
+        # Generate documentation
+        documentation = self.generate_documentation(endpoint, m_filename, function_name)
+        
+        return m_filename, m_code, doc_filename, documentation
     
     def categorize_endpoint(self, endpoint: EndpointInfo) -> str:
         """Categorize an endpoint based on its path"""
@@ -432,7 +553,7 @@ class MCodeGenerator:
         else:
             return 'Other'
     
-    def process_collection(self, collection_file: str = "atlassian-api.json", categories: List[str] = None):
+    def process_collection(self, collection_file: str = "atlassian-api.json", categories: List[str] = None, generate_m_code: bool = True, generate_docs: bool = True):
         """Process API collection and generate files for specified categories"""
         print(f"Loading collection: {collection_file}")
         collection = self.load_collection(collection_file)
@@ -477,17 +598,36 @@ class MCodeGenerator:
         
         generated_files = []
         
+        # Show what will be generated
+        generation_types = []
+        if generate_m_code:
+            generation_types.append("M code")
+        if generate_docs:
+            generation_types.append("documentation")
+        print(f"Generating: {' and '.join(generation_types)}")
+        
         for endpoint in endpoints:
             try:
-                filename, m_code = self.generate_file(endpoint)
+                m_filename, m_code, doc_filename, documentation = self.generate_file(endpoint)
                 
-                # Write to assets directory
-                output_path = self.assets_dir / filename
-                with open(output_path, 'w') as f:
-                    f.write(m_code)
+                files_generated = []
                 
-                generated_files.append(filename)
-                print(f"Generated: {filename}")
+                # Write M code to assets directory (if requested)
+                if generate_m_code:
+                    m_output_path = self.assets_dir / m_filename
+                    with open(m_output_path, 'w') as f:
+                        f.write(m_code)
+                    files_generated.append(m_filename)
+                
+                # Write documentation to docs directory (if requested)
+                if generate_docs:
+                    doc_output_path = self.docs_dir / doc_filename
+                    with open(doc_output_path, 'w') as f:
+                        f.write(documentation)
+                    files_generated.append(doc_filename)
+                
+                generated_files.append(m_filename)
+                print(f"Generated: {' + '.join(files_generated)}")
                 
             except Exception as e:
                 print(f"Error generating {endpoint.name}: {e}")
@@ -509,6 +649,10 @@ def main():
                        help='Limit generation to specific endpoint categories')
     parser.add_argument('--list-categories', action='store_true',
                        help='Show available categories and endpoint counts')
+    parser.add_argument('--m-code-only', action='store_true',
+                       help='Generate only M code files (skip documentation)')
+    parser.add_argument('--docs-only', action='store_true',
+                       help='Generate only documentation files (skip M code)')
     
     args = parser.parse_args()
     
@@ -548,7 +692,11 @@ def main():
         print(f"  python3 generator.py  # (generates all categories)")
         return
     
-    generator.process_collection(args.collection_file, args.categories)
+    # Determine what to generate
+    generate_m_code = not args.docs_only
+    generate_docs = not args.m_code_only
+    
+    generator.process_collection(args.collection_file, args.categories, generate_m_code, generate_docs)
 
 if __name__ == "__main__":
     main()

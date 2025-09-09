@@ -53,7 +53,7 @@ jobs:
         # Validate each M code file
         for file in assets/*.m; do
           if [ -f "$file" ]; then
-            echo "Validating: $file"
+            echo "Validating M code: $file"
             
             # Check for required front matter
             if ! head -10 "$file" | grep -q "draft: true"; then
@@ -92,7 +92,45 @@ jobs:
               ((WARNINGS++))
             fi
             
-            echo "✅ Validated: $file"
+            echo "✅ Validated M code: $file"
+            ((VALID_FILES++))
+          fi
+        done
+        
+        # Validate each documentation file
+        for file in docs/jira-*.md; do
+          if [ -f "$file" ]; then
+            echo "Validating documentation: $file"
+            
+            # Check for required front matter
+            if ! head -10 "$file" | grep -q "draft: true"; then
+              echo "❌ Missing 'draft: true' in documentation front matter: $file"
+              echo "- ❌ **$(basename $file)**: Missing 'draft: true' in front matter" >> validation-report.md
+              ((INVALID_FILES++))
+              continue
+            fi
+            
+            # Check for required sections
+            if ! grep -q "## Purpose" "$file"; then
+              echo "⚠️ Missing 'Purpose' section: $file"
+              echo "- ⚠️ **$(basename $file)**: Missing 'Purpose' section" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            if ! grep -q "## Project Analysis Value" "$file"; then
+              echo "⚠️ Missing 'Project Analysis Value' section: $file"
+              echo "- ⚠️ **$(basename $file)**: Missing 'Project Analysis Value' section" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            # Check for M code file reference
+            if ! grep -q "assets/jira-.*\.m" "$file"; then
+              echo "⚠️ Missing M code file reference: $file"
+              echo "- ⚠️ **$(basename $file)**: Missing M code file reference" >> validation-report.md
+              ((WARNINGS++))
+            fi
+            
+            echo "✅ Validated documentation: $file"
             ((VALID_FILES++))
           fi
         done

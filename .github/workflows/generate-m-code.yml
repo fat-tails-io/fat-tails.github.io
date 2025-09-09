@@ -16,8 +16,18 @@ on:
         required: false
         default: ''
         type: string
+      generate_m_code:
+        description: 'Generate M code files'
+        required: false
+        default: 'true'
+        type: boolean
+      generate_docs:
+        description: 'Generate documentation articles'
+        required: false
+        default: 'true'
+        type: boolean
       force_regenerate:
-        description: 'Force regeneration of all M code files'
+        description: 'Force regeneration of all files'
         required: false
         default: 'false'
         type: boolean
@@ -49,28 +59,47 @@ jobs:
         cd collections
         echo "🚀 Starting M code generation..."
         
-        # Check if categories were specified
+        # Build generator command with options
+        GENERATOR_CMD="python3 generator.py"
+        
+        # Add category filter if specified
         if [ -n "${{ github.event.inputs.categories }}" ]; then
-          echo "📂 Generating for categories: ${{ github.event.inputs.categories }}"
-          python3 generator.py --categories ${{ github.event.inputs.categories }}
+          GENERATOR_CMD="$GENERATOR_CMD --categories ${{ github.event.inputs.categories }}"
+          echo "📂 Categories: ${{ github.event.inputs.categories }}"
         else
-          echo "📂 Generating for all categories"
-          python3 generator.py
+          echo "📂 Categories: All categories"
         fi
+        
+        # Add generation type flags
+        if [ "${{ github.event.inputs.generate_m_code }}" = "false" ]; then
+          GENERATOR_CMD="$GENERATOR_CMD --docs-only"
+          echo "📝 Mode: Documentation only"
+        elif [ "${{ github.event.inputs.generate_docs }}" = "false" ]; then
+          GENERATOR_CMD="$GENERATOR_CMD --m-code-only"
+          echo "⚙️ Mode: M code only"
+        else
+          echo "📋 Mode: M code and documentation"
+        fi
+        
+        echo "🚀 Running: $GENERATOR_CMD"
+        $GENERATOR_CMD
         
         echo "✅ M code generation completed"
 
     - name: Check for changes
       id: git-check
       run: |
-        cd assets
-        if [ -n "$(git status --porcelain)" ]; then
+        # Check both assets (M code) and docs (documentation) directories
+        if [ -n "$(git status --porcelain assets/ docs/)" ]; then
           echo "changes=true" >> $GITHUB_OUTPUT
-          echo "📝 Changes detected in generated M code files"
-          git status --short
+          echo "📝 Changes detected in generated files"
+          echo "M code files:"
+          git status --short assets/ || echo "No M code changes"
+          echo "Documentation files:"
+          git status --short docs/ || echo "No documentation changes"
         else
           echo "changes=false" >> $GITHUB_OUTPUT
-          echo "ℹ️ No changes in generated M code files"
+          echo "ℹ️ No changes in generated files"
         fi
 
     - name: Commit and push changes
@@ -79,8 +108,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - M Code Generator"
         
-        # Add all new and modified M code files
-        git add assets/*.m
+        # Add all new and modified M code and documentation files
+        git add assets/*.m docs/jira-*.md
         
         # Count files
         NEW_FILES=$(git diff --cached --name-only --diff-filter=A | wc -l)
@@ -94,11 +123,17 @@ jobs:
           CATEGORIES_MSG="- Categories: All categories"
         fi
         
-        COMMIT_MSG="🤖 Auto-generate M code files
+        # Count M code and documentation files separately
+        M_CODE_FILES=$(git diff --cached --name-only | grep -c '\.m$' || echo "0")
+        DOC_FILES=$(git diff --cached --name-only | grep -c '\.md$' || echo "0")
+        
+        COMMIT_MSG="🤖 Auto-generate M code and documentation
 
         📊 Summary:
-        - New M code files: $NEW_FILES
-        - Modified M code files: $MODIFIED_FILES
+        - M code files: $M_CODE_FILES
+        - Documentation files: $DOC_FILES
+        - Total new files: $NEW_FILES
+        - Total modified files: $MODIFIED_FILES
         - Generated from: collections/atlassian-api.json
         $CATEGORIES_MSG
         - Generator version: $(date +'%Y-%m-%d %H:%M:%S')
@@ -111,16 +146,17 @@ jobs:
 
     - name: Create summary
       run: |
-        echo "## 🤖 M Code Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "## 🤖 M Code & Documentation Generation Summary" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         
         if [ "${{ steps.git-check.outputs.changes }}" == "true" ]; then
           echo "✅ **Status**: Changes detected and committed" >> $GITHUB_STEP_SUMMARY
-          echo "📁 **Location**: \`assets/\` directory" >> $GITHUB_STEP_SUMMARY
+          echo "📁 **M Code Location**: \`assets/\` directory" >> $GITHUB_STEP_SUMMARY
+          echo "📚 **Documentation Location**: \`docs/\` directory" >> $GITHUB_STEP_SUMMARY
           echo "🔄 **Trigger**: API collection or generator updates" >> $GITHUB_STEP_SUMMARY
         else
           echo "ℹ️ **Status**: No changes detected" >> $GITHUB_STEP_SUMMARY
-          echo "🎯 **Reason**: Generated M code matches existing files" >> $GITHUB_STEP_SUMMARY
+          echo "🎯 **Reason**: Generated files match existing files" >> $GITHUB_STEP_SUMMARY
         fi
         
         echo "" >> $GITHUB_STEP_SUMMARY
@@ -132,10 +168,11 @@ jobs:
         echo "- **Scope**: GET endpoints only (264 total)" >> $GITHUB_STEP_SUMMARY
         
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🎯 Next Steps" >> $GITHUB_STEP_SUMMARY
-        echo "- Generated M code files are ready for use in Power Query" >> $GITHUB_STEP_SUMMARY
-        echo "- Each file includes authentication setup and deep JSON expansion" >> $GITHUB_STEP_SUMMARY
-        echo "- Files are marked with \`draft: true\` in front matter" >> $GITHUB_STEP_SUMMARY
+        echo "### 🎯 Generated Content" >> $GITHUB_STEP_SUMMARY
+        echo "- **M Code Files**: Ready for use in Power Query with authentication and deep JSON expansion" >> $GITHUB_STEP_SUMMARY
+        echo "- **Business Documentation**: Project manager-focused articles explaining business value" >> $GITHUB_STEP_SUMMARY
+        echo "- **Jekyll Integration**: Files marked with \`draft: true\` and proper front matter" >> $GITHUB_STEP_SUMMARY
+        echo "- **Cross-Referenced**: Documentation links to corresponding M code files" >> $GITHUB_STEP_SUMMARY
 
     - name: Notify on failure
       if: failure()

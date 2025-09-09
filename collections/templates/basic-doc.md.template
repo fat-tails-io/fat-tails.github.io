@@ -1,0 +1,42 @@
+---
+title: {{TITLE}}
+description: {{DESCRIPTION}}
+nav_order: {{NAV_ORDER}}
+draft: true
+---
+
+# {{TITLE}}
+
+## Purpose
+{{PURPOSE}}
+
+## When to Use
+{{WHEN_TO_USE}}
+
+## Key Data Points
+{{KEY_DATA_POINTS}}
+
+## Project Analysis Value
+{{ANALYSIS_VALUE}}
+
+## Usage Examples
+{{USAGE_EXAMPLES}}
+
+## Implementation
+To use this data in Excel Power Query:
+
+1. **Load the M code**: Use the function `{{FUNCTION_NAME}}` from [{{M_CODE_FILE}}](../assets/{{M_CODE_FILE}})
+2. **Configure authentication**: Ensure your Parameters table includes Jira credentials
+3. **Execute the query**: The function will return structured data ready for analysis
+
+### Function Parameters
+{{FUNCTION_PARAMETERS}}
+
+### Expected Output
+{{EXPECTED_OUTPUT}}
+
+## Related Endpoints
+{{RELATED_ENDPOINTS}}
+
+---
+*This documentation corresponds to the Jira API endpoint: `{{API_ENDPOINT}}`*
