@@ -173,7 +173,7 @@ jobs:
         echo "📊 Quality metrics generated"
 
     - name: Upload validation report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: m-code-validation-report
         path: validation-report.md
