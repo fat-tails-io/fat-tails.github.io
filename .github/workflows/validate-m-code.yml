@@ -56,9 +56,9 @@ jobs:
             echo "Validating M code: $file"
             
             # Check for required front matter
-            if ! head -10 "$file" | grep -q "draft: true"; then
-              echo "❌ Missing 'draft: true' in front matter: $file"
-              echo "- ❌ **$(basename $file)**: Missing 'draft: true' in front matter" >> validation-report.md
+            if ! head -10 "$file" | grep -q "published: false"; then
+              echo "❌ Missing 'published: false' in front matter: $file"
+              echo "- ❌ **$(basename $file)**: Missing 'published: false' in front matter" >> validation-report.md
               ((INVALID_FILES++))
               continue
             fi
@@ -103,9 +103,9 @@ jobs:
             echo "Validating documentation: $file"
             
             # Check for required front matter
-            if ! head -10 "$file" | grep -q "draft: true"; then
-              echo "❌ Missing 'draft: true' in documentation front matter: $file"
-              echo "- ❌ **$(basename $file)**: Missing 'draft: true' in front matter" >> validation-report.md
+            if ! head -10 "$file" | grep -q "published: false"; then
+              echo "❌ Missing 'published: false' in documentation front matter: $file"
+              echo "- ❌ **$(basename $file)**: Missing 'published: false' in front matter" >> validation-report.md
               ((INVALID_FILES++))
               continue
             fi

@@ -3,7 +3,7 @@ title: {{TITLE}}
 description: {{DESCRIPTION}}
 endpoint: {{ENDPOINT}}
 method: {{METHOD}}
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

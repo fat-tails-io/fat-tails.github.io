@@ -11,8 +11,7 @@ collections/generated/
 collections/*.json
 !collections/atlassian-api.json
 
-# Generated documentation (excluded while refining draft approach)
-docs/jira-*.md
+# Generated documentation files are now committed with published: false
 
 # Python cache
 __pycache__/

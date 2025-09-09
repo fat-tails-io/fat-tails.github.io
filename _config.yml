@@ -37,7 +37,7 @@ defaults:
       path: "docs" # an empty string here means all files in the project
       type: "pages"
     values:
-      layout: "documents"
+      layout: "default"
 
 # Build settings
 # theme: just-the-docs

@@ -2,7 +2,7 @@
 title: {{TITLE}}
 description: {{DESCRIPTION}}
 nav_order: {{NAV_ORDER}}
-draft: true
+published: false
 ---
 
 # {{TITLE}}
