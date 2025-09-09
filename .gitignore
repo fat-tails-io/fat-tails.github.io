@@ -11,6 +11,9 @@ collections/generated/
 collections/*.json
 !collections/atlassian-api.json
 
+# Generated documentation (excluded while refining draft approach)
+docs/jira-*.md
+
 # Python cache
 __pycache__/
 *.pyc
