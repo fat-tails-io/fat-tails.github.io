@@ -3,3 +3,12 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Collections and generation
+collections/generated/
+collections/*.json
+!collections/atlassian-api.json
+
+# Python cache
+__pycache__/
+*.pyc
