@@ -6,6 +6,7 @@ This API endpoint allows you to get a live custom project template details by ei
 
 ***Note: Custom Te...
 nav_order: 999
+draft: true
 ---
 
 # Gets A Custom Project Template

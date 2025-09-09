@@ -4,6 +4,7 @@ description: Gets a [notification scheme](https://confluence.atlassian.com/x/8Yd
 
 **[Permissions](#permissions) required:** *Admin...
 nav_order: 999
+draft: true
 ---
 
 # Project Notification Scheme

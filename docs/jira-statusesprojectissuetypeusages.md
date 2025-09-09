@@ -2,6 +2,7 @@
 title: Issue Type Usages By Status And Project
 description: Returns a page of issue types in a project using a given status.
 nav_order: 999
+draft: true
 ---
 
 # Issue Type Usages By Status And Project

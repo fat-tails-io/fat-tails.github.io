@@ -4,6 +4,7 @@ description: Returns a [paginated](#pagination) list of issue type schemes and, 
 
 Only issue type sc...
 nav_order: 999
+draft: true
 ---
 
 # Issue Type Schemes For Projects

@@ -7,6 +7,7 @@ The issue type hierarchy for a project consists of:
  *  *Epic* at level 1 (optional).
  *  One o...
 nav_order: 999
+draft: true
 ---
 
 # Project Issue Type Hierarchy

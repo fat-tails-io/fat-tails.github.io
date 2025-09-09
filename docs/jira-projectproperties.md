@@ -2,6 +2,7 @@
 title: Project Property
 description: Returns the value of a [project property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-entity-proper...
 nav_order: 999
+draft: true
 ---
 
 # Project Property

@@ -4,6 +4,7 @@ description: Returns a [paginated](#pagination) list of projects by scheme.
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
+draft: true
 ---
 
 # Projects By Priority Scheme

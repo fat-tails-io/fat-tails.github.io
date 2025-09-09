@@ -4,6 +4,7 @@ description: Returns a [paginated](#pagination) list of field configuration sche
 
 The list is sorted b...
 nav_order: 999
+draft: true
 ---
 
 # Field Configuration Schemes For Projects
