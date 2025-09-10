@@ -1,13 +1,19 @@
 ---
 title: Project Issue Security Scheme
-description: Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
-
-**[Permissions](#permissions) required:**...
+description: |-
+  Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 nav_order: 999
 published: false
 ---
 
 # Project Issue Security Scheme
+
+## API Description
+Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

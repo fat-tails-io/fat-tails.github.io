@@ -1,15 +1,31 @@
 ---
 title: Recent Projects
-description: Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
-
-This operation can be accessed anonymously.
-
-**[P...
+description: |-
+  Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Recent Projects
+
+## API Description
+Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+
+ *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

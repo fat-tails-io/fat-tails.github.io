@@ -1,13 +1,51 @@
 ---
 title: Audit Records
-description: Returns a list of audit records. The list can be filtered to include items:
-
- *  where each item in `filter` has at least one match in any of these fi...
+description: |-
+  Returns a list of audit records. The list can be filtered to include items:
+  
+   *  where each item in `filter` has at least one match in any of these fields:
+      
+       *  `summary`
+       *  `category`
+       *  `eventSource`
+       *  `objectItem.name` If the object is a user, account ID is available to filter.
+       *  `objectItem.parentName`
+       *  `objectItem.typeName`
+       *  `changedValues.changedFrom`
+       *  `changedValues.changedTo`
+       *  `remoteAddress`
+      
+      For example, if `filter` contains *man ed*, an audit record containing `summary": "User added to group"` and `"category": "group management"` is returned.
+   *  created on or after a date and time.
+   *  created or or before a date and time.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Audit Records
+
+## API Description
+Returns a list of audit records. The list can be filtered to include items:
+
+ *  where each item in `filter` has at least one match in any of these fields:
+    
+     *  `summary`
+     *  `category`
+     *  `eventSource`
+     *  `objectItem.name` If the object is a user, account ID is available to filter.
+     *  `objectItem.parentName`
+     *  `objectItem.typeName`
+     *  `changedValues.changedFrom`
+     *  `changedValues.changedTo`
+     *  `remoteAddress`
+    
+    For example, if `filter` contains *man ed*, an audit record containing `summary": "User added to group"` and `"category": "group management"` is returned.
+ *  created on or after a date and time.
+ *  created or or before a date and time.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

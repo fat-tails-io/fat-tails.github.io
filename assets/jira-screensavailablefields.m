@@ -1,8 +1,9 @@
 ---
 title: Get Available Screen Fields
-description: Returns the fields that can be added to a tab on a screen.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the fields that can be added to a tab on a screen.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/screens/{screenId}/availableFields
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetScreensAvailablefields
-// Description: Returns the fields that can be added to a tab on a screen.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the fields that can be added to a tab on a screen.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/screens/{screenId}/availableFields
 // Create this with query name: JiraGetScreensAvailablefields
 // -----------------------------------------------------------------------------

@@ -1,10 +1,11 @@
 ---
 title: Get Project Type By Key
-description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/project/type/{projectTypeKey}
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectType
-// Description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/project/type/{projectTypeKey}
 // Create this with query name: JiraGetProjectType
 // -----------------------------------------------------------------------------

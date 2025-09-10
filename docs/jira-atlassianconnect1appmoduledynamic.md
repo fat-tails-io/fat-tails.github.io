@@ -1,13 +1,19 @@
 ---
 title: Modules
-description: Returns all modules registered dynamically by the calling app.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request.
+description: |-
+  Returns all modules registered dynamically by the calling app.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request.
 nav_order: 999
 published: false
 ---
 
 # Modules
+
+## API Description
+Returns all modules registered dynamically by the calling app.
+
+**[Permissions](#permissions) required:** Only Connect apps can make this request.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

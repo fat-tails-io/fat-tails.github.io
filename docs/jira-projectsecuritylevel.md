@@ -1,13 +1,23 @@
 ---
 title: Project Issue Security Levels
-description: Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
-
-This operation can be acc...
+description: |-
+  Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # Project Issue Security Levels
+
+## API Description
+Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

@@ -1,13 +1,19 @@
 ---
 title: Resolution
-description: Returns an issue resolution value.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns an issue resolution value.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Resolution
+
+## API Description
+Returns an issue resolution value.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

@@ -1,13 +1,19 @@
 ---
 title: Available Priorities By Priority Scheme
-description: Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
-
-**[Permissions](#permissions) required:** Permission...
+description: |-
+  Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Available Priorities By Priority Scheme
+
+## API Description
+Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

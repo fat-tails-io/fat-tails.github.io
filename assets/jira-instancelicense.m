@@ -1,8 +1,9 @@
 ---
 title: Get License
-description: Returns licensing information about the Jira instance.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns licensing information about the Jira instance.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/instance/license
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetInstanceLicense
-// Description: Returns licensing information about the Jira instance.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns licensing information about the Jira instance.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/instance/license
 // Create this with query name: JiraGetInstanceLicense
 // -----------------------------------------------------------------------------

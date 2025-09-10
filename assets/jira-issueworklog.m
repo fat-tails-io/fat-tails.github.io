@@ -1,16 +1,17 @@
 ---
 title: Get Worklog
-description: Returns a worklog.
-
-Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+description: |-
+  Returns a worklog.
+  
+  Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/worklog/{id}
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssueWorklog
-// Description: Returns a worklog.
-
-Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+// Description: |-
+  Returns a worklog.
+  
+  Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 // API Endpoint: GET /rest/api/3/issue/{issueIdOrKey}/worklog/{id}
 // Create this with query name: JiraGetIssueWorklog
 // -----------------------------------------------------------------------------

@@ -1,11 +1,12 @@
 ---
 title: Get All Screen Tab Fields
-description: Returns all fields for a screen tab.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
+description: |-
+  Returns all fields for a screen tab.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
 endpoint: /rest/api/3/screens/{screenId}/tabs/{tabId}/fields
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetScreensTabsFields
-// Description: Returns all fields for a screen tab.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
+// Description: |-
+  Returns all fields for a screen tab.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
 // API Endpoint: GET /rest/api/3/screens/{screenId}/tabs/{tabId}/fields
 // Create this with query name: JiraGetScreensTabsFields
 // -----------------------------------------------------------------------------

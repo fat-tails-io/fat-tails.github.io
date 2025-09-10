@@ -7,6 +7,9 @@ published: false
 
 # Project Features
 
+## API Description
+Returns the list of features for a project.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

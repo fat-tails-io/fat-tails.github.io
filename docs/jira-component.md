@@ -1,20 +1,28 @@
 ---
 title: Component
-description: Returns a component.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](ht...
+description: |-
+  Returns a component.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for project containing the component.
 nav_order: 999
 published: false
 ---
 
 # Component
 
+## API Description
+Returns a component.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for project containing the component.
+
 ## Purpose
 Analyze project components and their associated issues for better project organization understanding
 
-## When to Use..
+## When to Use
 When you need this specific data point for project analysis or reporting requirements
 
 ## Key Data Points

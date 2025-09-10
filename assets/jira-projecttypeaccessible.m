@@ -1,8 +1,9 @@
 ---
 title: Get Accessible Project Type By Key
-description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/project/type/{projectTypeKey}/accessible
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectTypeAccessible
-// Description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/project/type/{projectTypeKey}/accessible
 // Create this with query name: JiraGetProjectTypeAccessible
 // -----------------------------------------------------------------------------

@@ -1,15 +1,29 @@
 ---
 title: User Nav Property
-description: Returns the value of a user nav preference.
-
-Note: This operation fetches the property key value directly from RbacClient.
-
-**[Permissions](#permissio...
+description: |-
+  Returns the value of a user nav preference.
+  
+  Note: This operation fetches the property key value directly from RbacClient.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+   *  Access to Jira, to get a property from the calling user's record.
 nav_order: 999
 published: false
 ---
 
 # User Nav Property
+
+## API Description
+Returns the value of a user nav preference.
+
+Note: This operation fetches the property key value directly from RbacClient.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+ *  Access to Jira, to get a property from the calling user's record.
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

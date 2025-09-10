@@ -1,15 +1,27 @@
 ---
 title: Redaction Status
-description: Retrieves the current status of a redaction job ID.
-
-The jobStatus will be one of the following:
-
- *  IN\_PROGRESS - The redaction job is currently in...
+description: |-
+  Retrieves the current status of a redaction job ID.
+  
+  The jobStatus will be one of the following:
+  
+   *  IN\_PROGRESS - The redaction job is currently in progress
+   *  COMPLETED - The redaction job has completed successfully.
+   *  PENDING - The redaction job has not started yet
 nav_order: 999
 published: false
 ---
 
 # Redaction Status
+
+## API Description
+Retrieves the current status of a redaction job ID.
+
+The jobStatus will be one of the following:
+
+ *  IN\_PROGRESS - The redaction job is currently in progress
+ *  COMPLETED - The redaction job has completed successfully.
+ *  PENDING - The redaction job has not started yet
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

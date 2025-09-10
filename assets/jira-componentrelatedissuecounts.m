@@ -1,15 +1,16 @@
 ---
 title: Get Component Issues Count
-description: Returns the counts of issues assigned to the component.
-
-This operation can be accessed anonymously.
-
-**Deprecation notice:** The required OAuth 2.0 scopes will be updated on June 15, 2024.
-
- *  **Classic**: `read:jira-work`
- *  **Granular**: `read:field:jira`, `read:project.component:jira`
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns the counts of issues assigned to the component.
+  
+  This operation can be accessed anonymously.
+  
+  **Deprecation notice:** The required OAuth 2.0 scopes will be updated on June 15, 2024.
+  
+   *  **Classic**: `read:jira-work`
+   *  **Granular**: `read:field:jira`, `read:project.component:jira`
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/component/{id}/relatedIssueCounts
 method: GET
 published: false
@@ -17,16 +18,17 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetComponentRelatedissuecounts
-// Description: Returns the counts of issues assigned to the component.
-
-This operation can be accessed anonymously.
-
-**Deprecation notice:** The required OAuth 2.0 scopes will be updated on June 15, 2024.
-
- *  **Classic**: `read:jira-work`
- *  **Granular**: `read:field:jira`, `read:project.component:jira`
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns the counts of issues assigned to the component.
+  
+  This operation can be accessed anonymously.
+  
+  **Deprecation notice:** The required OAuth 2.0 scopes will be updated on June 15, 2024.
+  
+   *  **Classic**: `read:jira-work`
+   *  **Granular**: `read:field:jira`, `read:project.component:jira`
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/component/{id}/relatedIssueCounts
 // Create this with query name: JiraGetComponentRelatedissuecounts
 // -----------------------------------------------------------------------------

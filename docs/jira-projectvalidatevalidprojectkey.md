@@ -1,13 +1,19 @@
 ---
 title: Valid Project Key
-description: Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
-
-**[Permissions](#permissions) requ...
+description: |-
+  Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Valid Project Key
+
+## API Description
+Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

@@ -1,8 +1,9 @@
 ---
 title: Get Account Ids For Users
-description: Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/user/bulk/migration
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserBulkMigration
-// Description: Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/user/bulk/migration
 // Create this with query name: JiraGetUserBulkMigration
 // -----------------------------------------------------------------------------

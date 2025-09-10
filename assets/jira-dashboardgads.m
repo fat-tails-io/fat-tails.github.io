@@ -1,8 +1,9 @@
 ---
 title: Get Available Gadgets
-description: Gets a list of all available gadgets that can be added to all dashboards.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Gets a list of all available gadgets that can be added to all dashboards.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/dashboard/gadgets
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetDashboardGadgets
-// Description: Gets a list of all available gadgets that can be added to all dashboards.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Gets a list of all available gadgets that can be added to all dashboards.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/dashboard/gadgets
 // Create this with query name: JiraGetDashboardGadgets
 // -----------------------------------------------------------------------------

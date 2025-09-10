@@ -1,13 +1,23 @@
 ---
 title: Visible Issue Field Options
-description: Returns a [paginated](#pagination) list of options for a select list issue field that can be viewed by the user.
-
-Note that this operation **only work...
+description: |-
+  Returns a [paginated](#pagination) list of options for a select list issue field that can be viewed by the user.
+  
+  Note that this operation **only works for issue field select list options added by Connect apps**, it cannot be used with issue field select list options created in Jira or using operations from the [Issue custom field options](#api-group-Issue-custom-field-options) resource.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Visible Issue Field Options
+
+## API Description
+Returns a [paginated](#pagination) list of options for a select list issue field that can be viewed by the user.
+
+Note that this operation **only works for issue field select list options added by Connect apps**, it cannot be used with issue field select list options created in Jira or using operations from the [Issue custom field options](#api-group-Issue-custom-field-options) resource.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

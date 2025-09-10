@@ -1,10 +1,11 @@
 ---
 title: Get System Avatars By Type
-description: Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/avatar/{type}/system
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAvatarSystem
-// Description: Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/avatar/{type}/system
 // Create this with query name: JiraGetAvatarSystem
 // -----------------------------------------------------------------------------

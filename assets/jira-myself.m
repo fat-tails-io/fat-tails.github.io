@@ -1,8 +1,9 @@
 ---
 title: Get Current User
-description: Returns details for the current user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns details for the current user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/myself
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetMyself
-// Description: Returns details for the current user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns details for the current user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/myself
 // Create this with query name: JiraGetMyself
 // -----------------------------------------------------------------------------

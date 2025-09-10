@@ -1,8 +1,9 @@
 ---
 title: Get Available Priorities By Priority Scheme
-description: Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priorityscheme/priorities/available
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPriorityschemePrioritiesAvailable
-// Description: Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a [paginated](#pagination) list of priorities available for adding to a priority scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/priorityscheme/priorities/available
 // Create this with query name: JiraGetPriorityschemePrioritiesAvailable
 // -----------------------------------------------------------------------------

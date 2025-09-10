@@ -1,16 +1,37 @@
 ---
 title: Gadgets
-description: Returns a list of dashboard gadgets on a dashboard.
-
-This operation returns:
-
- *  Gadgets from a list of IDs, when `id` is set.
- *  Gadgets with a mod...
+description: |-
+  Returns a list of dashboard gadgets on a dashboard.
+  
+  This operation returns:
+  
+   *  Gadgets from a list of IDs, when `id` is set.
+   *  Gadgets with a module key, when `moduleKey` is set.
+   *  Gadgets from a list of URIs, when `uri` is set.
+   *  All gadgets, when no other parameters are set.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Gadgets
+
+## API Description
+Returns a list of dashboard gadgets on a dashboard.
+
+This operation returns:
+
+ *  Gadgets from a list of IDs, when `id` is set.
+ *  Gadgets with a module key, when `moduleKey` is set.
+ *  Gadgets from a list of URIs, when `uri` is set.
+ *  All gadgets, when no other parameters are set.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

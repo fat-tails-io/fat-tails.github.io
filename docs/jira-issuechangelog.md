@@ -1,13 +1,29 @@
 ---
 title: Changelogs
-description: Returns a [paginated](#pagination) list of all changelogs for an issue sorted by date, starting from the oldest.
-
-This operation can be accessed anony...
+description: |-
+  Returns a [paginated](#pagination) list of all changelogs for an issue sorted by date, starting from the oldest.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 nav_order: 999
 published: false
 ---
 
 # Changelogs
+
+## API Description
+Returns a [paginated](#pagination) list of all changelogs for an issue sorted by date, starting from the oldest.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

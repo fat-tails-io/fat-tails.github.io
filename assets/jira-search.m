@@ -1,17 +1,18 @@
 ---
 title: Currently Being Removed. Search For Issues Using Jql (Get)
-description: Endpoint is currently being removed. [More details](https://developer.atlassian.com/changelog/#CHANGE-2046)
-
-Searches for issues using [JQL](https://confluence.atlassian.com/x/egORLQ).
-
-If the JQL query expression is too large to be encoded as a query parameter, use the [POST](#api-rest-api-3-search-post) version of this resource.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Issues are included in the response where the user has:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+description: |-
+  Endpoint is currently being removed. [More details](https://developer.atlassian.com/changelog/#CHANGE-2046)
+  
+  Searches for issues using [JQL](https://confluence.atlassian.com/x/egORLQ).
+  
+  If the JQL query expression is too large to be encoded as a query parameter, use the [POST](#api-rest-api-3-search-post) version of this resource.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Issues are included in the response where the user has:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 endpoint: /rest/api/3/search
 method: GET
 published: false
@@ -19,18 +20,19 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetSearch
-// Description: Endpoint is currently being removed. [More details](https://developer.atlassian.com/changelog/#CHANGE-2046)
-
-Searches for issues using [JQL](https://confluence.atlassian.com/x/egORLQ).
-
-If the JQL query expression is too large to be encoded as a query parameter, use the [POST](#api-rest-api-3-search-post) version of this resource.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Issues are included in the response where the user has:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue. with automatic pagination handling
+// Description: |-
+  Endpoint is currently being removed. [More details](https://developer.atlassian.com/changelog/#CHANGE-2046)
+  
+  Searches for issues using [JQL](https://confluence.atlassian.com/x/egORLQ).
+  
+  If the JQL query expression is too large to be encoded as a query parameter, use the [POST](#api-rest-api-3-search-post) version of this resource.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Issues are included in the response where the user has:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/search
 // Create this with query name: JiraGetSearch
 // -----------------------------------------------------------------------------

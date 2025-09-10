@@ -1,10 +1,11 @@
 ---
 title: Get Version'S Unresolved Issues Count
-description: Returns counts of the issues and unresolved issues for the project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
+description: |-
+  Returns counts of the issues and unresolved issues for the project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 endpoint: /rest/api/3/version/{id}/unresolvedIssueCount
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetVersionUnresolvedissuecount
-// Description: Returns counts of the issues and unresolved issues for the project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
+// Description: |-
+  Returns counts of the issues and unresolved issues for the project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 // API Endpoint: GET /rest/api/3/version/{id}/unresolvedIssueCount
 // Create this with query name: JiraGetVersionUnresolvedissuecount
 // -----------------------------------------------------------------------------

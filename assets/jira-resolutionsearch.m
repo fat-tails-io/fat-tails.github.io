@@ -1,11 +1,12 @@
 ---
 title: Search Resolutions
-description: Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
-
- *  a list of resolutions IDs.
- *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
+  
+   *  a list of resolutions IDs.
+   *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/resolution/search
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetResolutionSearch
-// Description: Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
-
- *  a list of resolutions IDs.
- *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
-
-**[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
+  
+   *  a list of resolutions IDs.
+   *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/resolution/search
 // Create this with query name: JiraGetResolutionSearch
 // -----------------------------------------------------------------------------

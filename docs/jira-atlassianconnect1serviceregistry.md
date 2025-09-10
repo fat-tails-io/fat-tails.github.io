@@ -1,13 +1,19 @@
 ---
 title: Retrieve The Attributes Of Service Registries
-description: Retrieve the attributes of given service registries.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request and the servic...
+description: |-
+  Retrieve the attributes of given service registries.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
 nav_order: 999
 published: false
 ---
 
 # Retrieve The Attributes Of Service Registries
+
+## API Description
+Retrieve the attributes of given service registries.
+
+**[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

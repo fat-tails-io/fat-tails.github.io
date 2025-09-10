@@ -1,17 +1,31 @@
 ---
 title: Comment Property
-description: Returns the value of a comment property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects...
+description: |-
+  Returns the value of a comment property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 nav_order: 999
 published: false
 ---
 
 # Comment Property
+
+## API Description
+Returns the value of a comment property.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

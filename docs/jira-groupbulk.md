@@ -1,13 +1,19 @@
 ---
 title: Bulk Get Groups
-description: Returns a [paginated](#pagination) list of groups.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://co...
+description: |-
+  Returns a [paginated](#pagination) list of groups.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Bulk Get Groups
+
+## API Description
+Returns a [paginated](#pagination) list of groups.
+
+**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

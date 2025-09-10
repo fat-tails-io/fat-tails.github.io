@@ -1,12 +1,13 @@
 ---
 title: Get Redaction Status
-description: Retrieves the current status of a redaction job ID.
-
-The jobStatus will be one of the following:
-
- *  IN\_PROGRESS - The redaction job is currently in progress
- *  COMPLETED - The redaction job has completed successfully.
- *  PENDING - The redaction job has not started yet
+description: |-
+  Retrieves the current status of a redaction job ID.
+  
+  The jobStatus will be one of the following:
+  
+   *  IN\_PROGRESS - The redaction job is currently in progress
+   *  COMPLETED - The redaction job has completed successfully.
+   *  PENDING - The redaction job has not started yet
 endpoint: /rest/api/3/redact/status/{jobId}
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetRedactStatus
-// Description: Retrieves the current status of a redaction job ID.
-
-The jobStatus will be one of the following:
-
- *  IN\_PROGRESS - The redaction job is currently in progress
- *  COMPLETED - The redaction job has completed successfully.
- *  PENDING - The redaction job has not started yet
+// Description: |-
+  Retrieves the current status of a redaction job ID.
+  
+  The jobStatus will be one of the following:
+  
+   *  IN\_PROGRESS - The redaction job is currently in progress
+   *  COMPLETED - The redaction job has completed successfully.
+   *  PENDING - The redaction job has not started yet
 // API Endpoint: GET /rest/api/3/redact/status/{jobId}
 // Create this with query name: JiraGetRedactStatus
 // -----------------------------------------------------------------------------

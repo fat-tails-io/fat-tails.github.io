@@ -1,13 +1,19 @@
 ---
 title: Project Role By Id
-description: Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
-
-**[Permissions](...
+description: |-
+  Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Project Role By Id
+
+## API Description
+Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand project roles, permissions, and team structure for governance analysis

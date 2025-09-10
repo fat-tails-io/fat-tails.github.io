@@ -1,16 +1,17 @@
 ---
 title: Get Filter
-description: Returns a filter.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
-
- *  owned by the user.
- *  shared with a group that the user is a member of.
- *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
- *  shared with a public project.
- *  shared with the public.
+description: |-
+  Returns a filter.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
+  
+   *  owned by the user.
+   *  shared with a group that the user is a member of.
+   *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+   *  shared with a public project.
+   *  shared with the public.
 endpoint: /rest/api/3/filter/{id}
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFilter
-// Description: Returns a filter.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
-
- *  owned by the user.
- *  shared with a group that the user is a member of.
- *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
- *  shared with a public project.
- *  shared with the public.
+// Description: |-
+  Returns a filter.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
+  
+   *  owned by the user.
+   *  shared with a group that the user is a member of.
+   *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+   *  shared with a public project.
+   *  shared with the public.
 // API Endpoint: GET /rest/api/3/filter/{id}
 // Create this with query name: JiraGetFilter
 // -----------------------------------------------------------------------------

@@ -1,13 +1,19 @@
 ---
 title: Available Screen Fields
-description: Returns the fields that can be added to a tab on a screen.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://co...
+description: |-
+  Returns the fields that can be added to a tab on a screen.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Available Screen Fields
+
+## API Description
+Returns the fields that can be added to a tab on a screen.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

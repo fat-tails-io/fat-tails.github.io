@@ -1,12 +1,25 @@
 ---
 title: Search Issue Security Schemes
-description: Returns a [paginated](#pagination) list of issue security schemes.  
-If you specify the project ID parameter, the result will contain issue security s...
+description: |-
+  Returns a [paginated](#pagination) list of issue security schemes.  
+  If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
+  
+  Only issue security schemes in the context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Search Issue Security Schemes
+
+## API Description
+Returns a [paginated](#pagination) list of issue security schemes.  
+If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
+
+Only issue security schemes in the context of classic projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

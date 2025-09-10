@@ -1,13 +1,19 @@
 ---
 title: Project Notification Scheme
-description: Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Admin...
+description: |-
+  Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 nav_order: 999
 published: false
 ---
 
 # Project Notification Scheme
+
+## API Description
+Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

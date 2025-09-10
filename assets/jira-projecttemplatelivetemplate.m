@@ -1,10 +1,11 @@
 ---
 title: Gets A Custom Project Template
-description: Get custom template
-
-This API endpoint allows you to get a live custom project template details by either templateKey or projectId
-
-***Note: Custom Templates are only supported for Jira Enterprise edition.***
+description: |-
+  Get custom template
+  
+  This API endpoint allows you to get a live custom project template details by either templateKey or projectId
+  
+  ***Note: Custom Templates are only supported for Jira Enterprise edition.***
 endpoint: /rest/api/3/project-template/live-template
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectTemplateLiveTemplate
-// Description: Get custom template
-
-This API endpoint allows you to get a live custom project template details by either templateKey or projectId
-
-***Note: Custom Templates are only supported for Jira Enterprise edition.***
+// Description: |-
+  Get custom template
+  
+  This API endpoint allows you to get a live custom project template details by either templateKey or projectId
+  
+  ***Note: Custom Templates are only supported for Jira Enterprise edition.***
 // API Endpoint: GET /rest/api/3/project-template/live-template
 // Create this with query name: JiraGetProjectTemplateLiveTemplate
 // -----------------------------------------------------------------------------

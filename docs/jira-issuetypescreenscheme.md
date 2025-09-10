@@ -1,15 +1,23 @@
 ---
 title: Issue Type Screen Schemes
-description: Returns a [paginated](#pagination) list of issue type screen schemes.
-
-Only issue type screen schemes used in classic projects are returned.
-
-**[Permi...
+description: |-
+  Returns a [paginated](#pagination) list of issue type screen schemes.
+  
+  Only issue type screen schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Type Screen Schemes
+
+## API Description
+Returns a [paginated](#pagination) list of issue type screen schemes.
+
+Only issue type screen schemes used in classic projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

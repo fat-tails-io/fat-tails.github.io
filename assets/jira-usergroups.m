@@ -1,8 +1,9 @@
 ---
 title: Get User Groups
-description: Returns the groups to which a user belongs.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the groups to which a user belongs.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/user/groups
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserGroups
-// Description: Returns the groups to which a user belongs.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the groups to which a user belongs.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/user/groups
 // Create this with query name: JiraGetUserGroups
 // -----------------------------------------------------------------------------

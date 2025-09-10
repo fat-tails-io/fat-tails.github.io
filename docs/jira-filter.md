@@ -1,15 +1,35 @@
 ---
 title: Filter
-description: Returns a filter.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None, however, the filter is only returned w...
+description: |-
+  Returns a filter.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
+  
+   *  owned by the user.
+   *  shared with a group that the user is a member of.
+   *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+   *  shared with a public project.
+   *  shared with the public.
 nav_order: 999
 published: false
 ---
 
 # Filter
+
+## API Description
+Returns a filter.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None, however, the filter is only returned where it is:
+
+ *  owned by the user.
+ *  shared with a group that the user is a member of.
+ *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+ *  shared with a public project.
+ *  shared with the public.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

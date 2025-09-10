@@ -1,14 +1,15 @@
 ---
 title: Get Comment Property
-description: Returns the value of a comment property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+description: |-
+  Returns the value of a comment property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/comment/{commentId}/properties/{propertyKey}
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetCommentProperties
-// Description: Returns the value of a comment property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+// Description: |-
+  Returns the value of a comment property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the comment has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 // API Endpoint: GET /rest/api/3/comment/{commentId}/properties/{propertyKey}
 // Create this with query name: JiraGetCommentProperties
 // -----------------------------------------------------------------------------

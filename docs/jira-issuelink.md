@@ -1,17 +1,29 @@
 ---
 title: Issue Link
-description: Returns an issue link.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse project* [project permissi...
+description: |-
+  Returns an issue link.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse project* [project permission](https://confluence.atlassian.com/x/yodKLg) for all the projects containing the linked issues.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, permission to view both of the issues.
 nav_order: 999
 published: false
 ---
 
 # Issue Link
+
+## API Description
+Returns an issue link.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse project* [project permission](https://confluence.atlassian.com/x/yodKLg) for all the projects containing the linked issues.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, permission to view both of the issues.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

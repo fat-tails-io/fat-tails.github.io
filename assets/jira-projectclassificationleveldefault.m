@@ -1,12 +1,13 @@
 ---
 title: Get The Default Data Classification Level Of A Project
-description: Returns the default data classification for a project.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the default data classification for a project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/project/{projectIdOrKey}/classification-level/default
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectClassificationLevelDefault
-// Description: Returns the default data classification for a project.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the default data classification for a project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/project/{projectIdOrKey}/classification-level/default
 // Create this with query name: JiraGetProjectClassificationLevelDefault
 // -----------------------------------------------------------------------------

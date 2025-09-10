@@ -1,13 +1,19 @@
 ---
 title: Validate Project Key
-description: Validates a project key by confirming the key is a valid string and not in use.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Validates a project key by confirming the key is a valid string and not in use.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Validate Project Key
+
+## API Description
+Validates a project key by confirming the key is a valid string and not in use.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

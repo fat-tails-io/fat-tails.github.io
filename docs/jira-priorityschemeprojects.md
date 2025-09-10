@@ -1,13 +1,19 @@
 ---
 title: Projects By Priority Scheme
-description: Returns a [paginated](#pagination) list of projects by scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of projects by scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Projects By Priority Scheme
+
+## API Description
+Returns a [paginated](#pagination) list of projects by scheme.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

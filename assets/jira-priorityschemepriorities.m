@@ -1,8 +1,9 @@
 ---
 title: Get Priorities By Priority Scheme
-description: Returns a [paginated](#pagination) list of priorities by scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of priorities by scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priorityscheme/{schemeId}/priorities
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPriorityschemePriorities
-// Description: Returns a [paginated](#pagination) list of priorities by scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a [paginated](#pagination) list of priorities by scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/priorityscheme/{schemeId}/priorities
 // Create this with query name: JiraGetPriorityschemePriorities
 // -----------------------------------------------------------------------------

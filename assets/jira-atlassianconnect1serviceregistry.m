@@ -1,8 +1,9 @@
 ---
 title: Retrieve The Attributes Of Service Registries
-description: Retrieve the attributes of given service registries.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
+description: |-
+  Retrieve the attributes of given service registries.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
 endpoint: /rest/atlassian-connect/1/service-registry
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAtlassianConnect1ServiceRegistry
-// Description: Retrieve the attributes of given service registries.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
+// Description: |-
+  Retrieve the attributes of given service registries.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
 // API Endpoint: GET /rest/atlassian-connect/1/service-registry
 // Create this with query name: JiraGetAtlassianConnect1ServiceRegistry
 // -----------------------------------------------------------------------------

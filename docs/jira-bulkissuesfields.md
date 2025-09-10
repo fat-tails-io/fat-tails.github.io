@@ -1,11 +1,29 @@
 ---
 title: Bulk Editable Fields
-description: Use this API to get a list of fields visible to the user to perform bulk edit operations. You can pass single or multiple issues in the query to get e...
+description: |-
+  Use this API to get a list of fields visible to the user to perform bulk edit operations. You can pass single or multiple issues in the query to get eligible editable fields. This API uses pagination to return responses, delivering 50 fields at a time.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  Global bulk change [permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-global-permissions/).
+   *  Browse [project permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/) in all projects that contain the selected issues.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  Depending on the field, any field-specific permissions required to edit it.
 nav_order: 999
 published: false
 ---
 
 # Bulk Editable Fields
+
+## API Description
+Use this API to get a list of fields visible to the user to perform bulk edit operations. You can pass single or multiple issues in the query to get eligible editable fields. This API uses pagination to return responses, delivering 50 fields at a time.
+
+**[Permissions](#permissions) required:**
+
+ *  Global bulk change [permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-global-permissions/).
+ *  Browse [project permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/) in all projects that contain the selected issues.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  Depending on the field, any field-specific permissions required to edit it.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

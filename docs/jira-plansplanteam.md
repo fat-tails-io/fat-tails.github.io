@@ -1,13 +1,19 @@
 ---
 title: Teams In Plan Paginated
-description: Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [glob...
+description: |-
+  Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Teams In Plan Paginated
+
+## API Description
+Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

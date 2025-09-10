@@ -1,14 +1,15 @@
 ---
 title: Get Recent Projects
-description: Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/project/recent
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectRecent
-// Description: Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a list of up to 20 projects recently viewed by the user that are still visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/project/recent
 // Create this with query name: JiraGetProjectRecent
 // -----------------------------------------------------------------------------

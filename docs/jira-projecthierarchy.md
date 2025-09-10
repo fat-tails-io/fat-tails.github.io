@@ -1,16 +1,31 @@
 ---
 title: Project Issue Type Hierarchy
-description: Get the issue type hierarchy for a next-gen project.
-
-The issue type hierarchy for a project consists of:
-
- *  *Epic* at level 1 (optional).
- *  One o...
+description: |-
+  Get the issue type hierarchy for a next-gen project.
+  
+  The issue type hierarchy for a project consists of:
+  
+   *  *Epic* at level 1 (optional).
+   *  One or more issue types at level 0 such as *Story*, *Task*, or *Bug*. Where the issue type *Epic* is defined, these issue types are used to break down the content of an epic.
+   *  *Subtask* at level -1 (optional). This issue type enables level 0 issue types to be broken down into components. Issues based on a level -1 issue type must have a parent issue.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # Project Issue Type Hierarchy
+
+## API Description
+Get the issue type hierarchy for a next-gen project.
+
+The issue type hierarchy for a project consists of:
+
+ *  *Epic* at level 1 (optional).
+ *  One or more issue types at level 0 such as *Story*, *Task*, or *Bug*. Where the issue type *Epic* is defined, these issue types are used to break down the content of an epic.
+ *  *Subtask* at level -1 (optional). This issue type enables level 0 issue types to be broken down into components. Issues based on a level -1 issue type must have a parent issue.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

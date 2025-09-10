@@ -1,15 +1,23 @@
 ---
 title: Version'S Unresolved Issues Count
-description: Returns counts of the issues and unresolved issues for the project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions...
+description: |-
+  Returns counts of the issues and unresolved issues for the project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 nav_order: 999
 published: false
 ---
 
 # Version'S Unresolved Issues Count
+
+## API Description
+Returns counts of the issues and unresolved issues for the project version.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 
 ## Purpose
 Track project versions, releases, and associated delivery metrics

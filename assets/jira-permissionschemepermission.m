@@ -1,8 +1,9 @@
 ---
 title: Get Permission Scheme Grant
-description: Returns a permission grant.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a permission grant.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/permissionscheme/{schemeId}/permission/{permissionId}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPermissionschemePermission
-// Description: Returns a permission grant.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a permission grant.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/permissionscheme/{schemeId}/permission/{permissionId}
 // Create this with query name: JiraGetPermissionschemePermission
 // -----------------------------------------------------------------------------

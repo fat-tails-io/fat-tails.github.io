@@ -1,15 +1,25 @@
 ---
 title: Bulk Get Statuses
-description: Returns a list of the statuses specified by one or more status IDs.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer projects* [project per...
+description: |-
+  Returns a list of the statuses specified by one or more status IDs.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 nav_order: 999
 published: false
 ---
 
 # Bulk Get Statuses
+
+## API Description
+Returns a list of the statuses specified by one or more status IDs.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+ *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

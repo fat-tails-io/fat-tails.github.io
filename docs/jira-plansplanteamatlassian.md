@@ -1,13 +1,19 @@
 ---
 title: Atlassian Team In Plan
-description: Returns planning settings for an Atlassian team in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://co...
+description: |-
+  Returns planning settings for an Atlassian team in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Atlassian Team In Plan
+
+## API Description
+Returns planning settings for an Atlassian team in a plan.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

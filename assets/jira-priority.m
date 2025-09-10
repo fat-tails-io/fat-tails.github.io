@@ -1,8 +1,9 @@
 ---
 title: Get Priority
-description: Returns an issue priority.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns an issue priority.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priority/{id}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPriority
-// Description: Returns an issue priority.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns an issue priority.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/priority/{id}
 // Create this with query name: JiraGetPriority
 // -----------------------------------------------------------------------------

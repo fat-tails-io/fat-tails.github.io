@@ -1,12 +1,13 @@
 ---
 title: Get Jira Attachment Settings
-description: Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
-
-Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
+  
+  Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/attachment/meta
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAttachmentMeta
-// Description: Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
-
-Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
+  
+  Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/attachment/meta
 // Create this with query name: JiraGetAttachmentMeta
 // -----------------------------------------------------------------------------

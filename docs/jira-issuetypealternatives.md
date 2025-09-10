@@ -1,11 +1,23 @@
 ---
 title: Alternative Issue Types
-description: Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, ...
+description: |-
+  Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Alternative Issue Types
+
+## API Description
+Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

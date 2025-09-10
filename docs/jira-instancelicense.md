@@ -1,13 +1,19 @@
 ---
 title: License
-description: Returns licensing information about the Jira instance.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns licensing information about the Jira instance.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # License
+
+## API Description
+Returns licensing information about the Jira instance.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

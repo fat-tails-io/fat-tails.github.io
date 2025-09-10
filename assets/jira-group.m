@@ -1,13 +1,14 @@
 ---
 title: Get Group
-description: This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
-
-Returns all users in a group.
-
-**[Permissions](#permissions) required:** either of:
-
- *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
+  
+  Returns all users in a group.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group
 method: GET
 published: false
@@ -15,14 +16,15 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetGroup
-// Description: This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
-
-Returns all users in a group.
-
-**[Permissions](#permissions) required:** either of:
-
- *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
+  
+  Returns all users in a group.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/group
 // Create this with query name: JiraGetGroup
 // -----------------------------------------------------------------------------

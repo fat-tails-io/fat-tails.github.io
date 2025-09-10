@@ -1,13 +1,14 @@
 ---
 title: Get Users From Group
-description: Returns a [paginated](#pagination) list of all users in a group.
-
-Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
-
-**[Permissions](#permissions) required:** either of:
-
- *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of all users in a group.
+  
+  Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group/member
 method: GET
 published: false
@@ -15,14 +16,15 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetGroupMember
-// Description: Returns a [paginated](#pagination) list of all users in a group.
-
-Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
-
-**[Permissions](#permissions) required:** either of:
-
- *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of all users in a group.
+  
+  Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/group/member
 // Create this with query name: JiraGetGroupMember
 // -----------------------------------------------------------------------------

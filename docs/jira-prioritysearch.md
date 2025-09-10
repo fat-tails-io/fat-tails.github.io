@@ -1,11 +1,27 @@
 ---
 title: Search Priorities
-description: Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria...
+description: |-
+  Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
+  
+   *  a list of priority IDs. Any invalid priority IDs are ignored.
+   *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
+   *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Search Priorities
+
+## API Description
+Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
+
+ *  a list of priority IDs. Any invalid priority IDs are ignored.
+ *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
+ *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

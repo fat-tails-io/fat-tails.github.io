@@ -1,8 +1,9 @@
 ---
 title: Get Project Role By Id
-description: Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/role/{id}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetRole
-// Description: Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Gets the project role details and the default actors associated with the role. The list of default actors is sorted by display name.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/role/{id}
 // Create this with query name: JiraGetRole
 // -----------------------------------------------------------------------------

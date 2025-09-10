@@ -1,13 +1,19 @@
 ---
 title: Default Actors For Project Role
-description: Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [globa...
+description: |-
+  Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Default Actors For Project Role
+
+## API Description
+Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand project roles, permissions, and team structure for governance analysis

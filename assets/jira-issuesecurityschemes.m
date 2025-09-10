@@ -1,11 +1,12 @@
 ---
 title: Get Issue Security Scheme
-description: Returns an issue security scheme along with its security levels.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme.
+description: |-
+  Returns an issue security scheme along with its security levels.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme.
 endpoint: /rest/api/3/issuesecurityschemes/{id}
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuesecurityschemes
-// Description: Returns an issue security scheme along with its security levels.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme. with automatic pagination handling
+// Description: |-
+  Returns an issue security scheme along with its security levels.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/issuesecurityschemes/{id}
 // Create this with query name: JiraGetIssuesecurityschemes
 // -----------------------------------------------------------------------------

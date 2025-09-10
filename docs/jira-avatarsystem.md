@@ -1,13 +1,23 @@
 ---
 title: System Avatars By Type
-description: Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
-
-This operation can be accesse...
+description: |-
+  Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # System Avatars By Type
+
+## API Description
+Returns a list of system avatar details by owner type, where the owner types are issue type, project, user or priority.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

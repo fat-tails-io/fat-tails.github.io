@@ -1,13 +1,31 @@
 ---
 title: Failed Webhooks
-description: Returns webhooks that have recently failed to be delivered to the requesting app after the maximum number of retries.
-
-After 72 hours the failure may ...
+description: |-
+  Returns webhooks that have recently failed to be delivered to the requesting app after the maximum number of retries.
+  
+  After 72 hours the failure may no longer be returned by this operation.
+  
+  The oldest failure is returned first.
+  
+  This method uses a cursor-based pagination. To request the next page use the failure time of the last webhook on the list as the `failedAfter` value or use the URL provided in `next`.
+  
+  **[Permissions](#permissions) required:** Only [Connect apps](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps) can use this operation.
 nav_order: 999
 published: false
 ---
 
 # Failed Webhooks
+
+## API Description
+Returns webhooks that have recently failed to be delivered to the requesting app after the maximum number of retries.
+
+After 72 hours the failure may no longer be returned by this operation.
+
+The oldest failure is returned first.
+
+This method uses a cursor-based pagination. To request the next page use the failure time of the last webhook on the list as the `failedAfter` value or use the URL provided in `next`.
+
+**[Permissions](#permissions) required:** Only [Connect apps](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps) can use this operation.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

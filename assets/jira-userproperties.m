@@ -1,13 +1,14 @@
 ---
 title: Get User Property
-description: Returns the value of a user's property. If no property key is provided [Get user property keys](#api-rest-api-3-user-properties-get) is called.
-
-Note: This operation does not access the [user properties](https://confluence.atlassian.com/x/8YxjL) created and maintained in Jira.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
- *  Access to Jira, to get a property from the calling user's record.
+description: |-
+  Returns the value of a user's property. If no property key is provided [Get user property keys](#api-rest-api-3-user-properties-get) is called.
+  
+  Note: This operation does not access the [user properties](https://confluence.atlassian.com/x/8YxjL) created and maintained in Jira.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+   *  Access to Jira, to get a property from the calling user's record.
 endpoint: /rest/api/3/user/properties/{propertyKey}
 method: GET
 published: false
@@ -15,14 +16,15 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserProperties
-// Description: Returns the value of a user's property. If no property key is provided [Get user property keys](#api-rest-api-3-user-properties-get) is called.
-
-Note: This operation does not access the [user properties](https://confluence.atlassian.com/x/8YxjL) created and maintained in Jira.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
- *  Access to Jira, to get a property from the calling user's record.
+// Description: |-
+  Returns the value of a user's property. If no property key is provided [Get user property keys](#api-rest-api-3-user-properties-get) is called.
+  
+  Note: This operation does not access the [user properties](https://confluence.atlassian.com/x/8YxjL) created and maintained in Jira.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+   *  Access to Jira, to get a property from the calling user's record.
 // API Endpoint: GET /rest/api/3/user/properties/{propertyKey}
 // Create this with query name: JiraGetUserProperties
 // -----------------------------------------------------------------------------

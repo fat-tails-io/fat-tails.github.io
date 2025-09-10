@@ -1,13 +1,19 @@
 ---
 title: Project'S Sender Email
-description: Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
-
-**[Permissions](#permissions) required:** *Browse projects* ...
+description: |-
+  Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # Project'S Sender Email
+
+## API Description
+Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

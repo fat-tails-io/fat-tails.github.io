@@ -1,11 +1,23 @@
 ---
 title: All Statuses For Project
-description: Returns the valid statuses for a project. The statuses are grouped by issue type, as each project has a set of valid issue types and each issue type h...
+description: |-
+  Returns the valid statuses for a project. The statuses are grouped by issue type, as each project has a set of valid issue types and each issue type has a set of valid statuses.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # All Statuses For Project
+
+## API Description
+Returns the valid statuses for a project. The statuses are grouped by issue type, as each project has a set of valid issue types and each issue type has a set of valid statuses.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

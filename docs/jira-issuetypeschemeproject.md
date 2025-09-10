@@ -1,13 +1,23 @@
 ---
 title: Issue Type Schemes For Projects
-description: Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
-
-Only issue type sc...
+description: |-
+  Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
+  
+  Only issue type schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Type Schemes For Projects
+
+## API Description
+Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
+
+Only issue type schemes used in classic projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

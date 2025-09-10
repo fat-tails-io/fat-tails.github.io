@@ -1,14 +1,31 @@
 ---
 title: Version'S Related Issues Count
-description: Returns the following counts for a version:
-
- *  Number of issues where the `fixVersion` is set to the version.
- *  Number of issues where the `affect...
+description: |-
+  Returns the following counts for a version:
+  
+   *  Number of issues where the `fixVersion` is set to the version.
+   *  Number of issues where the `affectedVersion` is set to the version.
+   *  Number of issues where a version custom field is set to the version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 nav_order: 999
 published: false
 ---
 
 # Version'S Related Issues Count
+
+## API Description
+Returns the following counts for a version:
+
+ *  Number of issues where the `fixVersion` is set to the version.
+ *  Number of issues where the `affectedVersion` is set to the version.
+ *  Number of issues where a version custom field is set to the version.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 
 ## Purpose
 Track project versions, releases, and associated delivery metrics

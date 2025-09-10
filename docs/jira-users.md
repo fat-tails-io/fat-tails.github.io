@@ -1,13 +1,23 @@
 ---
 title: All Users Default
-description: Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
-
-Privacy controls are...
+description: |-
+  Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
+  
+  Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # All Users Default
+
+## API Description
+Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
+
+Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+
+**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

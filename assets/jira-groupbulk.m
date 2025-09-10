@@ -1,8 +1,9 @@
 ---
 title: Bulk Get Groups
-description: Returns a [paginated](#pagination) list of groups.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of groups.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group/bulk
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetGroupBulk
-// Description: Returns a [paginated](#pagination) list of groups.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of groups.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/group/bulk
 // Create this with query name: JiraGetGroupBulk
 // -----------------------------------------------------------------------------

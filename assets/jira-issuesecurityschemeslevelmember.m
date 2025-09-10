@@ -1,12 +1,13 @@
 ---
 title: Get Issue Security Level Members
-description: Returns a [paginated](#pagination) list of issue security level members.
-
-Only issue security level members in the context of classic projects are returned.
-
-Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of issue security level members.
+  
+  Only issue security level members in the context of classic projects are returned.
+  
+  Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/level/member
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuesecurityschemesLevelMember
-// Description: Returns a [paginated](#pagination) list of issue security level members.
-
-Only issue security level members in the context of classic projects are returned.
-
-Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of issue security level members.
+  
+  Only issue security level members in the context of classic projects are returned.
+  
+  Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/issuesecurityschemes/level/member
 // Create this with query name: JiraGetIssuesecurityschemesLevelMember
 // -----------------------------------------------------------------------------

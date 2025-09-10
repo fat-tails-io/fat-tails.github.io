@@ -1,15 +1,25 @@
 ---
 title: Issue Limit Report
-description: Returns all issues breaching and approaching per-issue limits.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](...
+description: |-
+  Returns all issues breaching and approaching per-issue limits.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) is required for the project the issues are in. Results may be incomplete otherwise
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Limit Report
+
+## API Description
+Returns all issues breaching and approaching per-issue limits.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) is required for the project the issues are in. Results may be incomplete otherwise
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

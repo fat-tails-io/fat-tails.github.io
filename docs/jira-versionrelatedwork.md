@@ -1,15 +1,23 @@
 ---
 title: Related Work
-description: Returns related work items for the given version id.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse p...
+description: |-
+  Returns related work items for the given version id.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 nav_order: 999
 published: false
 ---
 
 # Related Work
+
+## API Description
+Returns related work items for the given version id.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 
 ## Purpose
 Track project versions, releases, and associated delivery metrics

@@ -1,13 +1,19 @@
 ---
 title: Issue Navigator Default Columns
-description: Returns the default issue navigator columns.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlas...
+description: |-
+  Returns the default issue navigator columns.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Navigator Default Columns
+
+## API Description
+Returns the default issue navigator columns.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

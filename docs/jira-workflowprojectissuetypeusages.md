@@ -7,6 +7,9 @@ published: false
 
 # Issue Types In A Project That Are Using A Given Workflow
 
+## API Description
+Returns a page of issue types using a given workflow within a project.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

@@ -1,16 +1,33 @@
 ---
 title: Avatar Image By Id
-description: Returns a project, issue type or priority avatar image by ID.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-...
+description: |-
+  Returns a project, issue type or priority avatar image by ID.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  For system avatars, none.
+   *  For custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+   *  For custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+   *  For priority avatars, none.
 nav_order: 999
 published: false
 ---
 
 # Avatar Image By Id
+
+## API Description
+Returns a project, issue type or priority avatar image by ID.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  For system avatars, none.
+ *  For custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+ *  For custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+ *  For priority avatars, none.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

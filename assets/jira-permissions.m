@@ -1,14 +1,15 @@
 ---
 title: Get All Permissions
-description: Returns all permissions, including:
-
- *  global permissions.
- *  project permissions.
- *  global permissions added by plugins.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns all permissions, including:
+  
+   *  global permissions.
+   *  project permissions.
+   *  global permissions added by plugins.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/permissions
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPermissions
-// Description: Returns all permissions, including:
-
- *  global permissions.
- *  project permissions.
- *  global permissions added by plugins.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns all permissions, including:
+  
+   *  global permissions.
+   *  project permissions.
+   *  global permissions added by plugins.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/permissions
 // Create this with query name: JiraGetPermissions
 // -----------------------------------------------------------------------------

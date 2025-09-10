@@ -1,13 +1,35 @@
 ---
 title: My Filters
-description: Returns the filters owned by the user. If `includeFavourites` is `true`, the user's visible favorite filters are also returned.
-
-**[Permissions](#perm...
+description: |-
+  Returns the filters owned by the user. If `includeFavourites` is `true`, the user's visible favorite filters are also returned.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira, however, a favorite filters is only visible to the user where the filter is:
+  
+   *  owned by the user.
+   *  shared with a group that the user is a member of.
+   *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+   *  shared with a public project.
+   *  shared with the public.
+  
+  For example, if the user favorites a public filter that is subsequently made private that filter is not returned by this operation.
 nav_order: 999
 published: false
 ---
 
 # My Filters
+
+## API Description
+Returns the filters owned by the user. If `includeFavourites` is `true`, the user's visible favorite filters are also returned.
+
+**[Permissions](#permissions) required:** Permission to access Jira, however, a favorite filters is only visible to the user where the filter is:
+
+ *  owned by the user.
+ *  shared with a group that the user is a member of.
+ *  shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+ *  shared with a public project.
+ *  shared with the public.
+
+For example, if the user favorites a public filter that is subsequently made private that filter is not returned by this operation.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

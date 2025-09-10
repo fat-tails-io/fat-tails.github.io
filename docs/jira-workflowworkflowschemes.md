@@ -7,6 +7,9 @@ published: false
 
 # Workflow Schemes Which Are Using A Given Workflow
 
+## API Description
+Returns a page of workflow schemes using a given workflow.
+
 ## Purpose
 Extract specific data from Jira for project analysis and reporting
 

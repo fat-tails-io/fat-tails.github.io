@@ -1,11 +1,19 @@
 ---
 title: Account Ids For Users
-description: Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specif...
+description: |-
+  Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Account Ids For Users
+
+## API Description
+Returns the account IDs for the users specified in the `key` or `username` parameters. Note that multiple `key` or `username` parameters can be specified.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

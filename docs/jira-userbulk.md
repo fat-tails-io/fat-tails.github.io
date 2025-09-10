@@ -1,13 +1,19 @@
 ---
 title: Bulk Get Users
-description: Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
-
-**[Permissions](#permissions) required:** Permission to ac...
+description: |-
+  Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Bulk Get Users
+
+## API Description
+Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

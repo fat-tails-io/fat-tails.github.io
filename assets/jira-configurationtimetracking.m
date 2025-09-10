@@ -1,8 +1,9 @@
 ---
 title: Get Selected Time Tracking Provider
-description: Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/configuration/timetracking
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetConfigurationTimetracking
-// Description: Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/configuration/timetracking
 // Create this with query name: JiraGetConfigurationTimetracking
 // -----------------------------------------------------------------------------

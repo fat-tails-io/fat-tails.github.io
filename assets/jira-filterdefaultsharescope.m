@@ -1,8 +1,9 @@
 ---
 title: Get Default Share Scope
-description: Returns the default sharing settings for new filters and dashboards for a user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns the default sharing settings for new filters and dashboards for a user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/filter/defaultShareScope
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFilterDefaultsharescope
-// Description: Returns the default sharing settings for new filters and dashboards for a user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns the default sharing settings for new filters and dashboards for a user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/filter/defaultShareScope
 // Create this with query name: JiraGetFilterDefaultsharescope
 // -----------------------------------------------------------------------------

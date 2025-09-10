@@ -1,13 +1,19 @@
 ---
 title: Project Category By Id
-description: Returns a project category.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a project category.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Project Category By Id
+
+## API Description
+Returns a project category.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

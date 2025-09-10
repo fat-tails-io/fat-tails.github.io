@@ -1,15 +1,25 @@
 ---
 title: Issue Security Scheme
-description: Returns an issue security scheme along with its security levels.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission]...
+description: |-
+  Returns an issue security scheme along with its security levels.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme.
 nav_order: 999
 published: false
 ---
 
 # Issue Security Scheme
+
+## API Description
+Returns an issue security scheme along with its security levels.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+ *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

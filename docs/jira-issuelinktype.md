@@ -1,15 +1,27 @@
 ---
 title: Issue Link Type
-description: Returns an issue link type.
-
-To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
-
-This operat...
+description: |-
+  Returns an issue link type.
+  
+  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
 nav_order: 999
 published: false
 ---
 
 # Issue Link Type
+
+## API Description
+Returns an issue link type.
+
+To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

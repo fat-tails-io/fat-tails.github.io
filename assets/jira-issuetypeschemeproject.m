@@ -1,10 +1,11 @@
 ---
 title: Get Issue Type Schemes For Projects
-description: Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
-
-Only issue type schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
+  
+  Only issue type schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuetypescheme/project
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuetypeschemeProject
-// Description: Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
-
-Only issue type schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it.
+  
+  Only issue type schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/issuetypescheme/project
 // Create this with query name: JiraGetIssuetypeschemeProject
 // -----------------------------------------------------------------------------

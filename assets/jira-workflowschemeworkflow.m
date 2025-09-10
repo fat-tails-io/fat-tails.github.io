@@ -1,8 +1,9 @@
 ---
 title: Get Issue Types For Workflows In Workflow Scheme
-description: Returns the workflow-issue type mappings for a workflow scheme.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the workflow-issue type mappings for a workflow scheme.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflowscheme/{id}/workflow
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetWorkflowschemeWorkflow
-// Description: Returns the workflow-issue type mappings for a workflow scheme.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the workflow-issue type mappings for a workflow scheme.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/workflowscheme/{id}/workflow
 // Create this with query name: JiraGetWorkflowschemeWorkflow
 // -----------------------------------------------------------------------------

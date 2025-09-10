@@ -1,12 +1,13 @@
 ---
 title: Get Issue Security Levels
-description: Returns a [paginated](#pagination) list of issue security levels.
-
-Only issue security levels in the context of classic projects are returned.
-
-Filtering using IDs is inclusive: if you specify both security scheme IDs and level IDs, the result will include both specified issue security levels and all issue security levels from the specified schemes.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of issue security levels.
+  
+  Only issue security levels in the context of classic projects are returned.
+  
+  Filtering using IDs is inclusive: if you specify both security scheme IDs and level IDs, the result will include both specified issue security levels and all issue security levels from the specified schemes.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/level
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuesecurityschemesLevel
-// Description: Returns a [paginated](#pagination) list of issue security levels.
-
-Only issue security levels in the context of classic projects are returned.
-
-Filtering using IDs is inclusive: if you specify both security scheme IDs and level IDs, the result will include both specified issue security levels and all issue security levels from the specified schemes.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of issue security levels.
+  
+  Only issue security levels in the context of classic projects are returned.
+  
+  Filtering using IDs is inclusive: if you specify both security scheme IDs and level IDs, the result will include both specified issue security levels and all issue security levels from the specified schemes.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/issuesecurityschemes/level
 // Create this with query name: JiraGetIssuesecurityschemesLevel
 // -----------------------------------------------------------------------------

@@ -1,13 +1,19 @@
 ---
 title: Dynamic Webhooks For App
-description: Returns a [paginated](#pagination) list of the webhooks registered by the calling app.
-
-**[Permissions](#permissions) required:** Only [Connect](https...
+description: |-
+  Returns a [paginated](#pagination) list of the webhooks registered by the calling app.
+  
+  **[Permissions](#permissions) required:** Only [Connect](https://developer.atlassian.com/cloud/jira/platform/#connect-apps) and [OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps) apps can use this operation.
 nav_order: 999
 published: false
 ---
 
 # Dynamic Webhooks For App
+
+## API Description
+Returns a [paginated](#pagination) list of the webhooks registered by the calling app.
+
+**[Permissions](#permissions) required:** Only [Connect](https://developer.atlassian.com/cloud/jira/platform/#connect-apps) and [OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps) apps can use this operation.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

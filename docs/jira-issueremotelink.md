@@ -1,15 +1,33 @@
 ---
 title: Remote Issue Link By Id
-description: Returns a remote issue link for an issue.
-
-This operation requires [issue linking to be active](https://confluence.atlassian.com/x/yoXKM).
-
-This opera...
+description: |-
+  Returns a remote issue link for an issue.
+  
+  This operation requires [issue linking to be active](https://confluence.atlassian.com/x/yoXKM).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 nav_order: 999
 published: false
 ---
 
 # Remote Issue Link By Id
+
+## API Description
+Returns a remote issue link for an issue.
+
+This operation requires [issue linking to be active](https://confluence.atlassian.com/x/yoXKM).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

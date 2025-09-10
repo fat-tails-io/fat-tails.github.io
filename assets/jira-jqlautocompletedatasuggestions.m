@@ -1,17 +1,18 @@
 ---
 title: Get Field Auto Complete Suggestions
-description: Returns the JQL search auto complete suggestions for a field.
-
-Suggestions can be obtained by providing:
-
- *  `fieldName` to get a list of all values for the field.
- *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
- *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
- *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns the JQL search auto complete suggestions for a field.
+  
+  Suggestions can be obtained by providing:
+  
+   *  `fieldName` to get a list of all values for the field.
+   *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
+   *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
+   *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/jql/autocompletedata/suggestions
 method: GET
 published: false
@@ -19,18 +20,19 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetJqlAutocompletedataSuggestions
-// Description: Returns the JQL search auto complete suggestions for a field.
-
-Suggestions can be obtained by providing:
-
- *  `fieldName` to get a list of all values for the field.
- *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
- *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
- *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None. with JQL search capabilities
+// Description: |-
+  Returns the JQL search auto complete suggestions for a field.
+  
+  Suggestions can be obtained by providing:
+  
+   *  `fieldName` to get a list of all values for the field.
+   *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
+   *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
+   *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None. with JQL search capabilities
 // API Endpoint: GET /rest/api/3/jql/autocompletedata/suggestions
 // Create this with query name: JiraGetJqlAutocompletedataSuggestions
 // -----------------------------------------------------------------------------

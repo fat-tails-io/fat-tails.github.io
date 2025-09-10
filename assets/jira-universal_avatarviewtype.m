@@ -1,10 +1,11 @@
 ---
 title: Get Avatar Image By Type
-description: Returns the default project, issue type or priority avatar image.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns the default project, issue type or priority avatar image.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/universal_avatar/view/type/{type}
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUniversal_AvatarViewType
-// Description: Returns the default project, issue type or priority avatar image.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns the default project, issue type or priority avatar image.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/universal_avatar/view/type/{type}
 // Create this with query name: JiraGetUniversal_AvatarViewType
 // -----------------------------------------------------------------------------

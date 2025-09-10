@@ -1,8 +1,9 @@
 ---
 title: Get Modules
-description: Returns all modules registered dynamically by the calling app.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request.
+description: |-
+  Returns all modules registered dynamically by the calling app.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request.
 endpoint: /rest/atlassian-connect/1/app/module/dynamic
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAtlassianConnect1AppModuleDynamic
-// Description: Returns all modules registered dynamically by the calling app.
-
-**[Permissions](#permissions) required:** Only Connect apps can make this request.
+// Description: |-
+  Returns all modules registered dynamically by the calling app.
+  
+  **[Permissions](#permissions) required:** Only Connect apps can make this request.
 // API Endpoint: GET /rest/atlassian-connect/1/app/module/dynamic
 // Create this with query name: JiraGetAtlassianConnect1AppModuleDynamic
 // -----------------------------------------------------------------------------

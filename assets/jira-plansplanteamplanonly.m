@@ -1,8 +1,9 @@
 ---
 title: Get Plan-Only Team
-description: Returns planning settings for a plan-only team.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns planning settings for a plan-only team.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}/team/planonly/{planOnlyTeamId}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPlansPlanTeamPlanonly
-// Description: Returns planning settings for a plan-only team.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns planning settings for a plan-only team.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/plans/plan/{planId}/team/planonly/{planOnlyTeamId}
 // Create this with query name: JiraGetPlansPlanTeamPlanonly
 // -----------------------------------------------------------------------------

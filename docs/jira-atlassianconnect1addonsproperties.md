@@ -1,13 +1,21 @@
 ---
 title: App Property
-description: Returns the key and value of an app's property.
-
-**[Permissions](#permissions) required:** Only a Connect app whose key matches `addonKey` can make th...
+description: |-
+  Returns the key and value of an app's property.
+  
+  **[Permissions](#permissions) required:** Only a Connect app whose key matches `addonKey` can make this request.
+  Additionally, Forge apps can access Connect app properties (stored against the same `app.connect.key`).
 nav_order: 999
 published: false
 ---
 
 # App Property
+
+## API Description
+Returns the key and value of an app's property.
+
+**[Permissions](#permissions) required:** Only a Connect app whose key matches `addonKey` can make this request.
+Additionally, Forge apps can access Connect app properties (stored against the same `app.connect.key`).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

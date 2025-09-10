@@ -1,11 +1,12 @@
 ---
 title: Search Workflows
-description: Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* global permission to access all, including project-scoped, workflows
- *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows
+description: |-
+  Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* global permission to access all, including project-scoped, workflows
+   *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows
 endpoint: /rest/api/3/workflows/search
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetWorkflowsSearch
-// Description: Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* global permission to access all, including project-scoped, workflows
- *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* global permission to access all, including project-scoped, workflows
+   *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows with automatic pagination handling
 // API Endpoint: GET /rest/api/3/workflows/search
 // Create this with query name: JiraGetWorkflowsSearch
 // -----------------------------------------------------------------------------

@@ -1,13 +1,19 @@
 ---
 title: Issue Types For Workflows In Draft Workflow Scheme
-description: Returns the workflow-issue type mappings for a workflow scheme's draft.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permissio...
+description: |-
+  Returns the workflow-issue type mappings for a workflow scheme's draft.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Types For Workflows In Draft Workflow Scheme
+
+## API Description
+Returns the workflow-issue type mappings for a workflow scheme's draft.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

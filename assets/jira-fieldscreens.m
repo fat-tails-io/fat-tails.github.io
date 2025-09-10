@@ -1,8 +1,9 @@
 ---
 title: Get Screens For A Field
-description: Returns a [paginated](#pagination) list of the screens a field is used in.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of the screens a field is used in.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/field/{fieldId}/screens
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldScreens
-// Description: Returns a [paginated](#pagination) list of the screens a field is used in.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of the screens a field is used in.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/field/{fieldId}/screens
 // Create this with query name: JiraGetFieldScreens
 // -----------------------------------------------------------------------------

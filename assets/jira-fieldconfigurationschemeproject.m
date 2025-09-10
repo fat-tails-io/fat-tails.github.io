@@ -1,12 +1,13 @@
 ---
 title: Get Field Configuration Schemes For Projects
-description: Returns a [paginated](#pagination) list of field configuration schemes and, for each scheme, a list of the projects that use it.
-
-The list is sorted by field configuration scheme ID. The first item contains the list of project IDs assigned to the default field configuration scheme.
-
-Only field configuration schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of field configuration schemes and, for each scheme, a list of the projects that use it.
+  
+  The list is sorted by field configuration scheme ID. The first item contains the list of project IDs assigned to the default field configuration scheme.
+  
+  Only field configuration schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfigurationscheme/project
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldconfigurationschemeProject
-// Description: Returns a [paginated](#pagination) list of field configuration schemes and, for each scheme, a list of the projects that use it.
-
-The list is sorted by field configuration scheme ID. The first item contains the list of project IDs assigned to the default field configuration scheme.
-
-Only field configuration schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of field configuration schemes and, for each scheme, a list of the projects that use it.
+  
+  The list is sorted by field configuration scheme ID. The first item contains the list of project IDs assigned to the default field configuration scheme.
+  
+  Only field configuration schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/fieldconfigurationscheme/project
 // Create this with query name: JiraGetFieldconfigurationschemeProject
 // -----------------------------------------------------------------------------

@@ -1,13 +1,19 @@
 ---
 title: Workflow For Issue Type In Workflow Scheme
-description: Returns the issue type-workflow mapping for an issue type in a workflow scheme.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global p...
+description: |-
+  Returns the issue type-workflow mapping for an issue type in a workflow scheme.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Workflow For Issue Type In Workflow Scheme
+
+## API Description
+Returns the issue type-workflow mapping for an issue type in a workflow scheme.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

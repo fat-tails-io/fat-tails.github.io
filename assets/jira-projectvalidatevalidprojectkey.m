@@ -1,8 +1,9 @@
 ---
 title: Get Valid Project Key
-description: Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/validProjectKey
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectvalidateValidprojectkey
-// Description: Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/projectvalidate/validProjectKey
 // Create this with query name: JiraGetProjectvalidateValidprojectkey
 // -----------------------------------------------------------------------------

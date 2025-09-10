@@ -1,8 +1,9 @@
 ---
 title: Get Atlassian Team In Plan
-description: Returns planning settings for an Atlassian team in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns planning settings for an Atlassian team in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}/team/atlassian/{atlassianTeamId}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPlansPlanTeamAtlassian
-// Description: Returns planning settings for an Atlassian team in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns planning settings for an Atlassian team in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/plans/plan/{planId}/team/atlassian/{atlassianTeamId}
 // Create this with query name: JiraGetPlansPlanTeamAtlassian
 // -----------------------------------------------------------------------------

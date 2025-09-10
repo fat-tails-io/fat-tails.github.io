@@ -1,10 +1,11 @@
 ---
 title: Get Project
-description: Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+description: |-
+  Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectIdOrKey}
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProject
-// Description: Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+// Description: |-
+  Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 // API Endpoint: GET /rest/api/3/project/{projectIdOrKey}
 // Create this with query name: JiraGetProject
 // -----------------------------------------------------------------------------

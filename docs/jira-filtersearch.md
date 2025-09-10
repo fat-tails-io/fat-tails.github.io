@@ -1,14 +1,41 @@
 ---
 title: Search For Filters
-description: Returns a [paginated](#pagination) list of filters. Use this operation to get:
-
- *  specific filters, by defining `id` only.
- *  filters that match al...
+description: |-
+  Returns a [paginated](#pagination) list of filters. Use this operation to get:
+  
+   *  specific filters, by defining `id` only.
+   *  filters that match all of the specified attributes. For example, all filters for a user with a particular word in their name. When multiple attributes are specified only filters matching all attributes are returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None, however, only the following filters that match the query parameters are returned:
+  
+   *  filters owned by the user.
+   *  filters shared with a group that the user is a member of.
+   *  filters shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+   *  filters shared with a public project.
+   *  filters shared with the public.
 nav_order: 999
 published: false
 ---
 
 # Search For Filters
+
+## API Description
+Returns a [paginated](#pagination) list of filters. Use this operation to get:
+
+ *  specific filters, by defining `id` only.
+ *  filters that match all of the specified attributes. For example, all filters for a user with a particular word in their name. When multiple attributes are specified only filters matching all attributes are returned.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None, however, only the following filters that match the query parameters are returned:
+
+ *  filters owned by the user.
+ *  filters shared with a group that the user is a member of.
+ *  filters shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.
+ *  filters shared with a public project.
+ *  filters shared with the public.
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

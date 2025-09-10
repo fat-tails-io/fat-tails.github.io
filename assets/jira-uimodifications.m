@@ -1,10 +1,11 @@
 ---
 title: Get Ui Modifications
-description: Gets UI modifications. UI modifications can only be retrieved by Forge apps.
-
-**[Permissions](#permissions) required:** None.
-
-The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
+description: |-
+  Gets UI modifications. UI modifications can only be retrieved by Forge apps.
+  
+  **[Permissions](#permissions) required:** None.
+  
+  The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 endpoint: /rest/api/3/uiModifications
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUimodifications
-// Description: Gets UI modifications. UI modifications can only be retrieved by Forge apps.
-
-**[Permissions](#permissions) required:** None.
-
-The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
+// Description: |-
+  Gets UI modifications. UI modifications can only be retrieved by Forge apps.
+  
+  **[Permissions](#permissions) required:** None.
+  
+  The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 // API Endpoint: GET /rest/api/3/uiModifications
 // Create this with query name: JiraGetUimodifications
 // -----------------------------------------------------------------------------

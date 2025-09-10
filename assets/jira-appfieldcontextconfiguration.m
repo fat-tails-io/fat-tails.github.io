@@ -1,17 +1,18 @@
 ---
 title: Get Custom Field Configurations
-description: Returns a [paginated](#pagination) list of configurations for a custom field of a [type](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/) created by a [Forge app](https://developer.atlassian.com/platform/forge/).
-
-The result can be filtered by one of these criteria:
-
- *  `id`.
- *  `fieldContextId`.
- *  `issueId`.
- *  `projectKeyOrId` and `issueTypeId`.
-
-Otherwise, all configurations are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the Forge app that provided the custom field type.
+description: |-
+  Returns a [paginated](#pagination) list of configurations for a custom field of a [type](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/) created by a [Forge app](https://developer.atlassian.com/platform/forge/).
+  
+  The result can be filtered by one of these criteria:
+  
+   *  `id`.
+   *  `fieldContextId`.
+   *  `issueId`.
+   *  `projectKeyOrId` and `issueTypeId`.
+  
+  Otherwise, all configurations are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the Forge app that provided the custom field type.
 endpoint: /rest/api/3/app/field/{fieldIdOrKey}/context/configuration
 method: GET
 published: false
@@ -19,18 +20,19 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAppFieldContextConfiguration
-// Description: Returns a [paginated](#pagination) list of configurations for a custom field of a [type](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/) created by a [Forge app](https://developer.atlassian.com/platform/forge/).
-
-The result can be filtered by one of these criteria:
-
- *  `id`.
- *  `fieldContextId`.
- *  `issueId`.
- *  `projectKeyOrId` and `issueTypeId`.
-
-Otherwise, all configurations are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the Forge app that provided the custom field type.
+// Description: |-
+  Returns a [paginated](#pagination) list of configurations for a custom field of a [type](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/) created by a [Forge app](https://developer.atlassian.com/platform/forge/).
+  
+  The result can be filtered by one of these criteria:
+  
+   *  `id`.
+   *  `fieldContextId`.
+   *  `issueId`.
+   *  `projectKeyOrId` and `issueTypeId`.
+  
+  Otherwise, all configurations are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the Forge app that provided the custom field type.
 // API Endpoint: GET /rest/api/3/app/field/{fieldIdOrKey}/context/configuration
 // Create this with query name: JiraGetAppFieldContextConfiguration
 // -----------------------------------------------------------------------------

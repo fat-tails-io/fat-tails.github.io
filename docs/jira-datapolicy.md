@@ -7,6 +7,9 @@ published: false
 
 # Data Policy For The Workspace
 
+## API Description
+Returns data policy for the workspace.
+
 ## Purpose
 Extract specific data from Jira for project analysis and reporting
 
