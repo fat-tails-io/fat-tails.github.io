@@ -2,7 +2,7 @@
 title: Project Features
 description: Returns the list of features for a project.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Project Features

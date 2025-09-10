@@ -4,7 +4,7 @@ description: Returns a status. The status must be associated with an active work
 
 If a name is used on more than one status, only the status fo...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Status

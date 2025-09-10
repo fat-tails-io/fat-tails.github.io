@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of options for a select lis
 
 Note that this operatio...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Selectable Issue Field Options

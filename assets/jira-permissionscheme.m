@@ -5,7 +5,7 @@ description: Returns a permission scheme.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/permissionscheme/{schemeId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

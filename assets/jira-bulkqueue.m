@@ -17,7 +17,7 @@ If the task has completed, then this resource will return:
 **Note:** You can view task progress for up to 14 days from creation.
 endpoint: /rest/api/3/bulk/queue/{taskId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

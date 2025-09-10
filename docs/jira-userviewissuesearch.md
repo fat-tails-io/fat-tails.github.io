@@ -7,7 +7,7 @@ description: Returns a list of users who fulfill these criteria:
 
 Use ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users With Browse Permission

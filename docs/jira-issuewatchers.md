@@ -4,7 +4,7 @@ description: Returns the watchers for an issue.
 
 This operation requires the **Allow users to watch issues** option to be *ON*. This option is set in General confi...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Watchers

@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
  *  If attachments are added in private comments, the comment-level restriction will be applied.
 endpoint: /rest/api/3/attachment/thumbnail/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

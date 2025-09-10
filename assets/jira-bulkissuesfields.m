@@ -10,7 +10,7 @@ description: Use this API to get a list of fields visible to the user to perform
  *  Depending on the field, any field-specific permissions required to edit it.
 endpoint: /rest/api/3/bulk/issues/fields
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

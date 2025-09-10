@@ -2,7 +2,7 @@
 title: Notification Scheme
 description: Returns a [notification scheme](https://confluence.atlassian.com/x/8YdKLg), including the list of events and the recipients who will receive notificat...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Notification Scheme

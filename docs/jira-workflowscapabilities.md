@@ -2,7 +2,7 @@
 title: Available Workflow Capabilities
 description: Get the list of workflow capabilities for a specific workflow using either the workflow ID, or the project and issue type ID pair. The response includ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Available Workflow Capabilities

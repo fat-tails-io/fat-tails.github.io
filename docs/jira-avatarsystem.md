@@ -4,7 +4,7 @@ description: Returns a list of system avatar details by owner type, where the ow
 
 This operation can be accesse...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # System Avatars By Type

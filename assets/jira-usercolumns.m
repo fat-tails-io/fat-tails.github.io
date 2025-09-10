@@ -8,7 +8,7 @@ description: Returns the default [issue table columns](https://confluence.atlass
  *  Permission to access Jira, to get the calling user's column details.
 endpoint: /rest/api/3/user/columns
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

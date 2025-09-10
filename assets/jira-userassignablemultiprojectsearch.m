@@ -11,7 +11,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for each project specified in `projectKeys`.
 endpoint: /rest/api/3/user/assignable/multiProjectSearch
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

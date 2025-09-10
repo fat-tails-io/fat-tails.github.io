@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permission...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Avatars

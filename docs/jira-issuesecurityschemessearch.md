@@ -3,7 +3,7 @@ title: Search Issue Security Schemes
 description: Returns a [paginated](#pagination) list of issue security schemes.  
 If you specify the project ID parameter, the result will contain issue security s...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search Issue Security Schemes

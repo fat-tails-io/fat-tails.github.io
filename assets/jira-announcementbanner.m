@@ -5,7 +5,7 @@ description: Returns the current announcement banner configuration.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/announcementBanner
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

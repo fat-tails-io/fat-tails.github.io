@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of issue security level mem
 
 Only issue security level members in the context of classic projects are ret...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Security Level Members

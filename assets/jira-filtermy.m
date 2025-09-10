@@ -13,7 +13,7 @@ description: Returns the filters owned by the user. If `includeFavourites` is `t
 For example, if the user favorites a public filter that is subsequently made private that filter is not returned by this operation.
 endpoint: /rest/api/3/filter/my
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

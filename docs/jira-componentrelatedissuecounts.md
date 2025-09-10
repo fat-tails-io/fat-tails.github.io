@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **Deprecation notice:** The required OAuth 2.0 s...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Component Issues Count

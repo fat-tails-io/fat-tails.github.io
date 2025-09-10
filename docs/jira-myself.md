@@ -4,7 +4,7 @@ description: Returns details for the current user.
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Current User

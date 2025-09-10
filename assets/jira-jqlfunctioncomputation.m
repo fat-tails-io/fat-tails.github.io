@@ -7,7 +7,7 @@ description: Returns the list of a function's precomputations along with informa
 The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 endpoint: /rest/api/3/jql/function/computation
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

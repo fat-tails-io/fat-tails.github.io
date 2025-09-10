@@ -4,7 +4,7 @@ description: Returns a list of users that can be assigned to an issue. Use this 
 
  *  a new issue, by pr...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users Assignable To Issues

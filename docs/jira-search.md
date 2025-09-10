@@ -4,7 +4,7 @@ description: Endpoint is currently being removed. [More details](https://develop
 
 Searches for issues using [JQL](https://c...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Currently Being Removed. Search For Issues Using Jql (Get)

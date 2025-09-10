@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of all changelogs for an is
 
 This operation can be accessed anony...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Changelogs

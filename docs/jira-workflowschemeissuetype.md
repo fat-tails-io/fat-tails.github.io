@@ -4,7 +4,7 @@ description: Returns the issue type-workflow mapping for an issue type in a work
 
 **[Permissions](#permissions) required:** *Administer Jira* [global p...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Workflow For Issue Type In Workflow Scheme

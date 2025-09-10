@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permissions) r...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Projects Paginated

@@ -6,7 +6,7 @@ Note: This operation fetches the property key value directly from RbacClient.
 
 **[Permissions](#permissio...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User Nav Property

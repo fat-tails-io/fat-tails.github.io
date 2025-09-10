@@ -3,7 +3,7 @@ title: Get User Email
 description: Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by Atlassian, according to these [guidelines](https://community.developer.atlassian.com/t/guidelines-for-requesting-access-to-email-address/27603). For Forge apps, this API only supports access via asApp() requests.
 endpoint: /rest/api/3/user/email
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

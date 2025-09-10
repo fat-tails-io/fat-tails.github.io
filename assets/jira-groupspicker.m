@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
 *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). Without this permission, calls where query is not an exact match to an existing group will return an empty list.
 endpoint: /rest/api/3/groups/picker
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

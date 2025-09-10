@@ -4,7 +4,7 @@ description: Returns a list of groups whose names contain a query string. A list
 
 The primary us...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Groups

@@ -2,7 +2,7 @@
 title: Advanced Settings
 description: Returns the application properties that are accessible on the *Advanced Settings* page. To navigate to the *Advanced Settings* page in Jira, choose th...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Advanced Settings

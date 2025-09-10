@@ -13,7 +13,7 @@ This operation can be accessed anonymously.
  *  Dashboards shared with the public.
 endpoint: /rest/api/3/dashboard/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

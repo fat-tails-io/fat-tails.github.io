@@ -5,7 +5,7 @@ description: Returns the fields that can be added to a tab on a screen.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/screens/{screenId}/availableFields
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

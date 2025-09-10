@@ -11,7 +11,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). Anonymous calls and calls by users without the required permission return search results for an exact name match only.
 endpoint: /rest/api/3/user/picker
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

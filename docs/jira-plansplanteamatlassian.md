@@ -4,7 +4,7 @@ description: Returns planning settings for an Atlassian team in a plan.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://co...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Atlassian Team In Plan

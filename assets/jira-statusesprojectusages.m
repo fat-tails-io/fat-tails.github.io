@@ -3,7 +3,7 @@ title: Get Project Usages By Status
 description: Returns a page of projects using a given status.
 endpoint: /rest/api/3/statuses/{statusId}/projectUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

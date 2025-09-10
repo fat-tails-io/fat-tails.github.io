@@ -5,7 +5,7 @@ description: Returns the following counts for a version:
  *  Number of issues where the `fixVersion` is set to the version.
  *  Number of issues where the `affect...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Version'S Related Issues Count

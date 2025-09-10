@@ -6,7 +6,7 @@ description: Gets UI modifications. UI modifications can only be retrieved by Fo
 
 The new `read:app-data:...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Ui Modifications

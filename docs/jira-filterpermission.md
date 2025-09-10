@@ -2,7 +2,7 @@
 title: Share Permission
 description: Returns a share permission for a filter. A filter can be shared with groups, projects, all logged-in users, or the public. Sharing with all logged-in ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Share Permission

@@ -5,7 +5,7 @@ description: Returns a project category.
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/projectCategory/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

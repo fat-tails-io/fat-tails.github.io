@@ -5,7 +5,7 @@ description: Returns the [project's sender email address](https://confluence.atl
 **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectId}/email
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

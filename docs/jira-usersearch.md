@@ -4,7 +4,7 @@ description: Returns a list of active users that match the search string and pro
 
 This operation first applies a filter to match the search string and proper...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users

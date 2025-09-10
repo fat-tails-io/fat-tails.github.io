@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of fields for Classic Jira 
  *  all fields
  *  specific fields, by defining `i...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Fields Paginated

@@ -4,7 +4,7 @@ description: Returns the key and value of an app's property.
 
 **[Permissions](#permissions) required:** Only a Connect app whose key matches `addonKey` can make th...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # App Property

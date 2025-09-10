@@ -4,7 +4,7 @@ description: Returns the default sharing settings for new filters and dashboards
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Default Share Scope

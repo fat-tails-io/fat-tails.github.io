@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of the users specified by o
 
 **[Permissions](#permissions) required:** Permission to ac...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Bulk Get Users

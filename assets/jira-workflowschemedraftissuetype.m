@@ -5,7 +5,7 @@ description: Returns the issue type-workflow mapping for an issue type in a work
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

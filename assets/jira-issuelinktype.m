@@ -9,7 +9,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
 endpoint: /rest/api/3/issueLinkType/{issueLinkTypeId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

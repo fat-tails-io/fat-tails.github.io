@@ -4,7 +4,7 @@ description: Returns the key and value of a dashboard item property.
 
 A dashboard item enables an app to add user-specific information to a user dashboard. Dashboa...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Dashboard Item Property

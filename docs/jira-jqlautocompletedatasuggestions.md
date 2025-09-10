@@ -6,7 +6,7 @@ Suggestions can be obtained by providing:
 
  *  `fieldName` to get a list of all values ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Field Auto Complete Suggestions

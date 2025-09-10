@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of groups.
 
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://co...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Bulk Get Groups

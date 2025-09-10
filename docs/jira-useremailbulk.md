@@ -2,7 +2,7 @@
 title: User Email Bulk
 description: Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User Email Bulk

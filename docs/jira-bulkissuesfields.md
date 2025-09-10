@@ -2,7 +2,7 @@
 title: Bulk Editable Fields
 description: Use this API to get a list of fields visible to the user to perform bulk edit operations. You can pass single or multiple issues in the query to get e...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Bulk Editable Fields

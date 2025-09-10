@@ -9,7 +9,7 @@ This operation can be accessed anonymously.
 [Permissions](#permissions) required: *Browse projects* [project permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/) for the project.
 endpoint: /rest/api/3/status/{idOrName}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

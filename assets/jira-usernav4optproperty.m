@@ -10,7 +10,7 @@ Note: This operation fetches the property key value directly from RbacClient.
  *  Access to Jira, to get a property from the calling user's record.
 endpoint: /rest/api/3/user/nav4-opt-property/{propertyKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

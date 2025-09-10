@@ -6,7 +6,7 @@ description: Returns the list of tabs for a screen.
 
  *  *Administer Jira* [global permission](https://confluence.atlass...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Screen Tabs

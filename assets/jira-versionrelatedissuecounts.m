@@ -11,7 +11,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 endpoint: /rest/api/3/version/{id}/relatedIssueCounts
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

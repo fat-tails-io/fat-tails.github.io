@@ -7,7 +7,7 @@ Note that this operation **only works for issue field select list options added 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the app providing the field.
 endpoint: /rest/api/3/field/{fieldKey}/option/{optionId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of groups.
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/group/bulk
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

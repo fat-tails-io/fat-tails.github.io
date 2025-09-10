@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of all screens or those spe
 
 **[Permissions](#permissions) required:** *Admin...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Screens

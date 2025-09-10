@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of plan-only and Atlassian 
 
 **[Permissions](#permissions) required:** *Administer Jira* [glob...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Teams In Plan Paginated

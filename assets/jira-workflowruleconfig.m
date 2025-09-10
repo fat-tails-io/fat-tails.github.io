@@ -12,7 +12,7 @@ Due to server-side optimizations, workflows with an empty list of rules may be r
 **[Permissions](#permissions) required:** Only [Connect](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps) or [Forge](https://developer.atlassian.com/cloud/jira/platform/index/#forge-apps) apps can use this operation.
 endpoint: /rest/api/3/workflow/rule/config
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

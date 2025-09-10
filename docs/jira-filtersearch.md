@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of filters. Use this operat
  *  specific filters, by defining `id` only.
  *  filters that match al...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search For Filters

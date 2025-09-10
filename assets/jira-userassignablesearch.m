@@ -15,7 +15,7 @@ Privacy controls are applied to the response based on the users' preferences. Th
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Assign issues* [project permission](https://confluence.atlassian.com/x/yodKLg)
 endpoint: /rest/api/3/user/assignable/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

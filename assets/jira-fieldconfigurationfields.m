@@ -7,7 +7,7 @@ Only the fields from configurations used in company-managed (classic) projects a
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfiguration/{id}/fields
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

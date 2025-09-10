@@ -5,7 +5,7 @@ description: Returns a status category. Status categories provided a mechanism f
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/statuscategory/{idOrKey}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of projects associated with
 
 Only company-managed projects associated with an iss...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Type Screen Scheme Projects

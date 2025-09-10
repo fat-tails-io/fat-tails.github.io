@@ -5,7 +5,7 @@ description: Returns all time tracking providers. By default, Jira only has one 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/configuration/timetracking/list
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

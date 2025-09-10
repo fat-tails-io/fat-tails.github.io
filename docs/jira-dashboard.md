@@ -8,7 +8,7 @@ This operation can be accessed anonymously.
 
 However, to get a dashboard, the d...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Dashboard

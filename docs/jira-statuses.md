@@ -6,7 +6,7 @@ description: Returns a list of the statuses specified by one or more status IDs.
 
  *  *Administer projects* [project per...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Bulk Get Statuses

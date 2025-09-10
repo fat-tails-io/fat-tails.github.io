@@ -5,7 +5,7 @@ description: Returns a [paginated](#pagination) list of priorities available for
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priorityscheme/priorities/available
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

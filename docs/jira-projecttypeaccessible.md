@@ -4,7 +4,7 @@ description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw)
 
 **[Permissions](#permissions) required:** Permis...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Accessible Project Type By Key

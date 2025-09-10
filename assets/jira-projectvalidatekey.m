@@ -5,7 +5,7 @@ description: Validates a project key by confirming the key is a valid string and
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/key
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

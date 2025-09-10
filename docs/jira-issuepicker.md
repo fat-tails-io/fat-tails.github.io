@@ -2,7 +2,7 @@
 title: Issue Picker Suggestions
 description: Returns lists of issues matching a query string. Use this resource to provide auto-completion suggestions when the user is looking for an issue using ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Picker Suggestions

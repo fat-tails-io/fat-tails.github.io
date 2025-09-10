@@ -2,7 +2,7 @@
 title: Data Policy For The Workspace
 description: Returns data policy for the workspace.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Data Policy For The Workspace

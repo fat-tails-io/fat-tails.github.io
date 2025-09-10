@@ -22,7 +22,7 @@ The list of issues can be extended as needed, as in *(PROJ-1, PROJ-2, ... PROJ-n
 `is assignee of PROJ AND [propertyKey].entity.property.path is "property value"`
 endpoint: /rest/api/3/user/search/query/key
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

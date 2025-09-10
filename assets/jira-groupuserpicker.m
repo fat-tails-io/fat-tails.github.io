@@ -25,7 +25,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/groupuserpicker
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

@@ -6,7 +6,7 @@ This operation can be accessed anonymously.
 
 **[Permissions](#permissions) required:** *Browse projects* [project permission](ht...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Component
@@ -14,7 +14,7 @@ draft: true
 ## Purpose
 Analyze project components and their associated issues for better project organization understanding
 
-## When to Use
+## When to Use..
 When you need this specific data point for project analysis or reporting requirements
 
 ## Key Data Points

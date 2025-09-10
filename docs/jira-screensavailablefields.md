@@ -4,7 +4,7 @@ description: Returns the fields that can be added to a tab on a screen.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://co...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Available Screen Fields

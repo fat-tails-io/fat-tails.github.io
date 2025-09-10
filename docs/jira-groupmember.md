@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of all users in a group.
 
 Note that users are ordered by username, however the username is not returned in the...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Users From Group

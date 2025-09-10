@@ -6,7 +6,7 @@ To return the attachment contents, use [Get attachment content](#api-rest-api-3-
 
 ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Attachment Thumbnail

@@ -7,7 +7,7 @@ Only field configuration schemes used in classic projects are returned.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfigurationscheme
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

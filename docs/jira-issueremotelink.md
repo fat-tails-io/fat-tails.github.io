@@ -6,7 +6,7 @@ This operation requires [issue linking to be active](https://confluence.atlassia
 
 This opera...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Remote Issue Link By Id

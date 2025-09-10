@@ -2,7 +2,7 @@
 title: Issue Type Property
 description: Returns the key and value of the [issue type property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Type Property

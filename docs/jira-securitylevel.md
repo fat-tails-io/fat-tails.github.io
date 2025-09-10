@@ -4,7 +4,7 @@ description: Returns details of an issue security level.
 
 Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue s...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Security Level

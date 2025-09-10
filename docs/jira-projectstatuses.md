@@ -2,7 +2,7 @@
 title: All Statuses For Project
 description: Returns the valid statuses for a project. The statuses are grouped by issue type, as each project has a set of valid issue types and each issue type h...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Statuses For Project

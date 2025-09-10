@@ -7,7 +7,7 @@ This API endpoint allows you to get a live custom project template details by ei
 ***Note: Custom Templates are only supported for Jira Enterprise edition.***
 endpoint: /rest/api/3/project-template/live-template
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

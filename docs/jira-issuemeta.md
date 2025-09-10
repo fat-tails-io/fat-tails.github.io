@@ -2,7 +2,7 @@
 title: Create Issue Metadata
 description: Returns details of projects, issue types within projects, and, when requested, the create screen fields for each issue type for the user. Use the info...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Create Issue Metadata

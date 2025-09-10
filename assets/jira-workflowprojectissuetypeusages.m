@@ -3,7 +3,7 @@ title: Get Issue Types In A Project That Are Using A Given Workflow
 description: Returns a page of issue types using a given workflow within a project.
 endpoint: /rest/api/3/workflow/{workflowId}/project/{projectId}/issueTypeUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

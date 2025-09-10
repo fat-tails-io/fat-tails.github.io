@@ -12,7 +12,7 @@ This resource does not return worklogs updated during the minute preceding the r
  *  the user is a member of a project role or group with permission to view the worklog.
 endpoint: /rest/api/3/worklog/updated
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

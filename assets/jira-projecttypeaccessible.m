@@ -5,7 +5,7 @@ description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw)
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/project/type/{projectTypeKey}/accessible
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

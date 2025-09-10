@@ -6,7 +6,7 @@ description: Returns the default data classification for a project.
 
  *  *Browse Projects* [project permission](https://...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # The Default Data Classification Level Of A Project

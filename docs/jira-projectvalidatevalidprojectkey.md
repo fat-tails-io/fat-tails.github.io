@@ -4,7 +4,7 @@ description: Validates a project key and, if the key is invalid or in use, gener
 
 **[Permissions](#permissions) requ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Valid Project Key

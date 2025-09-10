@@ -7,7 +7,7 @@ This operation returns:
  *  Gadgets from a list of IDs, when `id` is set.
  *  Gadgets with a mod...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Gadgets

@@ -11,7 +11,7 @@ The issue type hierarchy for a project consists of:
 **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectId}/hierarchy
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

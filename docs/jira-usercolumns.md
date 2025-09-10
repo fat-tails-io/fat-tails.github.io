@@ -2,7 +2,7 @@
 title: User Default Columns
 description: Returns the default [issue table columns](https://confluence.atlassian.com/x/XYdKLg) for the user. If `accountId` is not passed in the request, the ca...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User Default Columns

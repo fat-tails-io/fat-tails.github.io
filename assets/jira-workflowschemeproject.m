@@ -7,7 +7,7 @@ If the project is associated with the `Default Workflow Scheme` no ID is returne
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/workflowscheme/project
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

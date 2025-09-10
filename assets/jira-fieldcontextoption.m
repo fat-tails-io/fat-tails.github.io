@@ -7,7 +7,7 @@ This operation works for custom field options created in Jira or the operations 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). *Edit Workflow* [edit workflow permission](https://support.atlassian.com/jira-cloud-administration/docs/permissions-for-company-managed-projects/#Edit-Workflows)
 endpoint: /rest/api/3/field/{fieldId}/context/{contextId}/option
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

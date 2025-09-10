@@ -4,7 +4,7 @@ description: Returns the status of a [long-running asynchronous task](#async).
 
 When a task has finished, this operation returns the JSON blob applicable to the ta...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Task

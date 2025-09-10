@@ -5,7 +5,7 @@ description: Returns a [notification scheme](https://confluence.atlassian.com/x/
 **[Permissions](#permissions) required:** Permission to access Jira, however, the user must have permission to administer at least one project associated with the notification scheme.
 endpoint: /rest/api/3/notificationscheme/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

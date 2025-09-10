@@ -4,7 +4,7 @@ description: Returns the default issue navigator columns.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlas...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Navigator Default Columns

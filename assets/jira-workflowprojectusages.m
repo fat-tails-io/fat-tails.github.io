@@ -3,7 +3,7 @@ title: Get Projects Using A Given Workflow
 description: Returns a page of projects using a given workflow.
 endpoint: /rest/api/3/workflow/{workflowId}/projectUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

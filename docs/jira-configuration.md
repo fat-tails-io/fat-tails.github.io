@@ -2,7 +2,7 @@
 title: Global Settings
 description: Returns the [global settings](https://confluence.atlassian.com/x/qYXKM) in Jira. These settings determine whether optional features (for example, subt...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Global Settings

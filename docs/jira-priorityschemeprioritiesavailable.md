@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of priorities available for
 
 **[Permissions](#permissions) required:** Permission...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Available Priorities By Priority Scheme

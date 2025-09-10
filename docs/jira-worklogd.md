@@ -4,7 +4,7 @@ description: Returns a list of IDs and update timestamps for worklogs updated af
 
 This resource is paginated, with a limit of 1000 worklogs per...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Ids Of Updated Worklogs

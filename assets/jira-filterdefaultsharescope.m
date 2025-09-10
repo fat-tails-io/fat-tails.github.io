@@ -5,7 +5,7 @@ description: Returns the default sharing settings for new filters and dashboards
 **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/filter/defaultShareScope
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

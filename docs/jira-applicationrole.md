@@ -4,7 +4,7 @@ description: Returns an application role.
 
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKL...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Application Role

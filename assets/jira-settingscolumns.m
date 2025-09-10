@@ -5,7 +5,7 @@ description: Returns the default issue navigator columns.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/settings/columns
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

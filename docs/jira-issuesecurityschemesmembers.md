@@ -6,7 +6,7 @@ Only issue security level members in context of classic projects are returned.
 
 **[Permissions](#permissions) r...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Security Level Members By Issue Security Scheme

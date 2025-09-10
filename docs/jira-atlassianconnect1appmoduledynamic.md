@@ -4,7 +4,7 @@ description: Returns all modules registered dynamically by the calling app.
 
 **[Permissions](#permissions) required:** Only Connect apps can make this request.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Modules

@@ -15,7 +15,7 @@ This operation can be accessed anonymously.
 For example, if the user favorites a public filter that is subsequently made private that filter is not returned by this operation.
 endpoint: /rest/api/3/filter/favourite
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

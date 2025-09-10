@@ -5,7 +5,7 @@ description: Returns a list of users who fulfill these criteria:
  *  their user attributes match a search string.
  *  they have a set of permissions for a project...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users With Permissions

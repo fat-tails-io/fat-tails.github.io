@@ -5,7 +5,7 @@ description: Retrieve the attributes of given service registries.
 **[Permissions](#permissions) required:** Only Connect apps can make this request and the servicesIds belong to the tenant you are requesting
 endpoint: /rest/atlassian-connect/1/service-registry
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

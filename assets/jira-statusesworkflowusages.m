@@ -3,7 +3,7 @@ title: Get Workflow Usages By Status
 description: Returns a page of workflows using a given status.
 endpoint: /rest/api/3/statuses/{statusId}/workflowUsages
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

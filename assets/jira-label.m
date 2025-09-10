@@ -3,7 +3,7 @@ title: Get All Labels
 description: Returns a [paginated](#pagination) list of labels.
 endpoint: /rest/api/3/label
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

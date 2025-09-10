@@ -4,7 +4,7 @@ description: Returns a status category. Status categories provided a mechanism f
 
 **[Permissions](#...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Status Category

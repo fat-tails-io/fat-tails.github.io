@@ -2,7 +2,7 @@
 title: Search Workflows
 description: Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflo...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Search Workflows

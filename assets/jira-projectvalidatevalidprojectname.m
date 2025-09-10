@@ -5,7 +5,7 @@ description: Checks that a project name isn't in use. If the name isn't in use, 
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/validProjectName
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

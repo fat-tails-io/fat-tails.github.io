@@ -3,7 +3,7 @@ title: Get Data Policy For The Workspace
 description: Returns data policy for the workspace.
 endpoint: /rest/api/3/data-policy
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

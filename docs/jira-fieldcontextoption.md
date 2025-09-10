@@ -2,7 +2,7 @@
 title: Custom Field Options (Context)
 description: Returns a [paginated](#pagination) list of all custom field option for a context. Options are returned first then cascading options, in the order they...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Custom Field Options (Context)

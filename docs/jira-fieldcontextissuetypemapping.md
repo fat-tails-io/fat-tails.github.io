@@ -2,7 +2,7 @@
 title: Issue Types For Custom Field Context
 description: Returns a [paginated](#pagination) list of context to issue type mappings for a custom field. Mappings are returned for all contexts or a list of cont...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Issue Types For Custom Field Context

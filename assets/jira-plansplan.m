@@ -5,7 +5,7 @@ description: Returns a plan.
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

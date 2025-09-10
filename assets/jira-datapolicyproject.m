@@ -3,7 +3,7 @@ title: Get Data Policy For Projects
 description: Returns data policies for the projects specified in the request.
 endpoint: /rest/api/3/data-policy/project
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

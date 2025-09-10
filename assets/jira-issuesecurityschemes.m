@@ -8,7 +8,7 @@ description: Returns an issue security scheme along with its security levels.
  *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project that uses the requested issue security scheme.
 endpoint: /rest/api/3/issuesecurityschemes/{id}
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

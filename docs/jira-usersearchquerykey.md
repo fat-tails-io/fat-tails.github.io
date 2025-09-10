@@ -4,7 +4,7 @@ description: Finds users with a structured query and returns a [paginated](#pagi
 
 This operation takes the users in the range defined by ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find User Keys By Query

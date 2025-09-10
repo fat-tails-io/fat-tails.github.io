@@ -2,7 +2,7 @@
 title: Custom Field Contexts Default Values
 description: Returns a [paginated](#pagination) list of defaults for a custom field. The results can be filtered by `contextId`, otherwise all values are returned....
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Custom Field Contexts Default Values

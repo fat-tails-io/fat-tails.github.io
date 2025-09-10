@@ -6,7 +6,7 @@ Only items used in classic projects are returned.
 
 **[Permissions](#...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Field Configuration Issue Type Items

@@ -14,7 +14,7 @@ This operation can be accessed anonymously.
 **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/jql/autocompletedata/suggestions
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

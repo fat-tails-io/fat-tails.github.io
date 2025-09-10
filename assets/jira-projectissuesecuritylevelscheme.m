@@ -5,7 +5,7 @@ description: Returns the [issue security scheme](https://confluence.atlassian.co
 **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/issuesecuritylevelscheme
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

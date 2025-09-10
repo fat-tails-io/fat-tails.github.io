@@ -2,7 +2,7 @@
 title: Find Users For Picker
 description: Returns a list of users whose attributes match the query term. The returned object includes the `html` field where the matched query term is highlight...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Find Users For Picker

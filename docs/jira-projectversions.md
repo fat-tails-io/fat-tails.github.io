@@ -2,7 +2,7 @@
 title: Project Versions
 description: Returns all versions in a project. The response is not paginated. Use [Get project versions paginated](#api-rest-api-3-project-projectIdOrKey-version-...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Project Versions

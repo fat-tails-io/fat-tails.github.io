@@ -4,7 +4,7 @@ description: Returns a [paginated](#pagination) list of priority schemes.
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Priority Schemes

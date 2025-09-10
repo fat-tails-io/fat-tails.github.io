@@ -8,7 +8,7 @@ description: Returns a [paginated](#pagination) list of global and project workf
  *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows
 endpoint: /rest/api/3/workflows/search
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------

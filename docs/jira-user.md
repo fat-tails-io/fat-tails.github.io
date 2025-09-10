@@ -4,7 +4,7 @@ description: Returns a user.
 
 Privacy controls are applied to the response based on the user's preferences. This could mean, for example, that the user's email add...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # User

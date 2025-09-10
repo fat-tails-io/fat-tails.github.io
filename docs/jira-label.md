@@ -2,7 +2,7 @@
 title: All Labels
 description: Returns a [paginated](#pagination) list of labels.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # All Labels

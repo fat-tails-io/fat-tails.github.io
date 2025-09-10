@@ -4,7 +4,7 @@ description: Returns an issue priority.
 
 **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Priority

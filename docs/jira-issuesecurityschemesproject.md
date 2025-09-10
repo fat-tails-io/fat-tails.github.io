@@ -2,7 +2,7 @@
 title: Projects Using Issue Security Schemes
 description: Returns a [paginated](#pagination) mapping of projects that are using security schemes. You can provide either one or multiple security scheme IDs or ...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Projects Using Issue Security Schemes

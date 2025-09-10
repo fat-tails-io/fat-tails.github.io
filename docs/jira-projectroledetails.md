@@ -2,7 +2,7 @@
 title: Project Role Details
 description: Returns all [project roles](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-roles/) and the details for each role. Note th...
 nav_order: 999
-draft: true
+published: false
 ---
 
 # Project Role Details

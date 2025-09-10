@@ -8,7 +8,7 @@ description: Returns a list of the statuses specified by one or more status IDs.
  *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 endpoint: /rest/api/3/statuses
 method: GET
-draft: true
+published: false
 ---
 
 // -----------------------------------------------------------------------------
