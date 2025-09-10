@@ -228,10 +228,17 @@ class MCodeGenerator:
         for param in path_params:
             endpoint_path = endpoint_path.replace(f'{{{param}}}', f'" & {param} & "')
         
+        # Clean description for YAML front matter
+        clean_description = endpoint.description.split('\n')[0]  # Take only first line
+        clean_description = clean_description.replace('**', '').replace('[', '').replace(']', '')  # Remove markdown
+        clean_description = clean_description.replace('#', '').replace('*', '')  # Remove more markdown
+        if len(clean_description) > 150:
+            clean_description = clean_description[:147] + '...'
+        
         # Template replacements
         replacements = {
             '{{TITLE}}': title,
-            '{{DESCRIPTION}}': endpoint.description,
+            '{{DESCRIPTION}}': clean_description,
             '{{ENDPOINT}}': endpoint.path,
             '{{METHOD}}': endpoint.method,
             '{{FUNCTION_NAME}}': function_name,
@@ -462,6 +469,13 @@ class MCodeGenerator:
         if title.startswith('Get '):
             title = title[4:]  # Remove "Get " prefix for cleaner titles
         
+        # Clean description for YAML front matter (single line, no markdown)
+        clean_description = endpoint.description.split('\n')[0]  # Take only first line
+        clean_description = clean_description.replace('**', '').replace('[', '').replace(']', '')  # Remove markdown
+        clean_description = clean_description.replace('#', '').replace('*', '')  # Remove more markdown
+        if len(clean_description) > 150:
+            clean_description = clean_description[:147] + '...'
+        
         # Extract key data points from endpoint
         key_data_points = []
         if endpoint.parameters:
@@ -485,7 +499,8 @@ class MCodeGenerator:
         # Template replacements
         replacements = {
             '{{TITLE}}': title,
-            '{{DESCRIPTION}}': endpoint.description[:150] + '...' if len(endpoint.description) > 150 else endpoint.description,
+            '{{DESCRIPTION}}': clean_description,
+            '{{FULL_DESCRIPTION}}': endpoint.description,  # Keep the full description with formatting
             '{{NAV_ORDER}}': '999',  # Will be updated later for proper ordering
             '{{PURPOSE}}': context.get('purpose', 'Extract data for project analysis'),
             '{{WHEN_TO_USE}}': context.get('when_to_use', 'When you need this data for analysis'),

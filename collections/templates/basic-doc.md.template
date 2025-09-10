@@ -7,6 +7,9 @@ published: false
 
 # {{TITLE}}
 
+## API Description
+{{FULL_DESCRIPTION}}
+
 ## Purpose
 {{PURPOSE}}
 
