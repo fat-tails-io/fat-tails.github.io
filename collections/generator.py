@@ -228,17 +228,21 @@ class MCodeGenerator:
         for param in path_params:
             endpoint_path = endpoint_path.replace(f'{{{param}}}', f'" & {param} & "')
         
-        # Clean description for YAML front matter
-        clean_description = endpoint.description.split('\n')[0]  # Take only first line
-        clean_description = clean_description.replace('**', '').replace('[', '').replace(']', '')  # Remove markdown
-        clean_description = clean_description.replace('#', '').replace('*', '')  # Remove more markdown
-        if len(clean_description) > 150:
-            clean_description = clean_description[:147] + '...'
+        # Handle multi-line descriptions with YAML literal block scalar  
+        description_lines = endpoint.description.split('\n')
+        has_multiple_lines = len(description_lines) > 1 or len(endpoint.description) > 80
+        
+        if has_multiple_lines:
+            # Use literal block scalar for multi-line descriptions
+            yaml_description = "|-\n  " + endpoint.description.replace('\n', '\n  ')
+        else:
+            # Use simple string for single-line descriptions
+            yaml_description = endpoint.description
         
         # Template replacements
         replacements = {
             '{{TITLE}}': title,
-            '{{DESCRIPTION}}': clean_description,
+            '{{DESCRIPTION}}': yaml_description,
             '{{ENDPOINT}}': endpoint.path,
             '{{METHOD}}': endpoint.method,
             '{{FUNCTION_NAME}}': function_name,
@@ -469,12 +473,16 @@ class MCodeGenerator:
         if title.startswith('Get '):
             title = title[4:]  # Remove "Get " prefix for cleaner titles
         
-        # Clean description for YAML front matter (single line, no markdown)
-        clean_description = endpoint.description.split('\n')[0]  # Take only first line
-        clean_description = clean_description.replace('**', '').replace('[', '').replace(']', '')  # Remove markdown
-        clean_description = clean_description.replace('#', '').replace('*', '')  # Remove more markdown
-        if len(clean_description) > 150:
-            clean_description = clean_description[:147] + '...'
+        # Handle multi-line descriptions with YAML literal block scalar
+        description_lines = endpoint.description.split('\n')
+        has_multiple_lines = len(description_lines) > 1 or len(endpoint.description) > 80
+        
+        if has_multiple_lines:
+            # Use literal block scalar for multi-line descriptions
+            yaml_description = "|-\n  " + endpoint.description.replace('\n', '\n  ')
+        else:
+            # Use simple string for single-line descriptions
+            yaml_description = endpoint.description
         
         # Extract key data points from endpoint
         key_data_points = []
@@ -499,7 +507,7 @@ class MCodeGenerator:
         # Template replacements
         replacements = {
             '{{TITLE}}': title,
-            '{{DESCRIPTION}}': clean_description,
+            '{{DESCRIPTION}}': yaml_description,
             '{{FULL_DESCRIPTION}}': endpoint.description,  # Keep the full description with formatting
             '{{NAV_ORDER}}': '999',  # Will be updated later for proper ordering
             '{{PURPOSE}}': context.get('purpose', 'Extract data for project analysis'),
