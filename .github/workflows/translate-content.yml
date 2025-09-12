@@ -239,16 +239,17 @@ jobs:
 
     - name: Translate documentation files
       if: steps.identify-files.outputs.docs_count > 0
-      env:
-        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "📚 Translating documentation files..."
         
-        # Debug environment variable
-        echo "🔍 Environment variable debug:"
-        echo "  - DEEPL_API_KEY present: $([ -n "$DEEPL_API_KEY" ] && echo "Yes" || echo "No")"
-        echo "  - DEEPL_API_KEY length: ${#DEEPL_API_KEY}"
-        echo "  - DEEPL_API_KEY format: $([ "$DEEPL_API_KEY" = *":fx" ] && echo "Free" || echo "Pro")"
+        # Debug secret access
+        echo "🔍 Secret access debug:"
+        echo "  - Secret present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - Secret length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        echo "  - Secret format: $([ "${{ secrets.DEEPL_API_KEY }}" = *":fx" ] && echo "Free" || echo "Pro")"
+        
+        # Export as environment variable for Python
+        export DEEPL_API_KEY="${{ secrets.DEEPL_API_KEY }}"
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
         python3 translation/translate-docs.py "$TARGET_LANG" "translation-context.txt"
@@ -257,16 +258,17 @@ jobs:
 
     - name: Translate blog post files
       if: steps.identify-files.outputs.posts_count > 0
-      env:
-        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "📝 Translating blog post files..."
         
-        # Debug environment variable
-        echo "🔍 Environment variable debug:"
-        echo "  - DEEPL_API_KEY present: $([ -n "$DEEPL_API_KEY" ] && echo "Yes" || echo "No")"
-        echo "  - DEEPL_API_KEY length: ${#DEEPL_API_KEY}"
-        echo "  - DEEPL_API_KEY format: $([ "$DEEPL_API_KEY" = *":fx" ] && echo "Free" || echo "Pro")"
+        # Debug secret access
+        echo "🔍 Secret access debug:"
+        echo "  - Secret present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - Secret length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        echo "  - Secret format: $([ "${{ secrets.DEEPL_API_KEY }}" = *":fx" ] && echo "Free" || echo "Pro")"
+        
+        # Export as environment variable for Python
+        export DEEPL_API_KEY="${{ secrets.DEEPL_API_KEY }}"
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
         python3 translation/translate-docs.py "$TARGET_LANG" "translation-context.txt"
@@ -275,16 +277,17 @@ jobs:
 
     - name: Translate M code files (front matter only)
       if: steps.identify-files.outputs.assets_count > 0
-      env:
-        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "⚙️ Translating M code files (front matter only)..."
         
-        # Debug environment variable
-        echo "🔍 Environment variable debug:"
-        echo "  - DEEPL_API_KEY present: $([ -n "$DEEPL_API_KEY" ] && echo "Yes" || echo "No")"
-        echo "  - DEEPL_API_KEY length: ${#DEEPL_API_KEY}"
-        echo "  - DEEPL_API_KEY format: $([ "$DEEPL_API_KEY" = *":fx" ] && echo "Free" || echo "Pro")"
+        # Debug secret access
+        echo "🔍 Secret access debug:"
+        echo "  - Secret present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - Secret length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        echo "  - Secret format: $([ "${{ secrets.DEEPL_API_KEY }}" = *":fx" ] && echo "Free" || echo "Pro")"
+        
+        # Export as environment variable for Python
+        export DEEPL_API_KEY="${{ secrets.DEEPL_API_KEY }}"
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
         python3 translation/translate-assets.py "$TARGET_LANG" "translation-context.txt"
