@@ -98,27 +98,26 @@ jobs:
           echo "✅ Using existing translation/translation-context.json"
           
           # Extract business context for DeepL
-          python3 -c "
-          import json
-          with open('translation/translation-context.json', 'r') as f:
-              config = json.load(f)
-          
-          context = f\"\"\"
-          Business Context: {config['business_context']}
-          
-          Target Audience: {', '.join(config['target_audience'])}
-          Content Types: {', '.join(config['content_types'])}
-          Tone: {', '.join(config['tone_guidelines'])}
-          
-          Key Terminology:
-          \"\"\"
-          
-          for term, details in config['terminology_glossary'].items():
-              context += f\"- {details['en']}: {details['context']}\n\"
-          
-          with open('translation-context.txt', 'w') as f:
-              f.write(context)
-          "
+          python3 << 'EOF'
+import json
+with open('translation/translation-context.json', 'r') as f:
+    config = json.load(f)
+
+context = f"""Business Context: {config['business_context']}
+
+Target Audience: {', '.join(config['target_audience'])}
+Content Types: {', '.join(config['content_types'])}
+Tone: {', '.join(config['tone_guidelines'])}
+
+Key Terminology:
+"""
+
+for term, details in config['terminology_glossary'].items():
+    context += f"- {details['en']}: {details['context']}\n"
+
+with open('translation-context.txt', 'w') as f:
+    f.write(context)
+EOF
         else
           echo "⚠️ translation/translation-context.json not found, using default context"
           # Fallback context
