@@ -145,13 +145,13 @@ def process_file(input_file, output_file, target_lang, api_key, context):
 
 def main():
     """Main execution"""
-    if len(sys.argv) < 3:
-        print("Usage: python3 translate-docs.py <target_lang> <context_file>")
+    if len(sys.argv) < 4:
+        print("Usage: python3 translate-docs.py <target_lang> <context_file> <api_key>")
         sys.exit(1)
     
-    api_key = os.getenv("DEEPL_API_KEY")
     target_lang = sys.argv[1]
     context_file = sys.argv[2] if len(sys.argv) > 2 else ""
+    api_key = sys.argv[3] if len(sys.argv) > 3 else ""
     
     # Debug information
     print(f"🔧 Debug Info:")
@@ -162,7 +162,7 @@ def main():
         print(f"  - API key format: {'Free' if api_key.endswith(':fx') else 'Pro'}")
         print(f"  - API key length: {len(api_key)} characters")
     else:
-        print("  - ❌ DEEPL_API_KEY environment variable is not set!")
+        print("  - ❌ API key not provided as argument!")
         sys.exit(1)
     
     # Load context
