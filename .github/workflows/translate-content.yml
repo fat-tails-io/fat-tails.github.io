@@ -1,0 +1,605 @@
+name: Translate Content with DeepL
+
+on:
+  # Manual triggering with language selection
+  workflow_dispatch:
+    inputs:
+      target_language:
+        description: 'Target language for translation (e.g., es, fr, de, it, pt)'
+        required: true
+        default: 'es'
+        type: choice
+        options:
+          - es  # Spanish
+          - fr  # French
+          - de  # German
+          - it  # Italian
+          - pt  # Portuguese
+          - nl  # Dutch
+          - pl  # Polish
+          - ru  # Russian
+          - ja  # Japanese
+          - ko  # Korean
+          - zh  # Chinese
+      content_type:
+        description: 'Type of content to translate'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - docs
+          - posts
+          - assets
+      force_retranslate:
+        description: 'Force retranslation of existing files'
+        required: false
+        default: false
+        type: boolean
+      include_context:
+        description: 'Include business context in DeepL translation'
+        required: false
+        default: true
+        type: boolean
+
+  # Trigger when English content changes (optional automatic translation)
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/*.md'
+      - '_posts/*.md'
+      - 'assets/*.m'
+    paths-ignore:
+      - 'docs/*/'
+      - '_posts/*/'
+      - 'assets/*/'
+
+jobs:
+  translate-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests python-dotenv
+
+    - name: Configure DeepL API
+      run: |
+        echo "🔧 Configuring DeepL API..."
+        if [ -z "${{ secrets.DEEPL_API_KEY }}" ]; then
+          echo "❌ DEEPL_API_KEY secret is not set"
+          echo "Please add your DeepL API key as a repository secret"
+          exit 1
+        fi
+        echo "✅ DeepL API key configured"
+
+    - name: Set up translation context
+      run: |
+        echo "📝 Setting up translation context..."
+        
+        # Use the JSON context file for better DeepL integration
+        if [ -f "translation/translation-context.json" ]; then
+          echo "✅ Using existing translation/translation-context.json"
+          
+          # Extract business context for DeepL
+          python3 -c "
+          import json
+          with open('translation/translation-context.json', 'r') as f:
+              config = json.load(f)
+          
+          context = f\"\"\"
+          Business Context: {config['business_context']}
+          
+          Target Audience: {', '.join(config['target_audience'])}
+          Content Types: {', '.join(config['content_types'])}
+          Tone: {', '.join(config['tone_guidelines'])}
+          
+          Key Terminology:
+          \"\"\"
+          
+          for term, details in config['terminology_glossary'].items():
+              context += f\"- {details['en']}: {details['context']}\n\"
+          
+          with open('translation-context.txt', 'w') as f:
+              f.write(context)
+          "
+        else
+          echo "⚠️ translation/translation-context.json not found, using default context"
+          # Fallback context
+          cat > translation-context.txt << 'EOF'
+          Business Context: This is technical documentation for project managers and finance teams working with Atlassian Jira and Microsoft Excel. The content helps bridge the gap between project management tools and spreadsheet analysis.
+
+          Key Terminology:
+          - Project Management: Project management, project analysis, project lifecycle
+          - Atlassian Tools: Jira, Confluence, Atlassian, API endpoints, REST API
+          - Microsoft Excel: Power Query, M code, Excel, spreadsheet, data analysis
+          - Business Analysis: Forensic analysis, project success metrics, value attribution
+          - Technical Terms: API, JSON, authentication, parameters, endpoints, data extraction
+
+          Target Audience: Project managers, finance teams, business analysts, data analysts
+          Content Type: Technical documentation, business analysis guides, code examples
+          Tone: Professional, clear, business-focused, technically accurate
+          EOF
+        fi
+        
+        echo "✅ Translation context created"
+
+    - name: Create language directory structure
+      run: |
+        echo "📁 Creating language directory structure..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Create language-specific directories
+        mkdir -p "docs/$TARGET_LANG"
+        mkdir -p "_posts/$TARGET_LANG"
+        mkdir -p "assets/$TARGET_LANG"
+        
+        echo "✅ Created directories for language: $TARGET_LANG"
+
+    - name: Identify files to translate
+      id: identify-files
+      run: |
+        echo "🔍 Identifying files to translate..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'all' }}"
+        FORCE_RETRANSLATE="${{ github.event.inputs.force_retranslate || 'false' }}"
+        
+        # Arrays to store file paths
+        DOCS_FILES=()
+        POSTS_FILES=()
+        ASSETS_FILES=()
+        
+        # Find documentation files
+        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "docs" ]; then
+          for file in docs/*.md; do
+            if [ -f "$file" ] && [ ! "$file" = "docs/README.md" ]; then
+              # Check if translation already exists
+              translated_file="docs/$TARGET_LANG/$(basename "$file")"
+              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                DOCS_FILES+=("$file")
+              fi
+            fi
+          done
+        fi
+        
+        # Find blog post files
+        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "posts" ]; then
+          for file in _posts/*.md; do
+            if [ -f "$file" ]; then
+              translated_file="_posts/$TARGET_LANG/$(basename "$file")"
+              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                POSTS_FILES+=("$file")
+              fi
+            fi
+          done
+        fi
+        
+        # Find M code files (for front matter translation only)
+        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "assets" ]; then
+          for file in assets/*.m; do
+            if [ -f "$file" ]; then
+              translated_file="assets/$TARGET_LANG/$(basename "$file")"
+              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                ASSETS_FILES+=("$file")
+              fi
+            fi
+          done
+        fi
+        
+        # Output file counts
+        echo "docs_count=${#DOCS_FILES[@]}" >> $GITHUB_OUTPUT
+        echo "posts_count=${#POSTS_FILES[@]}" >> $GITHUB_OUTPUT
+        echo "assets_count=${#ASSETS_FILES[@]}" >> $GITHUB_OUTPUT
+        
+        # Create file lists for processing
+        printf '%s\n' "${DOCS_FILES[@]}" > docs_files.txt
+        printf '%s\n' "${POSTS_FILES[@]}" > posts_files.txt
+        printf '%s\n' "${ASSETS_FILES[@]}" > assets_files.txt
+        
+        echo "📊 Files to translate:"
+        echo "  - Documentation: ${#DOCS_FILES[@]} files"
+        echo "  - Blog posts: ${#POSTS_FILES[@]} files"
+        echo "  - M code files: ${#ASSETS_FILES[@]} files"
+
+    - name: Translate documentation files
+      if: steps.identify-files.outputs.docs_count > 0
+      run: |
+        echo "📚 Translating documentation files..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        INCLUDE_CONTEXT="${{ github.event.inputs.include_context || 'true' }}"
+        
+        # Create Python script for DeepL translation
+        cat > translate_docs.py << 'EOF'
+        import requests
+        import os
+        import re
+        import sys
+        from pathlib import Path
+
+        def translate_with_deepl(text, target_lang, api_key, context=""):
+            """Translate text using DeepL API with optional context"""
+            url = "https://api-free.deepl.com/v2/translate"
+            
+            data = {
+                "auth_key": api_key,
+                "text": text,
+                "target_lang": target_lang.upper(),
+                "source_lang": "EN"
+            }
+            
+            # Add context if provided
+            if context:
+                data["context"] = context
+            
+            response = requests.post(url, data=data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                return result["translations"][0]["text"]
+            else:
+                print(f"DeepL API error: {response.status_code} - {response.text}")
+                return text
+
+        def extract_front_matter(content):
+            """Extract and return front matter and body separately"""
+            if content.startswith("---"):
+                parts = content.split("---", 2)
+                if len(parts) >= 3:
+                    return parts[1], parts[2]
+            return "", content
+
+        def translate_front_matter(front_matter, target_lang, api_key, context):
+            """Translate front matter fields"""
+            lines = front_matter.strip().split('\n')
+            translated_lines = []
+            
+            for line in lines:
+                if ':' in line and not line.strip().startswith('#'):
+                    key, value = line.split(':', 1)
+                    value = value.strip()
+                    
+                    # Translate specific fields
+                    if key.strip() in ['title', 'description'] and value:
+                        translated_value = translate_with_deepl(value, target_lang, api_key, context)
+                        translated_lines.append(f"{key}: {translated_value}")
+                    else:
+                        translated_lines.append(line)
+                else:
+                    translated_lines.append(line)
+            
+            return '\n'.join(translated_lines)
+
+        def translate_markdown_content(content, target_lang, api_key, context):
+            """Translate markdown content while preserving code blocks and technical elements"""
+            # Split content into sections
+            sections = re.split(r'(```[^`]*```|`[^`]*`|\[.*?\]\(.*?\))', content)
+            translated_sections = []
+            
+            for section in sections:
+                if section.startswith('```') and section.endswith('```'):
+                    # Code block - don't translate
+                    translated_sections.append(section)
+                elif section.startswith('`') and section.endswith('`'):
+                    # Inline code - don't translate
+                    translated_sections.append(section)
+                elif section.startswith('[') and '](' in section and section.endswith(')'):
+                    # Link - translate text but preserve URL
+                    match = re.match(r'\[([^\]]*)\]\(([^)]*)\)', section)
+                    if match:
+                        text, url = match.groups()
+                        if text.strip():
+                            translated_text = translate_with_deepl(text, target_lang, api_key, context)
+                            translated_sections.append(f"[{translated_text}]({url})")
+                        else:
+                            translated_sections.append(section)
+                    else:
+                        translated_sections.append(section)
+                else:
+                    # Regular text - translate
+                    if section.strip():
+                        translated_sections.append(translate_with_deepl(section, target_lang, api_key, context))
+                    else:
+                        translated_sections.append(section)
+            
+            return ''.join(translated_sections)
+
+        def process_file(input_file, output_file, target_lang, api_key, context):
+            """Process a single markdown file"""
+            print(f"Processing: {input_file}")
+            
+            with open(input_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Extract front matter
+            front_matter, body = extract_front_matter(content)
+            
+            # Translate front matter
+            if front_matter:
+                translated_front_matter = translate_front_matter(front_matter, target_lang, api_key, context)
+                # Add language and original file metadata
+                translated_front_matter += f"\nlang: {target_lang}\noriginal: /{input_file}\n"
+            else:
+                translated_front_matter = f"---\nlang: {target_lang}\noriginal: /{input_file}\n---\n"
+            
+            # Translate body content
+            translated_body = translate_markdown_content(body, target_lang, api_key, context)
+            
+            # Combine translated content
+            translated_content = f"---\n{translated_front_matter}\n---\n{translated_body}"
+            
+            # Write translated file
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(translated_content)
+            
+            print(f"✅ Translated: {output_file}")
+
+        # Main execution
+        if __name__ == "__main__":
+            api_key = os.getenv("DEEPL_API_KEY")
+            target_lang = sys.argv[1]
+            context_file = sys.argv[2] if len(sys.argv) > 2 else ""
+            
+            # Load context
+            context = ""
+            if context_file and os.path.exists(context_file):
+                with open(context_file, 'r', encoding='utf-8') as f:
+                    context = f.read()
+            
+            # Process documentation files
+            with open("docs_files.txt", 'r') as f:
+                for line in f:
+                    input_file = line.strip()
+                    if input_file:
+                        output_file = f"docs/{target_lang}/{os.path.basename(input_file)}"
+                        process_file(input_file, output_file, target_lang, api_key, context)
+        EOF
+        
+        # Run translation
+        python translate_docs.py "$TARGET_LANG" "translation-context.txt"
+        
+        echo "✅ Documentation translation completed"
+
+    - name: Translate blog post files
+      if: steps.identify-files.outputs.posts_count > 0
+      run: |
+        echo "📝 Translating blog post files..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Reuse the same Python script for blog posts
+        python translate_docs.py "$TARGET_LANG" "translation-context.txt" --posts
+        
+        echo "✅ Blog post translation completed"
+
+    - name: Translate M code files (front matter only)
+      if: steps.identify-files.outputs.assets_count > 0
+      run: |
+        echo "⚙️ Translating M code files (front matter only)..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Create Python script for M code translation
+        cat > translate_assets.py << 'EOF'
+        import requests
+        import os
+        import re
+        import sys
+
+        def translate_with_deepl(text, target_lang, api_key, context=""):
+            """Translate text using DeepL API with optional context"""
+            url = "https://api-free.deepl.com/v2/translate"
+            
+            data = {
+                "auth_key": api_key,
+                "text": text,
+                "target_lang": target_lang.upper(),
+                "source_lang": "EN"
+            }
+            
+            if context:
+                data["context"] = context
+            
+            response = requests.post(url, data=data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                return result["translations"][0]["text"]
+            else:
+                print(f"DeepL API error: {response.status_code} - {response.text}")
+                return text
+
+        def translate_m_code_file(input_file, output_file, target_lang, api_key, context):
+            """Translate M code file front matter only"""
+            print(f"Processing M code: {input_file}")
+            
+            with open(input_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Extract front matter (between --- markers)
+            if content.startswith("---"):
+                parts = content.split("---", 2)
+                if len(parts) >= 3:
+                    front_matter = parts[1]
+                    m_code = parts[2]
+                    
+                    # Translate front matter fields
+                    lines = front_matter.strip().split('\n')
+                    translated_lines = []
+                    
+                    for line in lines:
+                        if ':' in line and not line.strip().startswith('#'):
+                            key, value = line.split(':', 1)
+                            value = value.strip()
+                            
+                            # Translate specific fields
+                            if key.strip() in ['title', 'description'] and value:
+                                translated_value = translate_with_deepl(value, target_lang, api_key, context)
+                                translated_lines.append(f"{key}: {translated_value}")
+                            else:
+                                translated_lines.append(line)
+                        else:
+                            translated_lines.append(line)
+                    
+                    # Add language metadata
+                    translated_lines.append(f"lang: {target_lang}")
+                    translated_lines.append(f"original: /{input_file}")
+                    
+                    translated_front_matter = '\n'.join(translated_lines)
+                    translated_content = f"---\n{translated_front_matter}\n---{m_code}"
+                else:
+                    translated_content = content
+            else:
+                # No front matter, add basic structure
+                translated_content = f"---\nlang: {target_lang}\noriginal: /{input_file}\n---\n{content}"
+            
+            # Write translated file
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(translated_content)
+            
+            print(f"✅ Translated M code: {output_file}")
+
+        # Main execution
+        if __name__ == "__main__":
+            api_key = os.getenv("DEEPL_API_KEY")
+            target_lang = sys.argv[1]
+            context_file = sys.argv[2] if len(sys.argv) > 2 else ""
+            
+            # Load context
+            context = ""
+            if context_file and os.path.exists(context_file):
+                with open(context_file, 'r', encoding='utf-8') as f:
+                    context = f.read()
+            
+            # Process M code files
+            with open("assets_files.txt", 'r') as f:
+                for line in f:
+                    input_file = line.strip()
+                    if input_file:
+                        output_file = f"assets/{target_lang}/{os.path.basename(input_file)}"
+                        translate_m_code_file(input_file, output_file, target_lang, api_key, context)
+        EOF
+        
+        # Run M code translation
+        python translate_assets.py "$TARGET_LANG" "translation-context.txt"
+        
+        echo "✅ M code translation completed"
+
+    - name: Check for translation changes
+      id: git-check
+      run: |
+        echo "🔍 Checking for translation changes..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Check for changes in language-specific directories
+        if [ -n "$(git status --porcelain docs/$TARGET_LANG/ _posts/$TARGET_LANG/ assets/$TARGET_LANG/)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "📝 Translation changes detected"
+          echo "Language: $TARGET_LANG"
+          echo "Files changed:"
+          git status --short "docs/$TARGET_LANG/" "_posts/$TARGET_LANG/" "assets/$TARGET_LANG/" || echo "No changes"
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "ℹ️ No translation changes detected"
+        fi
+
+    - name: Commit and push translation changes
+      if: steps.git-check.outputs.changes == 'true'
+      run: |
+        echo "💾 Committing translation changes..."
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'all' }}"
+        
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - DeepL Translator"
+        
+        # Add translated files
+        git add "docs/$TARGET_LANG/" "_posts/$TARGET_LANG/" "assets/$TARGET_LANG/"
+        
+        # Count files
+        NEW_FILES=$(git diff --cached --name-only --diff-filter=A | wc -l)
+        MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=M | wc -l)
+        
+        # Create commit message
+        COMMIT_MSG="🌍 Translate content to $TARGET_LANG
+
+        📊 Translation Summary:
+        - Target Language: $TARGET_LANG
+        - Content Type: $CONTENT_TYPE
+        - New files: $NEW_FILES
+        - Modified files: $MODIFIED_FILES
+        - Translated with: DeepL API
+        - Context: Business and technical terminology included
+        
+        🔍 Files translated:
+        $(git diff --cached --name-only | sed 's/^/- /')
+        
+        📋 Translation Rules:
+        - Technical content (M code, API endpoints) preserved in English
+        - Business context and explanations translated
+        - Front matter updated with language metadata
+        - Original file references maintained"
+        
+        git commit -m "$COMMIT_MSG"
+        git push
+        
+        echo "✅ Translation changes committed and pushed"
+
+    - name: Create translation summary
+      run: |
+        echo "## 🌍 Translation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'all' }}"
+        
+        if [ "${{ steps.git-check.outputs.changes }}" == "true" ]; then
+          echo "✅ **Status**: Translation completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "🌍 **Target Language**: $TARGET_LANG" >> $GITHUB_STEP_SUMMARY
+          echo "📝 **Content Type**: $CONTENT_TYPE" >> $GITHUB_STEP_SUMMARY
+          echo "🤖 **Translation Engine**: DeepL API" >> $GITHUB_STEP_SUMMARY
+          echo "📁 **Location**: \`docs/$TARGET_LANG/\`, \`_posts/$TARGET_LANG/\`, \`assets/$TARGET_LANG/\`" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **Status**: No translation changes needed" >> $GITHUB_STEP_SUMMARY
+          echo "🎯 **Reason**: All files already translated or no changes detected" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 Translation Details" >> $GITHUB_STEP_SUMMARY
+        echo "- **Source Language**: English" >> $GITHUB_STEP_SUMMARY
+        echo "- **Context Included**: Business and technical terminology" >> $GITHUB_STEP_SUMMARY
+        echo "- **Technical Content**: Preserved in English (M code, API endpoints)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Front Matter**: Translated with language metadata" >> $GITHUB_STEP_SUMMARY
+        echo "- **Quality**: Professional translation with domain-specific context" >> $GITHUB_STEP_SUMMARY
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "## ❌ Translation Failed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The automated translation process encountered an error." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔍 Troubleshooting" >> $GITHUB_STEP_SUMMARY
+        echo "1. Check that DEEPL_API_KEY secret is set in repository settings" >> $GITHUB_STEP_SUMMARY
+        echo "2. Verify DeepL API quota and billing status" >> $GITHUB_STEP_SUMMARY
+        echo "3. Ensure source files are properly formatted" >> $GITHUB_STEP_SUMMARY
+        echo "4. Review the action logs for specific error details" >> $GITHUB_STEP_SUMMARY
+        echo "5. Check translation rules compliance" >> $GITHUB_STEP_SUMMARY

@@ -26,6 +26,6 @@ The following rules apply:
 
 1. Articles are published to ../docs always.
 2. `m` code examples are written to ../assets always.
-3. `m` code examples are written with the front matter draft = true always.
+3. `m` code examples are written with the front matter published : false always.
 4. `m` code examples include configuration and authentication setup always. The template can be seen in [lines 33-56, auth-and-config.md](../docs/auth-and-config.md)
 5. Blog posts are written to ../_posts always.

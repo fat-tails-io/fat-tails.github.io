@@ -1,134 +1,149 @@
-# GitHub Actions Workflows for M Code Generation
+# GitHub Actions Workflows
 
-This directory contains automated workflows for generating and validating Power Query M code from Atlassian API specifications.
+This directory contains automated workflows for the fat-tails.io website.
 
-## 🤖 Workflows Overview
+## Available Workflows
 
-### 1. Generate M Code (`generate-m-code.yml`)
-
-**Purpose**: Automatically generates Power Query M code files from the Atlassian API collection.
-
-**Triggers**:
-- Push changes to `collections/atlassian-api.json`
-- Updates to `collections/generator.py` or templates
+### 1. Generate M Code from API Collection (`generate-m-code.yml`)
+- **Purpose**: Automatically generates Power Query M code and documentation from Atlassian API collections
+- **Triggers**: 
+  - Changes to `collections/atlassian-api.json`
 - Manual workflow dispatch
+- **Outputs**: M code files in `assets/` and documentation in `docs/`
 
-**What it does**:
-1. Detects OpenAPI specification format
-2. Generates M code for 264 GET endpoints
-3. Creates files in `assets/` directory
-4. Commits and pushes changes automatically
-5. Provides detailed summary of changes
-
-**Output**: 
-- 261+ M code files in `assets/jira-*.m`
-- Each file includes authentication, deep JSON expansion, and error handling
-- Files marked with `draft: true` for Jekyll integration
-
-### 2. Validate M Code (`validate-m-code.yml`)
-
-**Purpose**: Ensures generated M code meets quality standards and follows established rules.
-
-**Triggers**:
+### 2. Validate M Code Quality (`validate-m-code.yml`)
+- **Purpose**: Validates M code files and documentation for quality and compliance
+- **Triggers**:
 - Pull requests modifying M code files
-- Pushes to main branch with M code changes
-- Manual workflow dispatch
+  - Pushes to main branch
+  - Manual validation
+- **Outputs**: Validation reports and quality metrics
 
-**Validation checks**:
-- ✅ Required front matter (`draft: true`)
-- ✅ Authentication setup present
-- ✅ Function naming conventions
-- ✅ Deep JSON expansion included
-- ✅ API endpoint documentation
-- ✅ GET-only compliance (rule #20)
-- ✅ File naming conventions
+### 3. Translate Content with DeepL (`translate-content.yml`)
+- **Purpose**: Translates website content to multiple languages using DeepL API
+- **Triggers**:
+  - Manual workflow dispatch (with language selection)
+  - Automatic translation on content changes (optional)
+- **Outputs**: Translated content in language-specific directories
 
-**Quality metrics**:
-- Total lines of code
-- Average file size
-- Authentication coverage percentage
-- Deep expansion coverage percentage
+## Translation Workflow
 
-## 🔧 Configuration
+The translation workflow supports multiple languages and content types:
 
-### Required Secrets
-- `GITHUB_TOKEN` (automatically provided)
+### Supported Languages
+- Spanish (es)
+- French (fr) 
+- German (de)
+- Italian (it)
+- Portuguese (pt)
+- Dutch (nl)
+- Polish (pl)
+- Russian (ru)
+- Japanese (ja)
+- Korean (ko)
+- Chinese (zh)
 
-### File Dependencies
-- `collections/atlassian-api.json` - OpenAPI specification
-- `collections/generator.py` - M code generator
-- `collections/templates/*.template` - M code templates
-- `.cursor/rules/api-generation-rules.mdc` - Generation rules
+### Content Types
+- **docs**: Documentation articles
+- **posts**: Blog posts
+- **assets**: M code files (front matter only)
+- **all**: All content types
 
-## 📊 Workflow Status
+### Features
+- **Context-Aware Translation**: Uses business and technical context for better quality
+- **Technical Content Preservation**: M code, API endpoints, and technical terms remain in English
+- **Automatic Directory Structure**: Creates language-specific subdirectories
+- **Front Matter Translation**: Translates titles and descriptions while preserving technical metadata
+- **Quality Assurance**: Validates translations and maintains consistency
 
-The workflows provide comprehensive reporting:
+### Setup Requirements
 
-### Generation Workflow
-- 📝 Commit messages with file counts
-- 📊 Summary of new vs modified files
-- 🔄 Automatic push to repository
-- ❌ Failure notifications with troubleshooting
+1. **DeepL API Key**: Add `DEEPL_API_KEY` as a repository secret
+2. **Translation Context**: Uses `translation/translation-context.json` for business terminology
+3. **File Structure**: Automatically creates language directories
 
-### Validation Workflow
-- 🔍 Detailed validation report
-- 📈 Quality metrics dashboard
-- ⚠️ Warnings for potential issues
-- 💬 PR comments with results
+### Usage
 
-## 🚀 Manual Triggers
+#### Manual Translation
+1. Go to Actions → Translate Content with DeepL
+2. Click "Run workflow"
+3. Select target language and content type
+4. Choose whether to force retranslation
+5. Enable/disable context inclusion
 
-Both workflows can be triggered manually:
+#### Automatic Translation
+- Triggered when English content changes
+- Can be disabled by modifying workflow triggers
+- Only translates new or modified content
 
-1. Go to **Actions** tab in GitHub
-2. Select the desired workflow
-3. Click **Run workflow**
-4. Choose branch and options
-5. Click **Run workflow**
+### Translation Rules
 
-## 🛠️ Troubleshooting
+The translation follows strict rules defined in `.cursor/rules/translation-rules.mdc`:
 
-### Common Issues
+- **Technical Content**: M code, API endpoints, parameters remain in English
+- **Business Content**: Explanations, use cases, and descriptions are translated
+- **Front Matter**: Titles and descriptions translated, technical metadata preserved
+- **Quality**: Professional translation with domain-specific context
+- **Consistency**: Terminology maintained across all translations
 
-**Generation fails**:
-- Check API collection JSON format
-- Verify generator script syntax
-- Ensure all templates are present
-- Review Python dependencies
+### File Organization
 
-**Validation fails**:
-- Check M code file format
-- Verify front matter structure
-- Ensure authentication setup
-- Follow naming conventions
+```
+/docs/
+  ├── [English files]
+  ├── es/          # Spanish translations
+  ├── fr/          # French translations
+  └── [other-lang]/
 
-### Debug Steps
+/_posts/
+  ├── [English files]
+  ├── es/
+  ├── fr/
+  └── [other-lang]/
 
-1. **Check workflow logs** in Actions tab
-2. **Review file changes** in commits
-3. **Validate JSON format** of API collection
-4. **Test generator locally** in collections directory
-5. **Check rules compliance** against `.cursor/rules/api-generation-rules.mdc`
+/assets/
+  ├── [English M code]
+  ├── es/
+  ├── fr/
+  └── [other-lang]/
 
-## 📋 Rules Compliance
+/translation/
+  ├── README.md                    # Translation documentation
+  ├── translation-context.json     # DeepL context configuration
+  └── setup-translation.sh        # Setup script
+```
 
-The workflows enforce the rules defined in `.cursor/rules/api-generation-rules.mdc`:
+### Monitoring and Maintenance
 
-- **GET endpoints only** (rules #5, #20)
-- **Consistent authentication** (rules #2, #4)
-- **Deep JSON expansion** (rule #3)
-- **Proper file naming** (rule #14)
-- **Jekyll integration** (rule #4)
-- **Error handling** (rule #10)
-- **Business context** (rules #7-9)
+- Translation status is reported in workflow summaries
+- Changes are automatically committed with detailed commit messages
+- Quality metrics are generated for each translation run
+- Failed translations are reported with troubleshooting guidance
 
-## 🔄 Workflow Evolution
+## Workflow Dependencies
 
-These workflows are designed to evolve with the project:
+- **Python 3.10**: Required for all workflows
+- **DeepL API**: Required for translation workflow
+- **GitHub Token**: Automatically provided for repository access
+- **Repository Secrets**: DEEPL_API_KEY for translation functionality
 
-- **Template updates** automatically trigger regeneration
-- **Rule changes** are enforced in validation
-- **API updates** generate new M code files
-- **Quality metrics** track improvement over time
+## Troubleshooting
 
-The automation ensures that M code generation remains consistent, high-quality, and aligned with project goals while reducing manual maintenance overhead.
+### Translation Issues
+1. Verify DEEPL_API_KEY is set in repository secrets
+2. Check DeepL API quota and billing status
+3. Ensure source files are properly formatted
+4. Review translation context configuration
+5. Check workflow logs for specific errors
+
+### M Code Generation Issues
+1. Verify API collection file format
+2. Check generator script syntax
+3. Ensure all templates are present
+4. Review generation rules compliance
+
+### Validation Issues
+1. Check file naming conventions
+2. Verify front matter requirements
+3. Ensure technical content preservation
+4. Review quality metrics and warnings

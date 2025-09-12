@@ -9,11 +9,14 @@ on:
       - 'collections/templates/*.template'
       - '.cursor/rules/api-generation-rules.mdc'
   
-  # Run on pushes to main that include M code
+  # Run on pushes to main that include M code or translations
   push:
     branches: [ main ]
     paths:
       - 'assets/*.m'
+      - 'docs/*/'
+      - '_posts/*/'
+      - 'assets/*/'
 
   # Allow manual validation
   workflow_dispatch:
@@ -184,6 +187,84 @@ jobs:
         fi
         
         echo "✅ Rules compliance check completed"
+
+    - name: Validate Translation Files
+      run: |
+        echo "🌍 Validating translation files..."
+        
+        # Find all language directories
+        LANG_DIRS=$(find docs _posts assets -maxdepth 1 -type d -name "[a-z][a-z]" | sort)
+        
+        if [ -z "$LANG_DIRS" ]; then
+          echo "ℹ️ No translation directories found"
+          exit 0
+        fi
+        
+        echo "📁 Found translation directories: $LANG_DIRS"
+        
+        # Validation counters for translations
+        VALID_TRANSLATIONS=0
+        INVALID_TRANSLATIONS=0
+        TRANSLATION_WARNINGS=0
+        
+        # Validate each language directory
+        for lang_dir in $LANG_DIRS; do
+          LANG_CODE=$(basename "$lang_dir")
+          echo "🔍 Validating $LANG_CODE translations..."
+          
+          # Check for required front matter in translated files
+          for file in "$lang_dir"/*.md "$lang_dir"/*.m; do
+            if [ -f "$file" ]; then
+              # Check for language metadata
+              if ! grep -q "lang: $LANG_CODE" "$file"; then
+                echo "❌ Missing language metadata in: $file"
+                echo "- ❌ **$(basename $file)**: Missing 'lang: $LANG_CODE' in front matter" >> validation-report.md
+                ((INVALID_TRANSLATIONS++))
+                continue
+              fi
+              
+              # Check for original file reference
+              if ! grep -q "original: /" "$file"; then
+                echo "⚠️ Missing original file reference in: $file"
+                echo "- ⚠️ **$(basename $file)**: Missing 'original:' reference" >> validation-report.md
+                ((TRANSLATION_WARNINGS++))
+              fi
+              
+              # For M code files, ensure technical content is preserved
+              if [[ "$file" == *.m ]]; then
+                # Check that M code content is unchanged (basic check)
+                if grep -q "let\|in\|Source\|Json.Document" "$file"; then
+                  echo "✅ M code technical content preserved: $file"
+                else
+                  echo "⚠️ M code may have been translated: $file"
+                  echo "- ⚠️ **$(basename $file)**: M code content may have been translated" >> validation-report.md
+                  ((TRANSLATION_WARNINGS++))
+                fi
+              fi
+              
+              echo "✅ Validated translation: $file"
+              ((VALID_TRANSLATIONS++))
+            fi
+          done
+        done
+        
+        # Add translation summary to report
+        echo "" >> validation-report.md
+        echo "### 🌍 Translation Validation Summary" >> validation-report.md
+        echo "- ✅ **Valid translations**: $VALID_TRANSLATIONS" >> validation-report.md
+        echo "- ❌ **Invalid translations**: $INVALID_TRANSLATIONS" >> validation-report.md
+        echo "- ⚠️ **Translation warnings**: $TRANSLATION_WARNINGS" >> validation-report.md
+        
+        echo "🎯 Translation validation completed:"
+        echo "  ✅ Valid translations: $VALID_TRANSLATIONS"
+        echo "  ❌ Invalid translations: $INVALID_TRANSLATIONS"
+        echo "  ⚠️ Translation warnings: $TRANSLATION_WARNINGS"
+        
+        # Fail if there are invalid translations
+        if [ $INVALID_TRANSLATIONS -gt 0 ]; then
+          echo "💥 Translation validation failed due to invalid files"
+          exit 1
+        fi
 
     - name: Generate Quality Metrics
       run: |
