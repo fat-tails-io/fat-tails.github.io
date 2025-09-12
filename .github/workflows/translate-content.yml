@@ -121,7 +121,7 @@ jobs:
         else
           echo "⚠️ translation/translation-context.json not found, using default context"
           # Fallback context
-          cat > translation-context.txt << 'EOF'
+          cat > translation-context.txt << 'FALLBACK_EOF'
 Business Context: This is technical documentation for project managers and finance teams working with Atlassian Jira and Microsoft Excel. The content helps bridge the gap between project management tools and spreadsheet analysis.
 
 Key Terminology:
@@ -134,7 +134,7 @@ Key Terminology:
 Target Audience: Project managers, finance teams, business analysts, data analysts
 Content Type: Technical documentation, business analysis guides, code examples
 Tone: Professional, clear, business-focused, technically accurate
-EOF
+FALLBACK_EOF
         fi
         
         echo "✅ Translation context created"
