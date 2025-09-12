@@ -243,6 +243,14 @@ jobs:
         echo "📚 Translating documentation files..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Debug what we're passing to the script
+        echo "🔍 Debug arguments:"
+        echo "  - Target language: $TARGET_LANG"
+        echo "  - Context file: translation-context.txt"
+        echo "  - API key present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - API key length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        
         python3 translation/translate-docs.py "$TARGET_LANG" "translation-context.txt" "${{ secrets.DEEPL_API_KEY }}"
         
         echo "✅ Documentation translation completed"
@@ -253,6 +261,14 @@ jobs:
         echo "📝 Translating blog post files..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Debug what we're passing to the script
+        echo "🔍 Debug arguments:"
+        echo "  - Target language: $TARGET_LANG"
+        echo "  - Context file: translation-context.txt"
+        echo "  - API key present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - API key length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        
         python3 translation/translate-docs.py "$TARGET_LANG" "translation-context.txt" "${{ secrets.DEEPL_API_KEY }}"
         
         echo "✅ Blog post translation completed"
@@ -263,6 +279,14 @@ jobs:
         echo "⚙️ Translating M code files (front matter only)..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        
+        # Debug what we're passing to the script
+        echo "🔍 Debug arguments:"
+        echo "  - Target language: $TARGET_LANG"
+        echo "  - Context file: translation-context.txt"
+        echo "  - API key present: $([ -n "${{ secrets.DEEPL_API_KEY }}" ] && echo "Yes" || echo "No")"
+        echo "  - API key length: ${#{{ secrets.DEEPL_API_KEY }}}"
+        
         python3 translation/translate-assets.py "$TARGET_LANG" "translation-context.txt" "${{ secrets.DEEPL_API_KEY }}"
         
         echo "✅ M code translation completed"
