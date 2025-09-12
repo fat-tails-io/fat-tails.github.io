@@ -122,19 +122,19 @@ jobs:
           echo "⚠️ translation/translation-context.json not found, using default context"
           # Fallback context
           cat > translation-context.txt << 'EOF'
-          Business Context: This is technical documentation for project managers and finance teams working with Atlassian Jira and Microsoft Excel. The content helps bridge the gap between project management tools and spreadsheet analysis.
+Business Context: This is technical documentation for project managers and finance teams working with Atlassian Jira and Microsoft Excel. The content helps bridge the gap between project management tools and spreadsheet analysis.
 
-          Key Terminology:
-          - Project Management: Project management, project analysis, project lifecycle
-          - Atlassian Tools: Jira, Confluence, Atlassian, API endpoints, REST API
-          - Microsoft Excel: Power Query, M code, Excel, spreadsheet, data analysis
-          - Business Analysis: Forensic analysis, project success metrics, value attribution
-          - Technical Terms: API, JSON, authentication, parameters, endpoints, data extraction
+Key Terminology:
+- Project Management: Project management, project analysis, project lifecycle
+- Atlassian Tools: Jira, Confluence, Atlassian, API endpoints, REST API
+- Microsoft Excel: Power Query, M code, Excel, spreadsheet, data analysis
+- Business Analysis: Forensic analysis, project success metrics, value attribution
+- Technical Terms: API, JSON, authentication, parameters, endpoints, data extraction
 
-          Target Audience: Project managers, finance teams, business analysts, data analysts
-          Content Type: Technical documentation, business analysis guides, code examples
-          Tone: Professional, clear, business-focused, technically accurate
-          EOF
+Target Audience: Project managers, finance teams, business analysts, data analysts
+Content Type: Technical documentation, business analysis guides, code examples
+Tone: Professional, clear, business-focused, technically accurate
+EOF
         fi
         
         echo "✅ Translation context created"
