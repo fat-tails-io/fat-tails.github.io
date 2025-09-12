@@ -17,6 +17,13 @@ Setup script that helps configure the translation feature. Run this script to:
 - Create example language directories
 - Provide setup instructions
 
+### `list-files.sh`
+Helper script that lists all available files for translation. Run this script to:
+- See all documentation files in `docs/`
+- See all blog post files in `_posts/`
+- See all M code files in `assets/`
+- Get usage examples for specific file translation
+
 ## Usage
 
 1. **Run the setup script**:
@@ -26,7 +33,14 @@ Setup script that helps configure the translation feature. Run this script to:
 
 2. **Configure DeepL API key** in repository secrets
 
-3. **Test translation** using the GitHub workflow
+3. **List available files** (optional):
+   ```bash
+   ./translation/list-files.sh
+   ```
+
+4. **Test translation** using the GitHub workflow:
+   - **All content**: Select content type (docs, posts, assets)
+   - **Specific files**: Select "specific_files" and provide comma-separated file paths
 
 ## Directory Structure
 
@@ -34,7 +48,8 @@ Setup script that helps configure the translation feature. Run this script to:
 translation/
 ├── README.md                    # This file
 ├── translation-context.json     # DeepL context configuration
-└── setup-translation.sh        # Setup and verification script
+├── setup-translation.sh        # Setup and verification script
+└── list-files.sh               # List available files for translation
 ```
 
 ## Integration

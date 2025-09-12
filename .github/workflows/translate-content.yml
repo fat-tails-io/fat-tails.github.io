@@ -24,13 +24,18 @@ on:
       content_type:
         description: 'Type of content to translate'
         required: true
-        default: 'all'
+        default: 'docs'
         type: choice
         options:
-          - all
           - docs
           - posts
           - assets
+          - specific_files
+      specific_files:
+        description: 'Specific files to translate (comma-separated, e.g., "docs/auth-and-config.md,docs/jira-projects-get.md")'
+        required: false
+        default: ''
+        type: string
       force_retranslate:
         description: 'Force retranslation of existing files'
         required: false
@@ -154,7 +159,8 @@ jobs:
         echo "🔍 Identifying files to translate..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
-        CONTENT_TYPE="${{ github.event.inputs.content_type || 'all' }}"
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'docs' }}"
+        SPECIFIC_FILES="${{ github.event.inputs.specific_files || '' }}"
         FORCE_RETRANSLATE="${{ github.event.inputs.force_retranslate || 'false' }}"
         
         # Arrays to store file paths
@@ -162,41 +168,82 @@ jobs:
         POSTS_FILES=()
         ASSETS_FILES=()
         
-        # Find documentation files
-        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "docs" ]; then
-          for file in docs/*.md; do
-            if [ -f "$file" ] && [ ! "$file" = "docs/README.md" ]; then
-              # Check if translation already exists
-              translated_file="docs/$TARGET_LANG/$(basename "$file")"
-              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
-                DOCS_FILES+=("$file")
-              fi
-            fi
-          done
-        fi
-        
-        # Find blog post files
-        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "posts" ]; then
-          for file in _posts/*.md; do
+        # Handle specific files selection
+        if [ "$CONTENT_TYPE" = "specific_files" ] && [ -n "$SPECIFIC_FILES" ]; then
+          echo "🎯 Processing specific files: $SPECIFIC_FILES"
+          
+          # Split comma-separated files and process each
+          IFS=',' read -ra FILES <<< "$SPECIFIC_FILES"
+          for file in "${FILES[@]}"; do
+            # Trim whitespace
+            file=$(echo "$file" | xargs)
+            
             if [ -f "$file" ]; then
-              translated_file="_posts/$TARGET_LANG/$(basename "$file")"
-              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
-                POSTS_FILES+=("$file")
+              # Determine file type and add to appropriate array
+              if [[ "$file" == docs/*.md ]]; then
+                translated_file="docs/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  DOCS_FILES+=("$file")
+                  echo "  📚 Added docs file: $file"
+                fi
+              elif [[ "$file" == _posts/*.md ]]; then
+                translated_file="_posts/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  POSTS_FILES+=("$file")
+                  echo "  📝 Added posts file: $file"
+                fi
+              elif [[ "$file" == assets/*.m ]]; then
+                translated_file="assets/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  ASSETS_FILES+=("$file")
+                  echo "  ⚙️ Added assets file: $file"
+                fi
+              else
+                echo "  ⚠️ Skipping unsupported file: $file"
               fi
+            else
+              echo "  ❌ File not found: $file"
             fi
           done
-        fi
-        
-        # Find M code files (for front matter translation only)
-        if [ "$CONTENT_TYPE" = "all" ] || [ "$CONTENT_TYPE" = "assets" ]; then
-          for file in assets/*.m; do
-            if [ -f "$file" ]; then
-              translated_file="assets/$TARGET_LANG/$(basename "$file")"
-              if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
-                ASSETS_FILES+=("$file")
+        else
+          # Handle content type selection
+          echo "📂 Processing content type: $CONTENT_TYPE"
+          
+          # Find documentation files
+          if [ "$CONTENT_TYPE" = "docs" ]; then
+            for file in docs/*.md; do
+              if [ -f "$file" ] && [ ! "$file" = "docs/README.md" ]; then
+                translated_file="docs/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  DOCS_FILES+=("$file")
+                fi
               fi
-            fi
-          done
+            done
+          fi
+          
+          # Find blog post files
+          if [ "$CONTENT_TYPE" = "posts" ]; then
+            for file in _posts/*.md; do
+              if [ -f "$file" ]; then
+                translated_file="_posts/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  POSTS_FILES+=("$file")
+                fi
+              fi
+            done
+          fi
+          
+          # Find M code files (for front matter translation only)
+          if [ "$CONTENT_TYPE" = "assets" ]; then
+            for file in assets/*.m; do
+              if [ -f "$file" ]; then
+                translated_file="assets/$TARGET_LANG/$(basename "$file")"
+                if [ "$FORCE_RETRANSLATE" = "true" ] || [ ! -f "$translated_file" ]; then
+                  ASSETS_FILES+=("$file")
+                fi
+              fi
+            done
+          fi
         fi
         
         # Output file counts
@@ -213,6 +260,20 @@ jobs:
         echo "  - Documentation: ${#DOCS_FILES[@]} files"
         echo "  - Blog posts: ${#POSTS_FILES[@]} files"
         echo "  - M code files: ${#ASSETS_FILES[@]} files"
+        
+        # Show specific files if using specific_files mode
+        if [ "$CONTENT_TYPE" = "specific_files" ]; then
+          echo "🎯 Specific files selected:"
+          if [ ${#DOCS_FILES[@]} -gt 0 ]; then
+            printf '  📚 Docs: %s\n' "${DOCS_FILES[@]}"
+          fi
+          if [ ${#POSTS_FILES[@]} -gt 0 ]; then
+            printf '  📝 Posts: %s\n' "${POSTS_FILES[@]}"
+          fi
+          if [ ${#ASSETS_FILES[@]} -gt 0 ]; then
+            printf '  ⚙️ Assets: %s\n' "${ASSETS_FILES[@]}"
+          fi
+        fi
 
     - name: Translate documentation files
       if: steps.identify-files.outputs.docs_count > 0
@@ -525,7 +586,8 @@ jobs:
         echo "💾 Committing translation changes..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
-        CONTENT_TYPE="${{ github.event.inputs.content_type || 'all' }}"
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'docs' }}"
+        SPECIFIC_FILES="${{ github.event.inputs.specific_files || '' }}"
         
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - DeepL Translator"
@@ -538,7 +600,28 @@ jobs:
         MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=M | wc -l)
         
         # Create commit message
-        COMMIT_MSG="🌍 Translate content to $TARGET_LANG
+        if [ "$CONTENT_TYPE" = "specific_files" ] && [ -n "$SPECIFIC_FILES" ]; then
+          COMMIT_MSG="🌍 Translate specific files to $TARGET_LANG
+
+        📊 Translation Summary:
+        - Target Language: $TARGET_LANG
+        - Content Type: Specific files
+        - Selected Files: $SPECIFIC_FILES
+        - New files: $NEW_FILES
+        - Modified files: $MODIFIED_FILES
+        - Translated with: DeepL API
+        - Context: Business and technical terminology included
+        
+        🔍 Files translated:
+        $(git diff --cached --name-only | sed 's/^/- /')
+        
+        📋 Translation Rules:
+        - Technical content (M code, API endpoints) preserved in English
+        - Business context and explanations translated
+        - Front matter updated with language metadata
+        - Original file references maintained"
+        else
+          COMMIT_MSG="🌍 Translate content to $TARGET_LANG
 
         📊 Translation Summary:
         - Target Language: $TARGET_LANG
@@ -556,6 +639,7 @@ jobs:
         - Business context and explanations translated
         - Front matter updated with language metadata
         - Original file references maintained"
+        fi
         
         git commit -m "$COMMIT_MSG"
         git push
