@@ -1,8 +1,9 @@
 ---
 title: Get Announcement Banner Configuration
-description: Returns the current announcement banner configuration.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the current announcement banner configuration.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/announcementBanner
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAnnouncementbanner
-// Description: Returns the current announcement banner configuration.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the current announcement banner configuration.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/announcementBanner
 // Create this with query name: JiraGetAnnouncementbanner
 // -----------------------------------------------------------------------------

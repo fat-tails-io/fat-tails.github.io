@@ -1,16 +1,17 @@
 ---
 title: Get Issue Watchers
-description: Returns the watchers for an issue.
-
-This operation requires the **Allow users to watch issues** option to be *ON*. This option is set in General configuration for Jira. See [Configuring Jira application options](https://confluence.atlassian.com/x/uYXKM) for details.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is ini
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  To see details of users on the watchlist other than themselves, *View voters and watchers* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+description: |-
+  Returns the watchers for an issue.
+  
+  This operation requires the **Allow users to watch issues** option to be *ON*. This option is set in General configuration for Jira. See [Configuring Jira application options](https://confluence.atlassian.com/x/uYXKM) for details.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is ini
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  To see details of users on the watchlist other than themselves, *View voters and watchers* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/watchers
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssueWatchers
-// Description: Returns the watchers for an issue.
-
-This operation requires the **Allow users to watch issues** option to be *ON*. This option is set in General configuration for Jira. See [Configuring Jira application options](https://confluence.atlassian.com/x/uYXKM) for details.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is ini
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  To see details of users on the watchlist other than themselves, *View voters and watchers* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+// Description: |-
+  Returns the watchers for an issue.
+  
+  This operation requires the **Allow users to watch issues** option to be *ON*. This option is set in General configuration for Jira. See [Configuring Jira application options](https://confluence.atlassian.com/x/uYXKM) for details.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is ini
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  To see details of users on the watchlist other than themselves, *View voters and watchers* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
 // API Endpoint: GET /rest/api/3/issue/{issueIdOrKey}/watchers
 // Create this with query name: JiraGetIssueWatchers
 // -----------------------------------------------------------------------------

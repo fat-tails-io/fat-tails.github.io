@@ -1,15 +1,33 @@
 ---
 title: Avatar Image By Owner
-description: Returns the avatar image for a project, issue type or priority.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:*...
+description: |-
+  Returns the avatar image for a project, issue type or priority.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  For system avatars, none.
+   *  For custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+   *  For custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+   *  For priority avatars, none.
 nav_order: 999
 published: false
 ---
 
 # Avatar Image By Owner
+
+## API Description
+Returns the avatar image for a project, issue type or priority.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  For system avatars, none.
+ *  For custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+ *  For custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+ *  For priority avatars, none.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

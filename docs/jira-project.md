@@ -1,15 +1,23 @@
 ---
 title: Project
-description: Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
-
-This operation can be accessed anonymously.
-
-**[Permissions](...
+description: |-
+  Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # Project
+
+## API Description
+Returns the [project details](https://confluence.atlassian.com/x/ahLpNw) for a project.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

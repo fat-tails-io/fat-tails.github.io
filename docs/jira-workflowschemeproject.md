@@ -1,11 +1,23 @@
 ---
 title: Workflow Scheme Project Associations
-description: Returns a list of the workflow schemes associated with a list of projects. Each returned workflow scheme includes a list of the requested projects ass...
+description: |-
+  Returns a list of the workflow schemes associated with a list of projects. Each returned workflow scheme includes a list of the requested projects associated with it. Any team-managed or non-existent projects in the request are ignored and no errors are returned.
+  
+  If the project is associated with the `Default Workflow Scheme` no ID is returned. This is because the way the `Default Workflow Scheme` is stored means it has no ID.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Workflow Scheme Project Associations
+
+## API Description
+Returns a list of the workflow schemes associated with a list of projects. Each returned workflow scheme includes a list of the requested projects associated with it. Any team-managed or non-existent projects in the request are ignored and no errors are returned.
+
+If the project is associated with the `Default Workflow Scheme` no ID is returned. This is because the way the `Default Workflow Scheme` is stored means it has no ID.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

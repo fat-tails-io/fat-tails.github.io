@@ -1,13 +1,14 @@
 ---
 title: Get User Nav Property
-description: Returns the value of a user nav preference.
-
-Note: This operation fetches the property key value directly from RbacClient.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
- *  Access to Jira, to get a property from the calling user's record.
+description: |-
+  Returns the value of a user nav preference.
+  
+  Note: This operation fetches the property key value directly from RbacClient.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+   *  Access to Jira, to get a property from the calling user's record.
 endpoint: /rest/api/3/user/nav4-opt-property/{propertyKey}
 method: GET
 published: false
@@ -15,14 +16,15 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserNav4OptProperty
-// Description: Returns the value of a user nav preference.
-
-Note: This operation fetches the property key value directly from RbacClient.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
- *  Access to Jira, to get a property from the calling user's record.
+// Description: |-
+  Returns the value of a user nav preference.
+  
+  Note: This operation fetches the property key value directly from RbacClient.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg), to get a property from any user.
+   *  Access to Jira, to get a property from the calling user's record.
 // API Endpoint: GET /rest/api/3/user/nav4-opt-property/{propertyKey}
 // Create this with query name: JiraGetUserNav4OptProperty
 // -----------------------------------------------------------------------------

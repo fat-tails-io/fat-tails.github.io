@@ -1,10 +1,11 @@
 ---
 title: Get All Users
-description: Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
-
-Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
+  
+  Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/users/search
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUsersSearch
-// Description: Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
-
-Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account.
+  
+  Privacy controls are applied to the response based on the users' preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/users/search
 // Create this with query name: JiraGetUsersSearch
 // -----------------------------------------------------------------------------

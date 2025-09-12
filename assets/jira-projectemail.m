@@ -1,8 +1,9 @@
 ---
 title: Get Project'S Sender Email
-description: Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+description: |-
+  Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectId}/email
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectEmail
-// Description: Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+// Description: |-
+  Returns the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 // API Endpoint: GET /rest/api/3/project/{projectId}/email
 // Create this with query name: JiraGetProjectEmail
 // -----------------------------------------------------------------------------

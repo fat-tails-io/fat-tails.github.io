@@ -7,6 +7,9 @@ published: false
 
 # Workflow Usages By Status
 
+## API Description
+Returns a page of workflows using a given status.
+
 ## Purpose
 Extract specific data from Jira for project analysis and reporting
 

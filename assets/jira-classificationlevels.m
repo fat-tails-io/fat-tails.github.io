@@ -1,8 +1,9 @@
 ---
 title: Get All Classification Levels
-description: Returns all classification levels.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns all classification levels.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/classification-levels
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetClassificationLevels
-// Description: Returns all classification levels.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns all classification levels.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/classification-levels
 // Create this with query name: JiraGetClassificationLevels
 // -----------------------------------------------------------------------------

@@ -1,13 +1,35 @@
 ---
 title: Find Groups
-description: Returns a list of groups whose names contain a query string. A list of group names can be provided to exclude groups from the results.
-
-The primary us...
+description: |-
+  Returns a list of groups whose names contain a query string. A list of group names can be provided to exclude groups from the results.
+  
+  The primary use case for this resource is to populate a group picker suggestions list. To this end, the returned object includes the `html` field where the matched query term is highlighted in the group name with the HTML strong tag. Also, the groups list is wrapped in a response object that contains a header for use in the picker, specifically *Showing X of Y matching groups*.
+  
+  The list returns with the groups sorted. If no groups match the list criteria, an empty list is returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg). Anonymous calls and calls by users without the required permission return an empty list.
+  
+  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). Without this permission, calls where query is not an exact match to an existing group will return an empty list.
 nav_order: 999
 published: false
 ---
 
 # Find Groups
+
+## API Description
+Returns a list of groups whose names contain a query string. A list of group names can be provided to exclude groups from the results.
+
+The primary use case for this resource is to populate a group picker suggestions list. To this end, the returned object includes the `html` field where the matched query term is highlighted in the group name with the HTML strong tag. Also, the groups list is wrapped in a response object that contains a header for use in the picker, specifically *Showing X of Y matching groups*.
+
+The list returns with the groups sorted. If no groups match the list criteria, an empty list is returned.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg). Anonymous calls and calls by users without the required permission return an empty list.
+
+*Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). Without this permission, calls where query is not an exact match to an existing group will return an empty list.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

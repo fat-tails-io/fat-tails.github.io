@@ -1,13 +1,19 @@
 ---
 title: Plan-Only Team
-description: Returns planning settings for a plan-only team.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.at...
+description: |-
+  Returns planning settings for a plan-only team.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Plan-Only Team
+
+## API Description
+Returns planning settings for a plan-only team.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

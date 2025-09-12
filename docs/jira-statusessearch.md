@@ -1,11 +1,25 @@
 ---
 title: Search Statuses Paginated
-description: Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or p...
+description: |-
+  Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 nav_order: 999
 published: false
 ---
 
 # Search Statuses Paginated
+
+## API Description
+Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+ *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

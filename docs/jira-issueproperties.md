@@ -1,17 +1,29 @@
 ---
 title: Issue Property
-description: Returns the key and value of an issue's property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse...
+description: |-
+  Returns the key and value of an issue's property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 nav_order: 999
 published: false
 ---
 
 # Issue Property
+
+## API Description
+Returns the key and value of an issue's property.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the issue.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

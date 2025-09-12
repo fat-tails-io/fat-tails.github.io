@@ -1,11 +1,25 @@
 ---
 title: Search Resolutions
-description: Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criter...
+description: |-
+  Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
+  
+   *  a list of resolutions IDs.
+   *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Search Resolutions
+
+## API Description
+Returns a [paginated](#pagination) list of resolutions. The list can contain all resolutions or a subset determined by any combination of these criteria:
+
+ *  a list of resolutions IDs.
+ *  whether the field configuration is a default. This returns resolutions from company-managed (classic) projects only, as there is no concept of default resolutions in team-managed projects.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

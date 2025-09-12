@@ -1,11 +1,15 @@
 ---
 title: The User'S Default Workflow Editor
-description: Get the user's default workflow editor. This can be either the new editor or the legacy editor.
+description: |-
+  Get the user's default workflow editor. This can be either the new editor or the legacy editor.
 nav_order: 999
 published: false
 ---
 
 # The User'S Default Workflow Editor
+
+## API Description
+Get the user's default workflow editor. This can be either the new editor or the legacy editor.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

@@ -7,6 +7,9 @@ published: false
 
 # Project Usages By Status
 
+## API Description
+Returns a page of projects using a given status.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

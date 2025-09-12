@@ -1,13 +1,19 @@
 ---
 title: Permission Scheme
-description: Returns a permission scheme.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a permission scheme.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Permission Scheme
+
+## API Description
+Returns a permission scheme.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

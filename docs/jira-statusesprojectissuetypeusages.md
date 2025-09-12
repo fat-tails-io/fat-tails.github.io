@@ -7,6 +7,9 @@ published: false
 
 # Issue Type Usages By Status And Project
 
+## API Description
+Returns a page of issue types in a project using a given status.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

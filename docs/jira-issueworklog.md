@@ -1,13 +1,35 @@
 ---
 title: Worklog
-description: Returns a worklog.
-
-Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time trac...
+description: |-
+  Returns a worklog.
+  
+  Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 nav_order: 999
 published: false
 ---
 
 # Worklog
+
+## API Description
+Returns a worklog.
+
+Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

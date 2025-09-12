@@ -1,8 +1,9 @@
 ---
 title: Get Plan
-description: Returns a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPlansPlan
-// Description: Returns a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/plans/plan/{planId}
 // Create this with query name: JiraGetPlansPlan
 // -----------------------------------------------------------------------------

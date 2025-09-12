@@ -1,15 +1,35 @@
 ---
 title: Attachment Thumbnail
-description: Returns the thumbnail of an attachment.
-
-To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
-
-...
+description: |-
+  Returns the thumbnail of an attachment.
+  
+  To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 nav_order: 999
 published: false
 ---
 
 # Attachment Thumbnail
+
+## API Description
+Returns the thumbnail of an attachment.
+
+To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** For the issue containing the attachment:
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  If attachments are added in private comments, the comment-level restriction will be applied.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

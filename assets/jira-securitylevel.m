@@ -1,12 +1,13 @@
 ---
 title: Get Issue Security Level
-description: Returns details of an issue security level.
-
-Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns details of an issue security level.
+  
+  Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/securitylevel/{id}
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetSecuritylevel
-// Description: Returns details of an issue security level.
-
-Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns details of an issue security level.
+  
+  Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/securitylevel/{id}
 // Create this with query name: JiraGetSecuritylevel
 // -----------------------------------------------------------------------------

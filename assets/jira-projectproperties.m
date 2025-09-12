@@ -1,10 +1,11 @@
 ---
 title: Get Project Property
-description: Returns the value of a [project property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-entity-properties-a-jira-entity-properties).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the property.
+description: |-
+  Returns the value of a [project property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-entity-properties-a-jira-entity-properties).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the property.
 endpoint: /rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectProperties
-// Description: Returns the value of a [project property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-entity-properties-a-jira-entity-properties).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the property.
+// Description: |-
+  Returns the value of a [project property](https://developer.atlassian.com/cloud/jira/platform/storing-data-without-a-database/#a-id-jira-entity-properties-a-jira-entity-properties).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the property.
 // API Endpoint: GET /rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}
 // Create this with query name: JiraGetProjectProperties
 // -----------------------------------------------------------------------------

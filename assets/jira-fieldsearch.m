@@ -1,15 +1,16 @@
 ---
 title: Get Fields Paginated
-description: Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
-
- *  all fields
- *  specific fields, by defining `id`
- *  fields that contain a string in the field name or description, by defining `query`
- *  specific fields that contain a string in the field name or description, by defining `id` and `query`
-
-Use `type` must be set to `custom` to show custom fields only.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
+  
+   *  all fields
+   *  specific fields, by defining `id`
+   *  fields that contain a string in the field name or description, by defining `query`
+   *  specific fields that contain a string in the field name or description, by defining `id` and `query`
+  
+  Use `type` must be set to `custom` to show custom fields only.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/field/search
 method: GET
 published: false
@@ -17,16 +18,17 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldSearch
-// Description: Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
-
- *  all fields
- *  specific fields, by defining `id`
- *  fields that contain a string in the field name or description, by defining `query`
- *  specific fields that contain a string in the field name or description, by defining `id` and `query`
-
-Use `type` must be set to `custom` to show custom fields only.
-
-**[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
+  
+   *  all fields
+   *  specific fields, by defining `id`
+   *  fields that contain a string in the field name or description, by defining `query`
+   *  specific fields that contain a string in the field name or description, by defining `id` and `query`
+  
+  Use `type` must be set to `custom` to show custom fields only.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/field/search
 // Create this with query name: JiraGetFieldSearch
 // -----------------------------------------------------------------------------

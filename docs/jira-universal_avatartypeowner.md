@@ -1,15 +1,33 @@
 ---
 title: Avatars
-description: Returns the system and custom avatars for a project, issue type or priority.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permission...
+description: |-
+  Returns the system and custom avatars for a project, issue type or priority.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  for custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+   *  for custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+   *  for system avatars, none.
+   *  for priority avatars, none.
 nav_order: 999
 published: false
 ---
 
 # Avatars
+
+## API Description
+Returns the system and custom avatars for a project, issue type or priority.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  for custom project avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project the avatar belongs to.
+ *  for custom issue type avatars, *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for at least one project the issue type is used in.
+ *  for system avatars, none.
+ *  for priority avatars, none.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

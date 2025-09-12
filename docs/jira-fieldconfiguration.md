@@ -1,11 +1,31 @@
 ---
 title: All Field Configurations
-description: Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combinatio...
+description: |-
+  Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
+  
+   *  a list of field configuration item IDs.
+   *  whether the field configuration is a default.
+   *  whether the field configuration name or description contains a query string.
+  
+  Only field configurations used in company-managed (classic) projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # All Field Configurations
+
+## API Description
+Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
+
+ *  a list of field configuration item IDs.
+ *  whether the field configuration is a default.
+ *  whether the field configuration name or description contains a query string.
+
+Only field configurations used in company-managed (classic) projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

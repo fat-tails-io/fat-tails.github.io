@@ -1,10 +1,11 @@
 ---
 title: Get Project Issue Security Levels
-description: Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
+description: |-
+  Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
 endpoint: /rest/api/3/project/{projectKeyOrId}/securitylevel
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectSecuritylevel
-// Description: Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
+// Description: |-
+  Returns all [issue security](https://confluence.atlassian.com/x/J4lKLg) levels for the project that the user has access to.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project, however, issue security levels are only returned for authenticated user with *Set Issue Security* [global permission](https://confluence.atlassian.com/x/x4dKLg) for the project.
 // API Endpoint: GET /rest/api/3/project/{projectKeyOrId}/securitylevel
 // Create this with query name: JiraGetProjectSecuritylevel
 // -----------------------------------------------------------------------------

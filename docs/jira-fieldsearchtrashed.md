@@ -1,11 +1,23 @@
 ---
 title: Fields In Trash Paginated
-description: Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a...
+description: |-
+  Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
+  
+  Only custom fields can be queried, `type` must be set to `custom`.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Fields In Trash Paginated
+
+## API Description
+Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
+
+Only custom fields can be queried, `type` must be set to `custom`.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

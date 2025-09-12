@@ -1,15 +1,31 @@
 ---
 title: Projects Paginated
-description: Returns a [paginated](#pagination) list of projects visible to the user.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) r...
+description: |-
+  Returns a [paginated](#pagination) list of projects visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Projects Paginated
+
+## API Description
+Returns a [paginated](#pagination) list of projects visible to the user.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+
+ *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

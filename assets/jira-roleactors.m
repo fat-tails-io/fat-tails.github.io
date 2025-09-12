@@ -1,8 +1,9 @@
 ---
 title: Get Default Actors For Project Role
-description: Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/role/{id}/actors
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetRoleActors
-// Description: Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns the [default actors](#api-rest-api-3-resolution-get) for the project role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/role/{id}/actors
 // Create this with query name: JiraGetRoleActors
 // -----------------------------------------------------------------------------

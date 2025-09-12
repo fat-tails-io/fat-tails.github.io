@@ -1,15 +1,23 @@
 ---
 title: All Project Avatars
-description: Returns all project avatars, grouped by system and custom avatars.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) require...
+description: |-
+  Returns all project avatars, grouped by system and custom avatars.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # All Project Avatars
+
+## API Description
+Returns all project avatars, grouped by system and custom avatars.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

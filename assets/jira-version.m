@@ -1,10 +1,11 @@
 ---
 title: Get Version
-description: Returns a project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
+description: |-
+  Returns a project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 endpoint: /rest/api/3/version/{id}
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetVersion
-// Description: Returns a project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
+// Description: |-
+  Returns a project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 // API Endpoint: GET /rest/api/3/version/{id}
 // Create this with query name: JiraGetVersion
 // -----------------------------------------------------------------------------

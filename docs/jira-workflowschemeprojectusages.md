@@ -7,6 +7,9 @@ published: false
 
 # Projects Which Are Using A Given Workflow Scheme
 
+## API Description
+Returns a page of projects using a given workflow scheme.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

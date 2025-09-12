@@ -7,6 +7,9 @@ published: false
 
 # All Labels
 
+## API Description
+Returns a [paginated](#pagination) list of labels.
+
 ## Purpose
 Extract specific data from Jira for project analysis and reporting
 

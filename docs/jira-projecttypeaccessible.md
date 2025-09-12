@@ -1,13 +1,19 @@
 ---
 title: Accessible Project Type By Key
-description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
-
-**[Permissions](#permissions) required:** Permis...
+description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Accessible Project Type By Key
+
+## API Description
+Returns a [project type](https://confluence.atlassian.com/x/Var1Nw) if it is accessible to the user.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

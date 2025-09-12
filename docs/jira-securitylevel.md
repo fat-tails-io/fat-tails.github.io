@@ -1,13 +1,27 @@
 ---
 title: Issue Security Level
-description: Returns details of an issue security level.
-
-Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue s...
+description: |-
+  Returns details of an issue security level.
+  
+  Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Issue Security Level
+
+## API Description
+Returns details of an issue security level.
+
+Use [Get issue security scheme](#api-rest-api-3-issuesecurityschemes-id-get) to obtain the IDs of issue security levels associated with the issue security scheme.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

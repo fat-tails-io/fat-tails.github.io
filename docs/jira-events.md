@@ -1,13 +1,19 @@
 ---
 title: Events
-description: Returns all issue events.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns all issue events.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Events
+
+## API Description
+Returns all issue events.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

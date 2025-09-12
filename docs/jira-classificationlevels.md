@@ -1,13 +1,19 @@
 ---
 title: All Classification Levels
-description: Returns all classification levels.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns all classification levels.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # All Classification Levels
+
+## API Description
+Returns all classification levels.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

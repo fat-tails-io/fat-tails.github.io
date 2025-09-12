@@ -1,15 +1,31 @@
 ---
 title: Attachment Metadata
-description: Returns the metadata for an attachment. Note that the attachment itself is not returned.
-
-This operation can be accessed anonymously.
-
-**[Permissions]...
+description: |-
+  Returns the metadata for an attachment. Note that the attachment itself is not returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 nav_order: 999
 published: false
 ---
 
 # Attachment Metadata
+
+## API Description
+Returns the metadata for an attachment. Note that the attachment itself is not returned.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  If attachments are added in private comments, the comment-level restriction will be applied.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

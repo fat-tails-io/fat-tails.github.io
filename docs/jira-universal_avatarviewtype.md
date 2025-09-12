@@ -1,15 +1,23 @@
 ---
 title: Avatar Image By Type
-description: Returns the default project, issue type or priority avatar image.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required...
+description: |-
+  Returns the default project, issue type or priority avatar image.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Avatar Image By Type
+
+## API Description
+Returns the default project, issue type or priority avatar image.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

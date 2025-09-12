@@ -1,15 +1,23 @@
 ---
 title: Screen Schemes
-description: Returns a [paginated](#pagination) list of screen schemes.
-
-Only screen schemes used in classic projects are returned.
-
-**[Permissions](#permissions) ...
+description: |-
+  Returns a [paginated](#pagination) list of screen schemes.
+  
+  Only screen schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Screen Schemes
+
+## API Description
+Returns a [paginated](#pagination) list of screen schemes.
+
+Only screen schemes used in classic projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

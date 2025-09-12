@@ -1,15 +1,23 @@
 ---
 title: Ui Modifications
-description: Gets UI modifications. UI modifications can only be retrieved by Forge apps.
-
-**[Permissions](#permissions) required:** None.
-
-The new `read:app-data:...
+description: |-
+  Gets UI modifications. UI modifications can only be retrieved by Forge apps.
+  
+  **[Permissions](#permissions) required:** None.
+  
+  The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 nav_order: 999
 published: false
 ---
 
 # Ui Modifications
+
+## API Description
+Gets UI modifications. UI modifications can only be retrieved by Forge apps.
+
+**[Permissions](#permissions) required:** None.
+
+The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

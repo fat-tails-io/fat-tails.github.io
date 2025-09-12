@@ -1,8 +1,9 @@
 ---
 title: Get Resolution
-description: Returns an issue resolution value.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns an issue resolution value.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/resolution/{id}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetResolution
-// Description: Returns an issue resolution value.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns an issue resolution value.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/resolution/{id}
 // Create this with query name: JiraGetResolution
 // -----------------------------------------------------------------------------

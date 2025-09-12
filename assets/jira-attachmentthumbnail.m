@@ -1,16 +1,17 @@
 ---
 title: Get Attachment Thumbnail
-description: Returns the thumbnail of an attachment.
-
-To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** For the issue containing the attachment:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+description: |-
+  Returns the thumbnail of an attachment.
+  
+  To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 endpoint: /rest/api/3/attachment/thumbnail/{id}
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAttachmentThumbnail
-// Description: Returns the thumbnail of an attachment.
-
-To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** For the issue containing the attachment:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+// Description: |-
+  Returns the thumbnail of an attachment.
+  
+  To return the attachment contents, use [Get attachment content](#api-rest-api-3-attachment-content-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 // API Endpoint: GET /rest/api/3/attachment/thumbnail/{id}
 // Create this with query name: JiraGetAttachmentThumbnail
 // -----------------------------------------------------------------------------

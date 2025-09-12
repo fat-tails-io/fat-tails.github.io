@@ -1,13 +1,19 @@
 ---
 title: Announcement Banner Configuration
-description: Returns the current announcement banner configuration.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://conflu...
+description: |-
+  Returns the current announcement banner configuration.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
-published: false
+published: true
 ---
 
 # Announcement Banner Configuration
+
+## API Description
+Returns the current announcement banner configuration.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

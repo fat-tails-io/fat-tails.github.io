@@ -1,6 +1,7 @@
 ---
 title: Get User Email Bulk
-description: Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by Atlassian, according to these [guidelines](https://community.developer.atlassian.com/t/guidelines-for-requesting-access-to-email-address/27603). For Forge apps, this API only supports access via asApp() requests.
+description: |-
+  Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by Atlassian, according to these [guidelines](https://community.developer.atlassian.com/t/guidelines-for-requesting-access-to-email-address/27603). For Forge apps, this API only supports access via asApp() requests.
 endpoint: /rest/api/3/user/email/bulk
 method: GET
 published: false
@@ -8,7 +9,8 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserEmailBulk
-// Description: Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by Atlassian, according to these [guidelines](https://community.developer.atlassian.com/t/guidelines-for-requesting-access-to-email-address/27603). For Forge apps, this API only supports access via asApp() requests.
+// Description: |-
+  Returns a user's email address regardless of the user's profile visibility settings. For Connect apps, this API is only available to apps approved by Atlassian, according to these [guidelines](https://community.developer.atlassian.com/t/guidelines-for-requesting-access-to-email-address/27603). For Forge apps, this API only supports access via asApp() requests.
 // API Endpoint: GET /rest/api/3/user/email/bulk
 // Create this with query name: JiraGetUserEmailBulk
 // -----------------------------------------------------------------------------

@@ -1,11 +1,12 @@
 ---
 title: Bulk Get Statuses
-description: Returns a list of the statuses specified by one or more status IDs.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
- *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+description: |-
+  Returns a list of the statuses specified by one or more status IDs.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 endpoint: /rest/api/3/statuses
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetStatuses
-// Description: Returns a list of the statuses specified by one or more status IDs.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
- *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+// Description: |-
+  Returns a list of the statuses specified by one or more status IDs.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 // API Endpoint: GET /rest/api/3/statuses
 // Create this with query name: JiraGetStatuses
 // -----------------------------------------------------------------------------

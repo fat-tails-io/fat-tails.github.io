@@ -1,8 +1,9 @@
 ---
 title: Get Application Role
-description: Returns an application role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns an application role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/applicationrole/{key}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetApplicationrole
-// Description: Returns an application role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns an application role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/applicationrole/{key}
 // Create this with query name: JiraGetApplicationrole
 // -----------------------------------------------------------------------------

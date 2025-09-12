@@ -1,10 +1,11 @@
 ---
 title: Get Fields In Trash Paginated
-description: Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
-
-Only custom fields can be queried, `type` must be set to `custom`.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
+  
+  Only custom fields can be queried, `type` must be set to `custom`.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/field/search/trashed
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldSearchTrashed
-// Description: Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
-
-Only custom fields can be queried, `type` must be set to `custom`.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of fields in the trash. The list may be restricted to fields whose field name or description partially match a string.
+  
+  Only custom fields can be queried, `type` must be set to `custom`.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/field/search/trashed
 // Create this with query name: JiraGetFieldSearchTrashed
 // -----------------------------------------------------------------------------

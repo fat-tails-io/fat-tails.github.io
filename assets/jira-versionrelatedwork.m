@@ -1,10 +1,11 @@
 ---
 title: Get Related Work
-description: Returns related work items for the given version id.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
+description: |-
+  Returns related work items for the given version id.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 endpoint: /rest/api/3/version/{id}/relatedwork
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetVersionRelatedwork
-// Description: Returns related work items for the given version id.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
+// Description: |-
+  Returns related work items for the given version id.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 // API Endpoint: GET /rest/api/3/version/{id}/relatedwork
 // Create this with query name: JiraGetVersionRelatedwork
 // -----------------------------------------------------------------------------

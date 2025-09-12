@@ -1,8 +1,9 @@
 ---
 title: Get Valid Project Name
-description: Checks that a project name isn't in use. If the name isn't in use, the passed string is returned. If the name is in use, this operation attempts to generate a valid project name based on the one supplied, usually by adding a sequence number. If a valid project name cannot be generated, a 404 response is returned.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Checks that a project name isn't in use. If the name isn't in use, the passed string is returned. If the name is in use, this operation attempts to generate a valid project name based on the one supplied, usually by adding a sequence number. If a valid project name cannot be generated, a 404 response is returned.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/validProjectName
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectvalidateValidprojectname
-// Description: Checks that a project name isn't in use. If the name isn't in use, the passed string is returned. If the name is in use, this operation attempts to generate a valid project name based on the one supplied, usually by adding a sequence number. If a valid project name cannot be generated, a 404 response is returned.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Checks that a project name isn't in use. If the name isn't in use, the passed string is returned. If the name is in use, this operation attempts to generate a valid project name based on the one supplied, usually by adding a sequence number. If a valid project name cannot be generated, a 404 response is returned.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/projectvalidate/validProjectName
 // Create this with query name: JiraGetProjectvalidateValidprojectname
 // -----------------------------------------------------------------------------

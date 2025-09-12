@@ -7,6 +7,9 @@ published: false
 
 # Data Policy For Projects
 
+## API Description
+Returns data policies for the projects specified in the request.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

@@ -1,14 +1,15 @@
 ---
 title: Get Projects Paginated
-description: Returns a [paginated](#pagination) list of projects visible to the user.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of projects visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/project/search
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectSearch
-// Description: Returns a [paginated](#pagination) list of projects visible to the user.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** Projects are returned only where the user has one of:
-
- *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
- *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of projects visible to the user.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** Projects are returned only where the user has one of:
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/project/search
 // Create this with query name: JiraGetProjectSearch
 // -----------------------------------------------------------------------------

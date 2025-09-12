@@ -1,15 +1,23 @@
 ---
 title: Version
-description: Returns a project version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permissi...
+description: |-
+  Returns a project version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 nav_order: 999
 published: false
 ---
 
 # Version
+
+## API Description
+Returns a project version.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project containing the version.
 
 ## Purpose
 Track project versions, releases, and associated delivery metrics

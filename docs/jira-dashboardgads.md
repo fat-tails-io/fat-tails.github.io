@@ -1,13 +1,19 @@
 ---
 title: Available Gadgets
-description: Gets a list of all available gadgets that can be added to all dashboards.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Gets a list of all available gadgets that can be added to all dashboards.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Available Gadgets
+
+## API Description
+Gets a list of all available gadgets that can be added to all dashboards.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

@@ -1,8 +1,9 @@
 ---
 title: Bulk Get Users
-description: Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/user/bulk
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetUserBulk
-// Description: Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a [paginated](#pagination) list of the users specified by one or more account IDs.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/user/bulk
 // Create this with query name: JiraGetUserBulk
 // -----------------------------------------------------------------------------

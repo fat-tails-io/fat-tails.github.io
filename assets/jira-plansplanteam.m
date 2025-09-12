@@ -1,8 +1,9 @@
 ---
 title: Get Teams In Plan Paginated
-description: Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/plans/plan/{planId}/team
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPlansPlanTeam
-// Description: Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of plan-only and Atlassian teams in a plan.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/plans/plan/{planId}/team
 // Create this with query name: JiraGetPlansPlanTeam
 // -----------------------------------------------------------------------------

@@ -1,15 +1,27 @@
 ---
 title: The Default Data Classification Level Of A Project
-description: Returns the default data classification for a project.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse Projects* [project permission](https://...
+description: |-
+  Returns the default data classification for a project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+   *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # The Default Data Classification Level Of A Project
+
+## API Description
+Returns the default data classification for a project.
+
+**[Permissions](#permissions) required:**
+
+ *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+ *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

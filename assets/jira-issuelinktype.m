@@ -1,12 +1,13 @@
 ---
 title: Get Issue Link Type
-description: Returns an issue link type.
-
-To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
+description: |-
+  Returns an issue link type.
+  
+  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
 endpoint: /rest/api/3/issueLinkType/{issueLinkTypeId}
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuelinktype
-// Description: Returns an issue link type.
-
-To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
+// Description: |-
+  Returns an issue link type.
+  
+  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for a project in the site.
 // API Endpoint: GET /rest/api/3/issueLinkType/{issueLinkTypeId}
 // Create this with query name: JiraGetIssuelinktype
 // -----------------------------------------------------------------------------

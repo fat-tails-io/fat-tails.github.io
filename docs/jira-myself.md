@@ -1,13 +1,19 @@
 ---
 title: Current User
-description: Returns details for the current user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns details for the current user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Current User
+
+## API Description
+Returns details for the current user.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

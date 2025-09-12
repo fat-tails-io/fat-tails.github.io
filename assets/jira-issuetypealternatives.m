@@ -1,10 +1,11 @@
 ---
 title: Get Alternative Issue Types
-description: Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/issuetype/{id}/alternatives
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuetypeAlternatives
-// Description: Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns a list of issue types that can be used to replace the issue type. The alternative issue types are those assigned to the same workflow scheme, field configuration scheme, and screen scheme.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/issuetype/{id}/alternatives
 // Create this with query name: JiraGetIssuetypeAlternatives
 // -----------------------------------------------------------------------------

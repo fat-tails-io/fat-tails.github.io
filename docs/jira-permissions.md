@@ -1,17 +1,31 @@
 ---
 title: All Permissions
-description: Returns all permissions, including:
-
- *  global permissions.
- *  project permissions.
- *  global permissions added by plugins.
-
-This operation can be ...
+description: |-
+  Returns all permissions, including:
+  
+   *  global permissions.
+   *  project permissions.
+   *  global permissions added by plugins.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # All Permissions
+
+## API Description
+Returns all permissions, including:
+
+ *  global permissions.
+ *  project permissions.
+ *  global permissions added by plugins.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

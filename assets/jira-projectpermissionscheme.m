@@ -1,8 +1,9 @@
 ---
 title: Get Assigned Permission Scheme
-description: Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
+description: |-
+  Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/permissionscheme
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectPermissionscheme
-// Description: Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
+// Description: |-
+  Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 // API Endpoint: GET /rest/api/3/project/{projectKeyOrId}/permissionscheme
 // Create this with query name: JiraGetProjectPermissionscheme
 // -----------------------------------------------------------------------------

@@ -1,10 +1,11 @@
 ---
 title: Get Field Configuration Items
-description: Returns a [paginated](#pagination) list of all fields for a configuration.
-
-Only the fields from configurations used in company-managed (classic) projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of all fields for a configuration.
+  
+  Only the fields from configurations used in company-managed (classic) projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfiguration/{id}/fields
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldconfigurationFields
-// Description: Returns a [paginated](#pagination) list of all fields for a configuration.
-
-Only the fields from configurations used in company-managed (classic) projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of all fields for a configuration.
+  
+  Only the fields from configurations used in company-managed (classic) projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/fieldconfiguration/{id}/fields
 // Create this with query name: JiraGetFieldconfigurationFields
 // -----------------------------------------------------------------------------

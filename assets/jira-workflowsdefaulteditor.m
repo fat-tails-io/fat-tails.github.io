@@ -1,6 +1,7 @@
 ---
 title: Get The User'S Default Workflow Editor
-description: Get the user's default workflow editor. This can be either the new editor or the legacy editor.
+description: |-
+  Get the user's default workflow editor. This can be either the new editor or the legacy editor.
 endpoint: /rest/api/3/workflows/defaultEditor
 method: GET
 published: false
@@ -8,7 +9,8 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetWorkflowsDefaulteditor
-// Description: Get the user's default workflow editor. This can be either the new editor or the legacy editor.
+// Description: |-
+  Get the user's default workflow editor. This can be either the new editor or the legacy editor.
 // API Endpoint: GET /rest/api/3/workflows/defaultEditor
 // Create this with query name: JiraGetWorkflowsDefaulteditor
 // -----------------------------------------------------------------------------

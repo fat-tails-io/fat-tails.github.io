@@ -1,8 +1,9 @@
 ---
 title: Get Screens
-description: Returns a [paginated](#pagination) list of all screens or those specified by one or more screen IDs.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of all screens or those specified by one or more screen IDs.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/screens
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetScreens
-// Description: Returns a [paginated](#pagination) list of all screens or those specified by one or more screen IDs.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of all screens or those specified by one or more screen IDs.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/screens
 // Create this with query name: JiraGetScreens
 // -----------------------------------------------------------------------------

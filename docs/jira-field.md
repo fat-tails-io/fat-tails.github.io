@@ -1,14 +1,33 @@
 ---
 title: Fields
-description: Returns system and custom issue fields according to the following rules:
-
- *  Fields that cannot be added to the issue navigator are always returned.
-...
+description: |-
+  Returns system and custom issue fields according to the following rules:
+  
+   *  Fields that cannot be added to the issue navigator are always returned.
+   *  Fields that cannot be placed on an issue screen are always returned.
+   *  Fields that depend on global Jira settings are only returned if the setting is enabled. That is, timetracking fields, subtasks, votes, and watches.
+   *  For all other fields, this operation only returns the fields that the user has permission to view (that is, the field is used in at least one project that the user has *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.)
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Fields
+
+## API Description
+Returns system and custom issue fields according to the following rules:
+
+ *  Fields that cannot be added to the issue navigator are always returned.
+ *  Fields that cannot be placed on an issue screen are always returned.
+ *  Fields that depend on global Jira settings are only returned if the setting is enabled. That is, timetracking fields, subtasks, votes, and watches.
+ *  For all other fields, this operation only returns the fields that the user has permission to view (that is, the field is used in at least one project that the user has *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.)
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

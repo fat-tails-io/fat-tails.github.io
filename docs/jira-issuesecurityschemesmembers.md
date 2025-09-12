@@ -1,15 +1,23 @@
 ---
 title: Issue Security Level Members By Issue Security Scheme
-description: Returns issue security level members.
-
-Only issue security level members in context of classic projects are returned.
-
-**[Permissions](#permissions) r...
+description: |-
+  Returns issue security level members.
+  
+  Only issue security level members in context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Security Level Members By Issue Security Scheme
+
+## API Description
+Returns issue security level members.
+
+Only issue security level members in context of classic projects are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

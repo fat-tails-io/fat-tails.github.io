@@ -1,11 +1,19 @@
 ---
 title: Notification Scheme
-description: Returns a [notification scheme](https://confluence.atlassian.com/x/8YdKLg), including the list of events and the recipients who will receive notificat...
+description: |-
+  Returns a [notification scheme](https://confluence.atlassian.com/x/8YdKLg), including the list of events and the recipients who will receive notifications for those events.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira, however, the user must have permission to administer at least one project associated with the notification scheme.
 nav_order: 999
 published: false
 ---
 
 # Notification Scheme
+
+## API Description
+Returns a [notification scheme](https://confluence.atlassian.com/x/8YdKLg), including the list of events and the recipients who will receive notifications for those events.
+
+**[Permissions](#permissions) required:** Permission to access Jira, however, the user must have permission to administer at least one project associated with the notification scheme.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

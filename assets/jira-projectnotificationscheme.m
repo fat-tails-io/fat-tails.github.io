@@ -1,8 +1,9 @@
 ---
 title: Get Project Notification Scheme
-description: Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
+description: |-
+  Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/notificationscheme
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectNotificationscheme
-// Description: Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
+// Description: |-
+  Gets a [notification scheme](https://confluence.atlassian.com/x/8YdKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 // API Endpoint: GET /rest/api/3/project/{projectKeyOrId}/notificationscheme
 // Create this with query name: JiraGetProjectNotificationscheme
 // -----------------------------------------------------------------------------

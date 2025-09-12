@@ -1,12 +1,13 @@
 ---
 title: Search Priorities
-description: Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
-
- *  a list of priority IDs. Any invalid priority IDs are ignored.
- *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
- *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
+  
+   *  a list of priority IDs. Any invalid priority IDs are ignored.
+   *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
+   *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/priority/search
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetPrioritySearch
-// Description: Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
-
- *  a list of priority IDs. Any invalid priority IDs are ignored.
- *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
- *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
-
-**[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of priorities. The list can contain all priorities or a subset determined by any combination of these criteria:
+  
+   *  a list of priority IDs. Any invalid priority IDs are ignored.
+   *  a list of project IDs. Only priorities that are available in these projects will be returned. Any invalid project IDs are ignored.
+   *  whether the field configuration is a default. This returns priorities from company-managed (classic) projects only, as there is no concept of default priorities in team-managed projects.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/priority/search
 // Create this with query name: JiraGetPrioritySearch
 // -----------------------------------------------------------------------------

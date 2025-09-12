@@ -1,11 +1,25 @@
 ---
 title: User Default Columns
-description: Returns the default [issue table columns](https://confluence.atlassian.com/x/XYdKLg) for the user. If `accountId` is not passed in the request, the ca...
+description: |-
+  Returns the default [issue table columns](https://confluence.atlassian.com/x/XYdKLg) for the user. If `accountId` is not passed in the request, the calling user's details are returned.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLgl), to get the column details for any user.
+   *  Permission to access Jira, to get the calling user's column details.
 nav_order: 999
 published: false
 ---
 
 # User Default Columns
+
+## API Description
+Returns the default [issue table columns](https://confluence.atlassian.com/x/XYdKLg) for the user. If `accountId` is not passed in the request, the calling user's details are returned.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLgl), to get the column details for any user.
+ *  Permission to access Jira, to get the calling user's column details.
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

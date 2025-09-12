@@ -1,13 +1,19 @@
 ---
 title: Default Share Scope
-description: Returns the default sharing settings for new filters and dashboards for a user.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns the default sharing settings for new filters and dashboards for a user.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Default Share Scope
+
+## API Description
+Returns the default sharing settings for new filters and dashboards for a user.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

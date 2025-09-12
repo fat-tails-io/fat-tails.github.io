@@ -1,15 +1,23 @@
 ---
 title: Jira Instance Info
-description: Returns information about the Jira instance.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns information about the Jira instance.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Jira Instance Info
+
+## API Description
+Returns information about the Jira instance.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

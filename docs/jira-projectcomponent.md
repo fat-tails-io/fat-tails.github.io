@@ -1,11 +1,27 @@
 ---
 title: Project Components Paginated
-description: Returns a [paginated](#pagination) list of all components in a project. See the [Get project components](#api-rest-api-3-project-projectIdOrKey-compon...
+description: |-
+  Returns a [paginated](#pagination) list of all components in a project. See the [Get project components](#api-rest-api-3-project-projectIdOrKey-components-get) resource if you want to get a full list of versions without pagination.
+  
+  If your project uses Compass components, this API will return a list of Compass components that are linked to issues in that project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 nav_order: 999
 published: false
 ---
 
 # Project Components Paginated
+
+## API Description
+Returns a [paginated](#pagination) list of all components in a project. See the [Get project components](#api-rest-api-3-project-projectIdOrKey-components-get) resource if you want to get a full list of versions without pagination.
+
+If your project uses Compass components, this API will return a list of Compass components that are linked to issues in that project.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 
 ## Purpose
 Analyze project components and their associated issues for better project organization understanding

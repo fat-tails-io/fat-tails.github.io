@@ -1,16 +1,17 @@
 ---
 title: Get Attachment Content
-description: Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
-
-To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** For the issue containing the attachment:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+description: |-
+  Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
+  
+  To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 endpoint: /rest/api/3/attachment/content/{id}
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAttachmentContent
-// Description: Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
-
-To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** For the issue containing the attachment:
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+// Description: |-
+  Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
+  
+  To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 // API Endpoint: GET /rest/api/3/attachment/content/{id}
 // Create this with query name: JiraGetAttachmentContent
 // -----------------------------------------------------------------------------

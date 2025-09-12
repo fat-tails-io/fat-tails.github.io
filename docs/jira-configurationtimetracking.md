@@ -1,11 +1,19 @@
 ---
 title: Selected Time Tracking Provider
-description: Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returne...
+description: |-
+  Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Selected Time Tracking Provider
+
+## API Description
+Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

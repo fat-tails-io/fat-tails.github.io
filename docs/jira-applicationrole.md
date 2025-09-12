@@ -1,13 +1,19 @@
 ---
 title: Application Role
-description: Returns an application role.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKL...
+description: |-
+  Returns an application role.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Application Role
+
+## API Description
+Returns an application role.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand project roles, permissions, and team structure for governance analysis

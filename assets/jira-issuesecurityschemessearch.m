@@ -1,11 +1,12 @@
 ---
 title: Search Issue Security Schemes
-description: Returns a [paginated](#pagination) list of issue security schemes.  
-If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
-
-Only issue security schemes in the context of classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of issue security schemes.  
+  If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
+  
+  Only issue security schemes in the context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/search
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuesecurityschemesSearch
-// Description: Returns a [paginated](#pagination) list of issue security schemes.  
-If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
-
-Only issue security schemes in the context of classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of issue security schemes.  
+  If you specify the project ID parameter, the result will contain issue security schemes and related project IDs you filter by. Use \{@link IssueSecuritySchemeResource\#searchProjectsUsingSecuritySchemes(String, String, Set, Set)\} to obtain all projects related to scheme.
+  
+  Only issue security schemes in the context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/issuesecurityschemes/search
 // Create this with query name: JiraGetIssuesecurityschemesSearch
 // -----------------------------------------------------------------------------

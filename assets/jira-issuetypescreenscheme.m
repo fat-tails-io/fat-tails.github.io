@@ -1,10 +1,11 @@
 ---
 title: Get Issue Type Screen Schemes
-description: Returns a [paginated](#pagination) list of issue type screen schemes.
-
-Only issue type screen schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of issue type screen schemes.
+  
+  Only issue type screen schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuetypescreenscheme
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuetypescreenscheme
-// Description: Returns a [paginated](#pagination) list of issue type screen schemes.
-
-Only issue type screen schemes used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of issue type screen schemes.
+  
+  Only issue type screen schemes used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/issuetypescreenscheme
 // Create this with query name: JiraGetIssuetypescreenscheme
 // -----------------------------------------------------------------------------

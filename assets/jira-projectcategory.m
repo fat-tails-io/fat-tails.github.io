@@ -1,8 +1,9 @@
 ---
 title: Get Project Category By Id
-description: Returns a project category.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a project category.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/projectCategory/{id}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectcategory
-// Description: Returns a project category.
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a project category.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/projectCategory/{id}
 // Create this with query name: JiraGetProjectcategory
 // -----------------------------------------------------------------------------

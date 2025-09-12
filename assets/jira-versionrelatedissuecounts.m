@@ -1,14 +1,15 @@
 ---
 title: Get Version'S Related Issues Count
-description: Returns the following counts for a version:
-
- *  Number of issues where the `fixVersion` is set to the version.
- *  Number of issues where the `affectedVersion` is set to the version.
- *  Number of issues where a version custom field is set to the version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
+description: |-
+  Returns the following counts for a version:
+  
+   *  Number of issues where the `fixVersion` is set to the version.
+   *  Number of issues where the `affectedVersion` is set to the version.
+   *  Number of issues where a version custom field is set to the version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 endpoint: /rest/api/3/version/{id}/relatedIssueCounts
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetVersionRelatedissuecounts
-// Description: Returns the following counts for a version:
-
- *  Number of issues where the `fixVersion` is set to the version.
- *  Number of issues where the `affectedVersion` is set to the version.
- *  Number of issues where a version custom field is set to the version.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
+// Description: |-
+  Returns the following counts for a version:
+  
+   *  Number of issues where the `fixVersion` is set to the version.
+   *  Number of issues where the `affectedVersion` is set to the version.
+   *  Number of issues where a version custom field is set to the version.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* project permission for the project that contains the version.
 // API Endpoint: GET /rest/api/3/version/{id}/relatedIssueCounts
 // Create this with query name: JiraGetVersionRelatedissuecounts
 // -----------------------------------------------------------------------------

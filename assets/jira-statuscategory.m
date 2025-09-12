@@ -1,8 +1,9 @@
 ---
 title: Get Status Category
-description: Returns a status category. Status categories provided a mechanism for categorizing [statuses](#api-rest-api-3-status-idOrName-get).
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+description: |-
+  Returns a status category. Status categories provided a mechanism for categorizing [statuses](#api-rest-api-3-status-idOrName-get).
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 endpoint: /rest/api/3/statuscategory/{idOrKey}
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetStatuscategory
-// Description: Returns a status category. Status categories provided a mechanism for categorizing [statuses](#api-rest-api-3-status-idOrName-get).
-
-**[Permissions](#permissions) required:** Permission to access Jira.
+// Description: |-
+  Returns a status category. Status categories provided a mechanism for categorizing [statuses](#api-rest-api-3-status-idOrName-get).
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 // API Endpoint: GET /rest/api/3/statuscategory/{idOrKey}
 // Create this with query name: JiraGetStatuscategory
 // -----------------------------------------------------------------------------

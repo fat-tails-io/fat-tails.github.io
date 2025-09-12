@@ -1,13 +1,23 @@
 ---
 title: User
-description: Returns a user.
-
-Privacy controls are applied to the response based on the user's preferences. This could mean, for example, that the user's email add...
+description: |-
+  Returns a user.
+  
+  Privacy controls are applied to the response based on the user's preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # User
+
+## API Description
+Returns a user.
+
+Privacy controls are applied to the response based on the user's preferences. This could mean, for example, that the user's email address is hidden. See the [Profile visibility overview](https://developer.atlassian.com/cloud/jira/platform/profile-visibility/) for more details.
+
+**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

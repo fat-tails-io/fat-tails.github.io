@@ -1,10 +1,11 @@
 ---
 title: Get Jira Instance Info
-description: Returns information about the Jira instance.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns information about the Jira instance.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/serverInfo
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetServerinfo
-// Description: Returns information about the Jira instance.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns information about the Jira instance.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/serverInfo
 // Create this with query name: JiraGetServerinfo
 // -----------------------------------------------------------------------------

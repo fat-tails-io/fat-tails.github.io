@@ -1,12 +1,13 @@
 ---
 title: Get Project Components
-description: Returns all components in a project. See the [Get project components paginated](#api-rest-api-3-project-projectIdOrKey-component-get) resource if you want to get a full list of components with pagination.
-
-If your project uses Compass components, this API will return a paginated list of Compass components that are linked to issues in that project.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+description: |-
+  Returns all components in a project. See the [Get project components paginated](#api-rest-api-3-project-projectIdOrKey-component-get) resource if you want to get a full list of components with pagination.
+  
+  If your project uses Compass components, this API will return a paginated list of Compass components that are linked to issues in that project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectIdOrKey}/components
 method: GET
 published: false
@@ -14,13 +15,14 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectComponents
-// Description: Returns all components in a project. See the [Get project components paginated](#api-rest-api-3-project-projectIdOrKey-component-get) resource if you want to get a full list of components with pagination.
-
-If your project uses Compass components, this API will return a paginated list of Compass components that are linked to issues in that project.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+// Description: |-
+  Returns all components in a project. See the [Get project components paginated](#api-rest-api-3-project-projectIdOrKey-component-get) resource if you want to get a full list of components with pagination.
+  
+  If your project uses Compass components, this API will return a paginated list of Compass components that are linked to issues in that project.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 // API Endpoint: GET /rest/api/3/project/{projectIdOrKey}/components
 // Create this with query name: JiraGetProjectComponents
 // -----------------------------------------------------------------------------

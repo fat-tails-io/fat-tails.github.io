@@ -1,15 +1,25 @@
 ---
 title: All Screen Tab Fields
-description: Returns all fields for a screen tab.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer Jira* [global permission](https://confluence.atlassia...
+description: |-
+  Returns all fields for a screen tab.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
 nav_order: 999
 published: false
 ---
 
 # All Screen Tab Fields
+
+## API Description
+Returns all fields for a screen tab.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+ *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) when the project key is specified, providing that the screen is associated with the project through a Screen Scheme and Issue Type Screen Scheme.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

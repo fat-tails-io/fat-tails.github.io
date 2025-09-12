@@ -1,13 +1,27 @@
 ---
 title: Issue Security Level Members
-description: Returns a [paginated](#pagination) list of issue security level members.
-
-Only issue security level members in the context of classic projects are ret...
+description: |-
+  Returns a [paginated](#pagination) list of issue security level members.
+  
+  Only issue security level members in the context of classic projects are returned.
+  
+  Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Security Level Members
+
+## API Description
+Returns a [paginated](#pagination) list of issue security level members.
+
+Only issue security level members in the context of classic projects are returned.
+
+Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

@@ -1,16 +1,17 @@
 ---
 title: Search For Dashboards
-description: Returns a [paginated](#pagination) list of dashboards. This operation is similar to [Get dashboards](#api-rest-api-3-dashboard-get) except that the results can be refined to include dashboards that have specific attributes. For example, dashboards with a particular name. When multiple attributes are specified only filters matching all attributes are returned.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** The following dashboards that match the query parameters are returned:
-
- *  Dashboards owned by the user. Not returned for anonymous users.
- *  Dashboards shared with a group that the user is a member of. Not returned for anonymous users.
- *  Dashboards shared with a private project that the user can browse. Not returned for anonymous users.
- *  Dashboards shared with a public project.
- *  Dashboards shared with the public.
+description: |-
+  Returns a [paginated](#pagination) list of dashboards. This operation is similar to [Get dashboards](#api-rest-api-3-dashboard-get) except that the results can be refined to include dashboards that have specific attributes. For example, dashboards with a particular name. When multiple attributes are specified only filters matching all attributes are returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** The following dashboards that match the query parameters are returned:
+  
+   *  Dashboards owned by the user. Not returned for anonymous users.
+   *  Dashboards shared with a group that the user is a member of. Not returned for anonymous users.
+   *  Dashboards shared with a private project that the user can browse. Not returned for anonymous users.
+   *  Dashboards shared with a public project.
+   *  Dashboards shared with the public.
 endpoint: /rest/api/3/dashboard/search
 method: GET
 published: false
@@ -18,17 +19,18 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetDashboardSearch
-// Description: Returns a [paginated](#pagination) list of dashboards. This operation is similar to [Get dashboards](#api-rest-api-3-dashboard-get) except that the results can be refined to include dashboards that have specific attributes. For example, dashboards with a particular name. When multiple attributes are specified only filters matching all attributes are returned.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** The following dashboards that match the query parameters are returned:
-
- *  Dashboards owned by the user. Not returned for anonymous users.
- *  Dashboards shared with a group that the user is a member of. Not returned for anonymous users.
- *  Dashboards shared with a private project that the user can browse. Not returned for anonymous users.
- *  Dashboards shared with a public project.
- *  Dashboards shared with the public. with automatic pagination handling
+// Description: |-
+  Returns a [paginated](#pagination) list of dashboards. This operation is similar to [Get dashboards](#api-rest-api-3-dashboard-get) except that the results can be refined to include dashboards that have specific attributes. For example, dashboards with a particular name. When multiple attributes are specified only filters matching all attributes are returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** The following dashboards that match the query parameters are returned:
+  
+   *  Dashboards owned by the user. Not returned for anonymous users.
+   *  Dashboards shared with a group that the user is a member of. Not returned for anonymous users.
+   *  Dashboards shared with a private project that the user can browse. Not returned for anonymous users.
+   *  Dashboards shared with a public project.
+   *  Dashboards shared with the public. with automatic pagination handling
 // API Endpoint: GET /rest/api/3/dashboard/search
 // Create this with query name: JiraGetDashboardSearch
 // -----------------------------------------------------------------------------

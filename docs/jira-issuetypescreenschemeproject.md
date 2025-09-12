@@ -1,13 +1,23 @@
 ---
 title: Issue Type Screen Scheme Projects
-description: Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
-
-Only company-managed projects associated with an iss...
+description: |-
+  Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
+  
+  Only company-managed projects associated with an issue type screen scheme are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Issue Type Screen Scheme Projects
+
+## API Description
+Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
+
+Only company-managed projects associated with an issue type screen scheme are returned.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

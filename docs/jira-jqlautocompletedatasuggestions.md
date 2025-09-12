@@ -1,15 +1,37 @@
 ---
 title: Field Auto Complete Suggestions
-description: Returns the JQL search auto complete suggestions for a field.
-
-Suggestions can be obtained by providing:
-
- *  `fieldName` to get a list of all values ...
+description: |-
+  Returns the JQL search auto complete suggestions for a field.
+  
+  Suggestions can be obtained by providing:
+  
+   *  `fieldName` to get a list of all values for the field.
+   *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
+   *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
+   *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Field Auto Complete Suggestions
+
+## API Description
+Returns the JQL search auto complete suggestions for a field.
+
+Suggestions can be obtained by providing:
+
+ *  `fieldName` to get a list of all values for the field.
+ *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`.
+ *  `fieldName` and `predicateName` to get a list of all predicate values for the field.
+ *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

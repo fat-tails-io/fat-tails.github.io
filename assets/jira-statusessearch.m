@@ -1,11 +1,12 @@
 ---
 title: Search Statuses Paginated
-description: Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
- *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+description: |-
+  Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg)
 endpoint: /rest/api/3/statuses/search
 method: GET
 published: false
@@ -13,12 +14,13 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetStatusesSearch
-// Description: Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
-
-**[Permissions](#permissions) required:**
-
- *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
- *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg) with automatic pagination handling
+// Description: |-
+  Returns a [paginated](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#pagination) list of statuses that match a search on name or project.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer projects* [project permission.](https://confluence.atlassian.com/x/yodKLg)
+   *  *Administer Jira* [project permission.](https://confluence.atlassian.com/x/yodKLg) with automatic pagination handling
 // API Endpoint: GET /rest/api/3/statuses/search
 // Create this with query name: JiraGetStatusesSearch
 // -----------------------------------------------------------------------------

@@ -1,8 +1,9 @@
 ---
 title: Get Project Issue Security Scheme
-description: Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
+description: |-
+  Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 endpoint: /rest/api/3/project/{projectKeyOrId}/issuesecuritylevelscheme
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectIssuesecuritylevelscheme
-// Description: Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg). with automatic pagination handling
+// Description: |-
+  Returns the [issue security scheme](https://confluence.atlassian.com/x/J4lKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or the *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/project/{projectKeyOrId}/issuesecuritylevelscheme
 // Create this with query name: JiraGetProjectIssuesecuritylevelscheme
 // -----------------------------------------------------------------------------

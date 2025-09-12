@@ -1,13 +1,19 @@
 ---
 title: Assigned Permission Scheme
-description: Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
-
-**[Permissions](#permissions) required:** *Admin...
+description: |-
+  Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 nav_order: 999
 published: false
 ---
 
 # Assigned Permission Scheme
+
+## API Description
+Gets the [permission scheme](https://confluence.atlassian.com/x/yodKLg) associated with the project.
+
+**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg) or *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg).
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

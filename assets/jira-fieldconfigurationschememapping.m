@@ -1,10 +1,11 @@
 ---
 title: Get Field Configuration Issue Type Items
-description: Returns a [paginated](#pagination) list of field configuration issue type items.
-
-Only items used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of field configuration issue type items.
+  
+  Only items used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfigurationscheme/mapping
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldconfigurationschemeMapping
-// Description: Returns a [paginated](#pagination) list of field configuration issue type items.
-
-Only items used in classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of field configuration issue type items.
+  
+  Only items used in classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/fieldconfigurationscheme/mapping
 // Create this with query name: JiraGetFieldconfigurationschemeMapping
 // -----------------------------------------------------------------------------

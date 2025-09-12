@@ -1,14 +1,33 @@
 ---
 title: Fields Paginated
-description: Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
-
- *  all fields
- *  specific fields, by defining `i...
+description: |-
+  Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
+  
+   *  all fields
+   *  specific fields, by defining `id`
+   *  fields that contain a string in the field name or description, by defining `query`
+   *  specific fields that contain a string in the field name or description, by defining `id` and `query`
+  
+  Use `type` must be set to `custom` to show custom fields only.
+  
+  **[Permissions](#permissions) required:** Permission to access Jira.
 nav_order: 999
 published: false
 ---
 
 # Fields Paginated
+
+## API Description
+Returns a [paginated](#pagination) list of fields for Classic Jira projects. The list can include:
+
+ *  all fields
+ *  specific fields, by defining `id`
+ *  fields that contain a string in the field name or description, by defining `query`
+ *  specific fields that contain a string in the field name or description, by defining `id` and `query`
+
+Use `type` must be set to `custom` to show custom fields only.
+
+**[Permissions](#permissions) required:** Permission to access Jira.
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

@@ -1,13 +1,19 @@
 ---
 title: User Groups
-description: Returns the groups to which a user belongs.
-
-**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluenc...
+description: |-
+  Returns the groups to which a user belongs.
+  
+  **[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # User Groups
+
+## API Description
+Returns the groups to which a user belongs.
+
+**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Understand team composition, roles, and user activity patterns

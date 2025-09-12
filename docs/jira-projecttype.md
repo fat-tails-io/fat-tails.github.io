@@ -1,15 +1,23 @@
 ---
 title: Project Type By Key
-description: Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) requi...
+description: |-
+  Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Project Type By Key
+
+## API Description
+Returns a [project type](https://confluence.atlassian.com/x/Var1Nw).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Retrieve essential project information for management oversight and analysis

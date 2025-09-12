@@ -1,11 +1,25 @@
 ---
 title: Search Workflows
-description: Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflo...
+description: |-
+  Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Administer Jira* global permission to access all, including project-scoped, workflows
+   *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows
 nav_order: 999
 published: false
 ---
 
 # Search Workflows
+
+## API Description
+Returns a [paginated](#pagination) list of global and project workflows. If workflow names are specified in the query string, details of those workflows are returned. Otherwise, all workflows are returned.
+
+**[Permissions](#permissions) required:**
+
+ *  *Administer Jira* global permission to access all, including project-scoped, workflows
+ *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows
 
 ## Purpose
 Execute complex queries to extract specific data sets for targeted analysis

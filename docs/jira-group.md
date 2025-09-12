@@ -1,15 +1,29 @@
 ---
 title: Group
-description: This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
-
-Returns all users in a group.
-
-**[Permissions](#permissions) re...
+description: |-
+  This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
+  
+  Returns all users in a group.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Group
+
+## API Description
+This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get).
+
+Returns all users in a group.
+
+**[Permissions](#permissions) required:** either of:
+
+ *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

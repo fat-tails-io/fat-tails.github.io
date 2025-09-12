@@ -1,11 +1,35 @@
 ---
 title: Attachment Content
-description: Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range h...
+description: |-
+  Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
+  
+  To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** For the issue containing the attachment:
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 nav_order: 999
 published: false
 ---
 
 # Attachment Content
+
+## API Description
+Returns the contents of an attachment. A `Range` header can be set to define a range of bytes within the attachment to download. See the [HTTP Range header standard](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) for details.
+
+To return a thumbnail of the attachment, use [Get attachment thumbnail](#api-rest-api-3-attachment-thumbnail-id-get).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** For the issue containing the attachment:
+
+ *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+ *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+ *  If attachments are added in private comments, the comment-level restriction will be applied.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

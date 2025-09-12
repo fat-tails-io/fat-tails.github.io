@@ -1,13 +1,27 @@
 ---
 title: Jira Attachment Settings
-description: Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
-
-Note that there are also [project ...
+description: |-
+  Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
+  
+  Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 nav_order: 999
 published: false
 ---
 
 # Jira Attachment Settings
+
+## API Description
+Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.
+
+Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments.
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** None.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

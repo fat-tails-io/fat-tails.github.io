@@ -1,10 +1,11 @@
 ---
 title: Get Issue Type Screen Scheme Projects
-description: Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
-
-Only company-managed projects associated with an issue type screen scheme are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
+  
+  Only company-managed projects associated with an issue type screen scheme are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/project
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuetypescreenschemeProject
-// Description: Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
-
-Only company-managed projects associated with an issue type screen scheme are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme.
+  
+  Only company-managed projects associated with an issue type screen scheme are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/project
 // Create this with query name: JiraGetIssuetypescreenschemeProject
 // -----------------------------------------------------------------------------

@@ -1,14 +1,15 @@
 ---
 title: Get All Field Configurations
-description: Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
-
- *  a list of field configuration item IDs.
- *  whether the field configuration is a default.
- *  whether the field configuration name or description contains a query string.
-
-Only field configurations used in company-managed (classic) projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
+  
+   *  a list of field configuration item IDs.
+   *  whether the field configuration is a default.
+   *  whether the field configuration name or description contains a query string.
+  
+  Only field configurations used in company-managed (classic) projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/fieldconfiguration
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetFieldconfiguration
-// Description: Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
-
- *  a list of field configuration item IDs.
- *  whether the field configuration is a default.
- *  whether the field configuration name or description contains a query string.
-
-Only field configurations used in company-managed (classic) projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+// Description: |-
+  Returns a [paginated](#pagination) list of field configurations. The list can be for all field configurations or a subset determined by any combination of these criteria:
+  
+   *  a list of field configuration item IDs.
+   *  whether the field configuration is a default.
+   *  whether the field configuration name or description contains a query string.
+  
+  Only field configurations used in company-managed (classic) projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 // API Endpoint: GET /rest/api/3/fieldconfiguration
 // Create this with query name: JiraGetFieldconfiguration
 // -----------------------------------------------------------------------------

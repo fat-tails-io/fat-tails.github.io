@@ -1,10 +1,11 @@
 ---
 title: Get Precomputations (Apps)
-description: Returns the list of a function's precomputations along with information about when they were created, updated, and last used. Each precomputation has a `value` \- the JQL fragment to replace the custom function clause with.
-
-**[Permissions](#permissions) required:** This API is only accessible to apps and apps can only inspect their own functions.
-
-The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
+description: |-
+  Returns the list of a function's precomputations along with information about when they were created, updated, and last used. Each precomputation has a `value` \- the JQL fragment to replace the custom function clause with.
+  
+  **[Permissions](#permissions) required:** This API is only accessible to apps and apps can only inspect their own functions.
+  
+  The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory.
 endpoint: /rest/api/3/jql/function/computation
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetJqlFunctionComputation
-// Description: Returns the list of a function's precomputations along with information about when they were created, updated, and last used. Each precomputation has a `value` \- the JQL fragment to replace the custom function clause with.
-
-**[Permissions](#permissions) required:** This API is only accessible to apps and apps can only inspect their own functions.
-
-The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory. with JQL search capabilities
+// Description: |-
+  Returns the list of a function's precomputations along with information about when they were created, updated, and last used. Each precomputation has a `value` \- the JQL fragment to replace the custom function clause with.
+  
+  **[Permissions](#permissions) required:** This API is only accessible to apps and apps can only inspect their own functions.
+  
+  The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won't break your app. However, we recommend adding it to your app's scope list because we will eventually make it mandatory. with JQL search capabilities
 // API Endpoint: GET /rest/api/3/jql/function/computation
 // Create this with query name: JiraGetJqlFunctionComputation
 // -----------------------------------------------------------------------------

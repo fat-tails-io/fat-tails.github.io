@@ -1,14 +1,15 @@
 ---
 title: Get Attachment Metadata
-description: Returns the metadata for an attachment. Note that the attachment itself is not returned.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+description: |-
+  Returns the metadata for an attachment. Note that the attachment itself is not returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 endpoint: /rest/api/3/attachment/{id}
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetAttachment
-// Description: Returns the metadata for an attachment. Note that the attachment itself is not returned.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If attachments are added in private comments, the comment-level restriction will be applied.
+// Description: |-
+  Returns the metadata for an attachment. Note that the attachment itself is not returned.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If attachments are added in private comments, the comment-level restriction will be applied.
 // API Endpoint: GET /rest/api/3/attachment/{id}
 // Create this with query name: JiraGetAttachment
 // -----------------------------------------------------------------------------

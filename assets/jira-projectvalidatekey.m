@@ -1,8 +1,9 @@
 ---
 title: Validate Project Key
-description: Validates a project key by confirming the key is a valid string and not in use.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Validates a project key by confirming the key is a valid string and not in use.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/projectvalidate/key
 method: GET
 published: false
@@ -10,9 +11,10 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectvalidateKey
-// Description: Validates a project key by confirming the key is a valid string and not in use.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Validates a project key by confirming the key is a valid string and not in use.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/projectvalidate/key
 // Create this with query name: JiraGetProjectvalidateKey
 // -----------------------------------------------------------------------------

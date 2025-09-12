@@ -1,13 +1,29 @@
 ---
 title: Users From Group
-description: Returns a [paginated](#pagination) list of all users in a group.
-
-Note that users are ordered by username, however the username is not returned in the...
+description: |-
+  Returns a [paginated](#pagination) list of all users in a group.
+  
+  Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
+  
+  **[Permissions](#permissions) required:** either of:
+  
+   *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+   *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
 published: false
 ---
 
 # Users From Group
+
+## API Description
+Returns a [paginated](#pagination) list of all users in a group.
+
+Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.
+
+**[Permissions](#permissions) required:** either of:
+
+ *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+ *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

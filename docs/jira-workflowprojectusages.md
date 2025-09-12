@@ -7,6 +7,9 @@ published: false
 
 # Projects Using A Given Workflow
 
+## API Description
+Returns a page of projects using a given workflow.
+
 ## Purpose
 Retrieve essential project information for management oversight and analysis
 

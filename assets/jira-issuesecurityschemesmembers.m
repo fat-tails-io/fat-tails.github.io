@@ -1,10 +1,11 @@
 ---
 title: Get Issue Security Level Members By Issue Security Scheme
-description: Returns issue security level members.
-
-Only issue security level members in context of classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+description: |-
+  Returns issue security level members.
+  
+  Only issue security level members in context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 endpoint: /rest/api/3/issuesecurityschemes/{issueSecuritySchemeId}/members
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssuesecurityschemesMembers
-// Description: Returns issue security level members.
-
-Only issue security level members in context of classic projects are returned.
-
-**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
+// Description: |-
+  Returns issue security level members.
+  
+  Only issue security level members in context of classic projects are returned.
+  
+  **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). with automatic pagination handling
 // API Endpoint: GET /rest/api/3/issuesecurityschemes/{issueSecuritySchemeId}/members
 // Create this with query name: JiraGetIssuesecurityschemesMembers
 // -----------------------------------------------------------------------------

@@ -1,13 +1,27 @@
 ---
 title: Status
-description: Returns a status. The status must be associated with an active workflow to be returned.
-
-If a name is used on more than one status, only the status fo...
+description: |-
+  Returns a status. The status must be associated with an active workflow to be returned.
+  
+  If a name is used on more than one status, only the status found first is returned. Therefore, identifying the status by its ID may be preferable.
+  
+  This operation can be accessed anonymously.
+  
+  [Permissions](#permissions) required: *Browse projects* [project permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/) for the project.
 nav_order: 999
 published: false
 ---
 
 # Status
+
+## API Description
+Returns a status. The status must be associated with an active workflow to be returned.
+
+If a name is used on more than one status, only the status found first is returned. Therefore, identifying the status by its ID may be preferable.
+
+This operation can be accessed anonymously.
+
+[Permissions](#permissions) required: *Browse projects* [project permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/) for the project.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

@@ -1,17 +1,18 @@
 ---
 title: Get Gadgets
-description: Returns a list of dashboard gadgets on a dashboard.
-
-This operation returns:
-
- *  Gadgets from a list of IDs, when `id` is set.
- *  Gadgets with a module key, when `moduleKey` is set.
- *  Gadgets from a list of URIs, when `uri` is set.
- *  All gadgets, when no other parameters are set.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+description: |-
+  Returns a list of dashboard gadgets on a dashboard.
+  
+  This operation returns:
+  
+   *  Gadgets from a list of IDs, when `id` is set.
+   *  Gadgets with a module key, when `moduleKey` is set.
+   *  Gadgets from a list of URIs, when `uri` is set.
+   *  All gadgets, when no other parameters are set.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 endpoint: /rest/api/3/dashboard/{dashboardId}/gadget
 method: GET
 published: false
@@ -19,18 +20,19 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetDashboardGadget
-// Description: Returns a list of dashboard gadgets on a dashboard.
-
-This operation returns:
-
- *  Gadgets from a list of IDs, when `id` is set.
- *  Gadgets with a module key, when `moduleKey` is set.
- *  Gadgets from a list of URIs, when `uri` is set.
- *  All gadgets, when no other parameters are set.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** None.
+// Description: |-
+  Returns a list of dashboard gadgets on a dashboard.
+  
+  This operation returns:
+  
+   *  Gadgets from a list of IDs, when `id` is set.
+   *  Gadgets with a module key, when `moduleKey` is set.
+   *  Gadgets from a list of URIs, when `uri` is set.
+   *  All gadgets, when no other parameters are set.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** None.
 // API Endpoint: GET /rest/api/3/dashboard/{dashboardId}/gadget
 // Create this with query name: JiraGetDashboardGadget
 // -----------------------------------------------------------------------------

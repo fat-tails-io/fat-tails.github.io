@@ -1,15 +1,43 @@
 ---
 title: Bulk Issue Operation Progress
-description: Use this to get the progress state for the specified bulk operation `taskId`.
-
-**[Permissions](#permissions) required:**
-
- *  Global bulk change [perm...
+description: |-
+  Use this to get the progress state for the specified bulk operation `taskId`.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  Global bulk change [permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-global-permissions/).
+  
+  If the task is running, this resource will return:
+  
+      {"taskId":"10779","status":"RUNNING","progressPercent":65,"submittedBy":{"accountId":"5b10a2844c20165700ede21g"},"created":1690180055963,"started":1690180056206,"updated":169018005829}
+  
+  If the task has completed, then this resource will return:
+  
+      {"processedAccessibleIssues":[10001,10002],"created":1709189449954,"progressPercent":100,"started":1709189450154,"status":"COMPLETE","submittedBy":{"accountId":"5b10a2844c20165700ede21g"},"invalidOrInaccessibleIssueCount":0,"taskId":"10000","totalIssueCount":2,"updated":1709189450354}
+  
+  **Note:** You can view task progress for up to 14 days from creation.
 nav_order: 999
 published: false
 ---
 
 # Bulk Issue Operation Progress
+
+## API Description
+Use this to get the progress state for the specified bulk operation `taskId`.
+
+**[Permissions](#permissions) required:**
+
+ *  Global bulk change [permission](https://support.atlassian.com/jira-cloud-administration/docs/manage-global-permissions/).
+
+If the task is running, this resource will return:
+
+    {"taskId":"10779","status":"RUNNING","progressPercent":65,"submittedBy":{"accountId":"5b10a2844c20165700ede21g"},"created":1690180055963,"started":1690180056206,"updated":169018005829}
+
+If the task has completed, then this resource will return:
+
+    {"processedAccessibleIssues":[10001,10002],"created":1709189449954,"progressPercent":100,"started":1709189450154,"status":"COMPLETE","submittedBy":{"accountId":"5b10a2844c20165700ede21g"},"invalidOrInaccessibleIssueCount":0,"taskId":"10000","totalIssueCount":2,"updated":1709189450354}
+
+**Note:** You can view task progress for up to 14 days from creation.
 
 ## Purpose
 Extract specific data from Jira for project analysis and reporting

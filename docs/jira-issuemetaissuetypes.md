@@ -1,11 +1,23 @@
 ---
 title: Create Field Metadata For A Project And Issue Type Id
-description: Returns a page of field metadata for a specified project and issuetype id. Use the information to populate the requests in [ Create issue](#api-rest-a...
+description: |-
+  Returns a page of field metadata for a specified project and issuetype id. Use the information to populate the requests in [ Create issue](#api-rest-api-3-issue-post) and [Create issues](#api-rest-api-3-issue-bulk-post).
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Create issues* [project permission](https://confluence.atlassian.com/x/yodKLg) in the requested projects.
 nav_order: 999
 published: false
 ---
 
 # Create Field Metadata For A Project And Issue Type Id
+
+## API Description
+Returns a page of field metadata for a specified project and issuetype id. Use the information to populate the requests in [ Create issue](#api-rest-api-3-issue-post) and [Create issues](#api-rest-api-3-issue-bulk-post).
+
+This operation can be accessed anonymously.
+
+**[Permissions](#permissions) required:** *Create issues* [project permission](https://confluence.atlassian.com/x/yodKLg) in the requested projects.
 
 ## Purpose
 Access detailed issue data for project analysis and performance tracking

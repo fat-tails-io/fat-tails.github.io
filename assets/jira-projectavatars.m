@@ -1,10 +1,11 @@
 ---
 title: Get All Project Avatars
-description: Returns all project avatars, grouped by system and custom avatars.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+description: |-
+  Returns all project avatars, grouped by system and custom avatars.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 endpoint: /rest/api/3/project/{projectIdOrKey}/avatars
 method: GET
 published: false
@@ -12,11 +13,12 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetProjectAvatars
-// Description: Returns all project avatars, grouped by system and custom avatars.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
+// Description: |-
+  Returns all project avatars, grouped by system and custom avatars.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:** *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.
 // API Endpoint: GET /rest/api/3/project/{projectIdOrKey}/avatars
 // Create this with query name: JiraGetProjectAvatars
 // -----------------------------------------------------------------------------

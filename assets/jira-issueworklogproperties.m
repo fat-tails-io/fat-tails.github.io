@@ -1,14 +1,15 @@
 ---
 title: Get Worklog Property
-description: Returns the value of a worklog property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+description: |-
+  Returns the value of a worklog property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 endpoint: /rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}
 method: GET
 published: false
@@ -16,15 +17,16 @@ published: false
 
 // -----------------------------------------------------------------------------
 // JiraGetIssueWorklogProperties
-// Description: Returns the value of a worklog property.
-
-This operation can be accessed anonymously.
-
-**[Permissions](#permissions) required:**
-
- *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
- *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
- *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
+// Description: |-
+  Returns the value of a worklog property.
+  
+  This operation can be accessed anonymously.
+  
+  **[Permissions](#permissions) required:**
+  
+   *  *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in.
+   *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+   *  If the worklog has visibility restrictions, belongs to the group or has the role visibility is restricted to.
 // API Endpoint: GET /rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}
 // Create this with query name: JiraGetIssueWorklogProperties
 // -----------------------------------------------------------------------------
