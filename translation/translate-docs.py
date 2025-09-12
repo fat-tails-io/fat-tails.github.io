@@ -12,10 +12,18 @@ from pathlib import Path
 
 def translate_with_deepl(text, target_lang, api_key, context=""):
     """Translate text using DeepL API with optional context"""
-    url = "https://api-free.deepl.com/v2/translate"
+    # Use appropriate endpoint based on API key format
+    if api_key.endswith(':fx'):
+        url = "https://api-free.deepl.com/v2/translate"
+    else:
+        url = "https://api.deepl.com/v2/translate"
+    
+    headers = {
+        "Authorization": f"DeepL-Auth-Key {api_key}",
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
     
     data = {
-        "auth_key": api_key,
         "text": text,
         "target_lang": target_lang.upper(),
         "source_lang": "EN"
@@ -25,13 +33,15 @@ def translate_with_deepl(text, target_lang, api_key, context=""):
     if context:
         data["context"] = context
     
-    response = requests.post(url, data=data)
+    response = requests.post(url, headers=headers, data=data)
     
     if response.status_code == 200:
         result = response.json()
         return result["translations"][0]["text"]
     else:
         print(f"DeepL API error: {response.status_code} - {response.text}")
+        print(f"API Key format: {'Free' if api_key.endswith(':fx') else 'Pro'}")
+        print(f"Endpoint used: {url}")
         return text
 
 def extract_front_matter(content):

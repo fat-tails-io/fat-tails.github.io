@@ -59,6 +59,8 @@ The translation workflow supports multiple languages and content types:
 ### Setup Requirements
 
 1. **DeepL API Key**: Add `DEEPL_API_KEY` as a repository secret
+   - **Free account**: API key ends with `:fx` (uses `api-free.deepl.com`)
+   - **Pro account**: API key without `:fx` (uses `api.deepl.com`)
 2. **Translation Context**: Uses `translation/translation-context.json` for business terminology
 3. **File Structure**: Automatically creates language directories
 
