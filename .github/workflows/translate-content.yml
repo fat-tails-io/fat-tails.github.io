@@ -49,10 +49,9 @@ on:
       - 'docs/*.md'
       - '_posts/*.md'
       - 'assets/*.m'
-    paths-ignore:
-      - 'docs/*/'
-      - '_posts/*/'
-      - 'assets/*/'
+      - '!docs/*/'
+      - '!_posts/*/'
+      - '!assets/*/'
 
 jobs:
   translate-content:
