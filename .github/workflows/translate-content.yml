@@ -232,6 +232,8 @@ jobs:
 
     - name: Translate documentation files
       if: steps.identify-files.outputs.docs_count > 0
+      env:
+        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "📚 Translating documentation files..."
         
@@ -242,6 +244,8 @@ jobs:
 
     - name: Translate blog post files
       if: steps.identify-files.outputs.posts_count > 0
+      env:
+        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "📝 Translating blog post files..."
         
@@ -252,6 +256,8 @@ jobs:
 
     - name: Translate M code files (front matter only)
       if: steps.identify-files.outputs.assets_count > 0
+      env:
+        DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       run: |
         echo "⚙️ Translating M code files (front matter only)..."
         

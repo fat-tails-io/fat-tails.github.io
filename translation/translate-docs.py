@@ -12,6 +12,11 @@ from pathlib import Path
 
 def translate_with_deepl(text, target_lang, api_key, context=""):
     """Translate text using DeepL API with optional context"""
+    # Check if API key is provided
+    if not api_key:
+        print("❌ Error: DEEPL_API_KEY environment variable is not set")
+        return text
+    
     # Use appropriate endpoint based on API key format
     if api_key.endswith(':fx'):
         url = "https://api-free.deepl.com/v2/translate"
@@ -147,6 +152,18 @@ def main():
     api_key = os.getenv("DEEPL_API_KEY")
     target_lang = sys.argv[1]
     context_file = sys.argv[2] if len(sys.argv) > 2 else ""
+    
+    # Debug information
+    print(f"🔧 Debug Info:")
+    print(f"  - Target language: {target_lang}")
+    print(f"  - Context file: {context_file}")
+    print(f"  - API key present: {'Yes' if api_key else 'No'}")
+    if api_key:
+        print(f"  - API key format: {'Free' if api_key.endswith(':fx') else 'Pro'}")
+        print(f"  - API key length: {len(api_key)} characters")
+    else:
+        print("  - ❌ DEEPL_API_KEY environment variable is not set!")
+        sys.exit(1)
     
     # Load context
     context = ""

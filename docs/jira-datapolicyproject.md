@@ -2,7 +2,7 @@
 title: Data Policy For Projects
 description: Returns data policies for the projects specified in the request.
 nav_order: 999
-published: false
+published: true
 ---
 
 # Data Policy For Projects
