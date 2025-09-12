@@ -84,10 +84,17 @@ jobs:
         echo "🔧 Configuring DeepL API..."
         if [ -z "${{ secrets.DEEPL_API_KEY }}" ]; then
           echo "❌ DEEPL_API_KEY secret is not set"
-          echo "Please add your DeepL API key as a repository secret"
+          echo ""
+          echo "Please add your DeepL API key as a repository secret:"
+          echo "1. Go to Settings → Secrets and variables → Actions"
+          echo "2. Click 'New repository secret'"
+          echo "3. Name: DEEPL_API_KEY"
+          echo "4. Value: [your DeepL API key]"
+          echo "5. Click 'Add secret'"
           exit 1
         fi
         echo "✅ DeepL API key configured"
+        echo "🔍 API Key detected (format will be shown in translation step)"
 
     - name: Set up translation context
       run: |
