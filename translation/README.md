@@ -24,6 +24,25 @@ Helper script that lists all available files for translation. Run this script to
 - See all M code files in `assets/`
 - Get usage examples for specific file translation
 
+### `setup-context.py`
+Python script that creates translation context for DeepL API. This script:
+- Loads business context from `translation-context.json`
+- Creates context file for DeepL API
+- Handles fallback context if JSON file is missing
+
+### `translate-docs.py`
+Python script for translating documentation and blog posts. This script:
+- Translates markdown content while preserving code blocks
+- Handles front matter translation
+- Preserves technical content and URLs
+- Uses DeepL API with business context
+
+### `translate-assets.py`
+Python script for translating M code files (front matter only). This script:
+- Translates only front matter fields (title, description)
+- Preserves all M code content in English
+- Adds language metadata to translated files
+
 ## Usage
 
 1. **Run the setup script**:
@@ -49,7 +68,10 @@ translation/
 ├── README.md                    # This file
 ├── translation-context.json     # DeepL context configuration
 ├── setup-translation.sh        # Setup and verification script
-└── list-files.sh               # List available files for translation
+├── list-files.sh               # List available files for translation
+├── setup-context.py            # Create translation context
+├── translate-docs.py           # Translate documentation and blog posts
+└── translate-assets.py         # Translate M code files (front matter only)
 ```
 
 ## Integration
