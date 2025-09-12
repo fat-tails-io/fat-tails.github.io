@@ -223,6 +223,21 @@ jobs:
         echo "  - Blog posts: ${#POSTS_FILES[@]} files"
         echo "  - M code files: ${#ASSETS_FILES[@]} files"
         
+        # Debug: Show if any files were found
+        if [ ${#DOCS_FILES[@]} -eq 0 ] && [ ${#POSTS_FILES[@]} -eq 0 ] && [ ${#ASSETS_FILES[@]} -eq 0 ]; then
+          echo "⚠️ WARNING: No files found to translate!"
+          echo "  - Content type: $CONTENT_TYPE"
+          echo "  - Target language: $TARGET_LANG"
+          echo "  - Force retranslate: $FORCE_RETRANSLATE"
+          echo "  - Specific files: $SPECIFIC_FILES"
+          echo "  - Available docs files:"
+          ls -la docs/*.md 2>/dev/null || echo "    No .md files in docs/"
+          echo "  - Available posts files:"
+          ls -la _posts/*.md 2>/dev/null || echo "    No .md files in _posts/"
+          echo "  - Available assets files:"
+          ls -la assets/*.m 2>/dev/null || echo "    No .m files in assets/"
+        fi
+        
         # Show specific files if using specific_files mode
         if [ "$CONTENT_TYPE" = "specific_files" ]; then
           echo "🎯 Specific files selected:"
@@ -237,10 +252,26 @@ jobs:
           fi
         fi
 
+    - name: Show file identification results
+      run: |
+        echo "🔍 File identification results:"
+        echo "  - Docs count: ${{ steps.identify-files.outputs.docs_count }}"
+        echo "  - Posts count: ${{ steps.identify-files.outputs.posts_count }}"
+        echo "  - Assets count: ${{ steps.identify-files.outputs.assets_count }}"
+        echo ""
+        echo "📁 File lists created:"
+        echo "  - docs_files.txt:"
+        cat docs_files.txt 2>/dev/null || echo "    (empty or not found)"
+        echo "  - posts_files.txt:"
+        cat posts_files.txt 2>/dev/null || echo "    (empty or not found)"
+        echo "  - assets_files.txt:"
+        cat assets_files.txt 2>/dev/null || echo "    (empty or not found)"
+
     - name: Translate documentation files
       if: steps.identify-files.outputs.docs_count > 0
       run: |
         echo "📚 Translating documentation files..."
+        echo "🔍 Docs count from previous step: ${{ steps.identify-files.outputs.docs_count }}"
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
         

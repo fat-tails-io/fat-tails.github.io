@@ -12,7 +12,7 @@ def translate_with_deepl(text, target_lang, api_key, context=""):
     """Translate text using DeepL API with optional context"""
     # Check if API key is provided
     if not api_key:
-        print("❌ Error: DEEPL_API_KEY environment variable is not set")
+        print("❌ Error: API key not provided")
         return text
     
     # Use appropriate endpoint based on API key format
@@ -35,15 +35,31 @@ def translate_with_deepl(text, target_lang, api_key, context=""):
     if context:
         data["context"] = context
     
-    response = requests.post(url, headers=headers, data=data)
+    print(f"🌐 Making DeepL API request...")
+    print(f"  - URL: {url}")
+    print(f"  - Target language: {target_lang.upper()}")
+    print(f"  - Text length: {len(text)} characters")
+    print(f"  - Context provided: {'Yes' if context else 'No'}")
     
-    if response.status_code == 200:
-        result = response.json()
-        return result["translations"][0]["text"]
-    else:
-        print(f"DeepL API error: {response.status_code} - {response.text}")
-        print(f"API Key format: {'Free' if api_key.endswith(':fx') else 'Pro'}")
-        print(f"Endpoint used: {url}")
+    try:
+        response = requests.post(url, headers=headers, data=data, timeout=30)
+        print(f"📡 DeepL API response: {response.status_code}")
+        
+        if response.status_code == 200:
+            result = response.json()
+            translated_text = result["translations"][0]["text"]
+            print(f"✅ Translation successful: {len(translated_text)} characters")
+            return translated_text
+        else:
+            print(f"❌ DeepL API error: {response.status_code} - {response.text}")
+            print(f"API Key format: {'Free' if api_key.endswith(':fx') else 'Pro'}")
+            print(f"Endpoint used: {url}")
+            return text
+    except requests.exceptions.Timeout:
+        print("⏰ DeepL API request timed out after 30 seconds")
+        return text
+    except requests.exceptions.RequestException as e:
+        print(f"🌐 DeepL API connection error: {e}")
         return text
 
 def translate_m_code_file(input_file, output_file, target_lang, api_key, context):
