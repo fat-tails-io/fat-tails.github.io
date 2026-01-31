@@ -5,7 +5,7 @@ description: |-
   
   **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
 nav_order: 999
-published: true
+published: false
 ---
 
 # Announcement Banner Configuration

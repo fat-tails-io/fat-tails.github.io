@@ -10,7 +10,7 @@ description: |-
   
   **[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). *Edit Workflow* [edit workflow permission](https://support.atlassian.com/jira-cloud-administration/docs/permissions-for-company-managed-projects/#Edit-Workflows)
 nav_order: 999
-published: true
+published: false
 ---
 
 # Custom Field Contexts
