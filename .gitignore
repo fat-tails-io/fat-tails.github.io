@@ -4,6 +4,8 @@ _site
 .jekyll-metadata
 vendor
 
+# Research plan
+research-plan-forge-financial-analytics.md
 .cursor/
 
 # Collections and generation
@@ -11,11 +13,12 @@ collections/generated/
 collections/*.json
 !collections/atlassian-api.json
 
+# Translation files
+translation/
+translation-context.txt
+
 # Generated documentation files are now committed with published: false
 
 # Python cache
 __pycache__/
 *.pyc
-
-research-plan-forge-financial-analytics.md
-translation-context.txt
