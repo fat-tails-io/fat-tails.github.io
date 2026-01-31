@@ -99,31 +99,54 @@ jobs:
     - name: Set up translation context
       run: |
         echo "📝 Setting up translation context..."
+        echo "🔍 Current directory: $(pwd)"
+        echo "🔍 Files in translation directory:"
+        ls -la translation/ || echo "Translation directory not found"
+        echo "🔍 Running setup-context.py..."
         python3 translation/setup-context.py
         echo "✅ Translation context created"
+        echo "🔍 Context file created:"
+        ls -la translation-context.txt || echo "Context file not found"
 
     - name: Create language directory structure
       run: |
         echo "📁 Creating language directory structure..."
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
+        echo "🔍 Target language: $TARGET_LANG"
         
         # Create language-specific directories
+        echo "🔍 Creating directories..."
         mkdir -p "docs/$TARGET_LANG"
         mkdir -p "_posts/$TARGET_LANG"
         mkdir -p "assets/$TARGET_LANG"
         
         echo "✅ Created directories for language: $TARGET_LANG"
+        echo "🔍 Directory structure:"
+        ls -la docs/ | head -5
+        ls -la _posts/ | head -5
+        ls -la assets/ | head -5
 
     - name: Identify files to translate
       id: identify-files
       run: |
         echo "🔍 Identifying files to translate..."
+        echo "🔍 Current directory: $(pwd)"
+        echo "🔍 Available files:"
+        ls -la docs/ | head -3
+        ls -la _posts/ | head -3
+        ls -la assets/ | head -3
         
         TARGET_LANG="${{ github.event.inputs.target_language || 'es' }}"
         CONTENT_TYPE="${{ github.event.inputs.content_type || 'docs' }}"
         SPECIFIC_FILES="${{ github.event.inputs.specific_files || '' }}"
         FORCE_RETRANSLATE="${{ github.event.inputs.force_retranslate || 'false' }}"
+        
+        echo "🔍 Parameters:"
+        echo "  - Target language: $TARGET_LANG"
+        echo "  - Content type: $CONTENT_TYPE"
+        echo "  - Specific files: $SPECIFIC_FILES"
+        echo "  - Force retranslate: $FORCE_RETRANSLATE"
         
         # Arrays to store file paths
         DOCS_FILES=()
