@@ -1,16 +1,16 @@
-$color-scheme: fat-tails !default;
-$body-background-color: $white !default;
-$body-heading-color: $black !default;
-$body-text-color: #3e7fa5 !default;
-$link-color: #3e7fa5 !default;
-$nav-child-link-color: #3e7fa5 !default;
-$sidebar-color: #ff8f1c !default;
-$base-button-color: #f7f7f7 !default;
-$btn-primary-color: #3e7fa5 !default;
-$code-background-color: #e8c13f !default;
-$feedback-color: darken($sidebar-color, 3%) !default;
-$table-background-color: $white !default;
-$search-background-color: #32b141 !default;
-$search-result-preview-color: #f04e98 !default;
+$color-scheme: fat-tails;
+$body-background-color: $white;
+$body-heading-color: $black;
+$body-text-color: #3e7fa5;
+$link-color: #3e7fa5;
+$nav-child-link-color: #3e7fa5;
+$sidebar-color: #ff8f1c;
+$base-button-color: #f7f7f7;
+$btn-primary-color: #3e7fa5;
+$code-background-color: #e8c13f;
+$feedback-color: darken($sidebar-color, 3%);
+$table-background-color: $white;
+$search-background-color: #32b141;
+$search-result-preview-color: #f04e98;
 
 /* @import "./vendor/accessible-pygments/github-light"; */
